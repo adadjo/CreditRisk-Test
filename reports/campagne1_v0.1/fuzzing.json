@@ -1,0 +1,10 @@
+{
+ "n": 800,
+ "statuts": {
+  "200": 138,
+  "422": 307,
+  "500": 355
+ },
+ "erreurs_serveur": 355,
+ "taux_erreurs_serveur": 0.4437
+}

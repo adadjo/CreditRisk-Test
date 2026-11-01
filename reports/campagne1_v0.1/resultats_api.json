@@ -1,0 +1,590 @@
+[
+ {
+  "id": "S01",
+  "titre": "Requête valide",
+  "exigences": [
+   "EX04",
+   "EX16"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 200,
+  "statut_observe": 200,
+  "erreur_attendue": null,
+  "erreur_observee": null,
+  "details_manquants": [],
+  "contenu_attendu": "probabilite_defaut dans [0 ; 1], niveau_risque, recommandation, alertes, version_modele",
+  "comportement": "Pipeline complet exécuté, aucune erreur.",
+  "fuite_technique": false,
+  "conforme": true,
+  "extrait_reponse": "{\"probabilite_defaut\":0.127311,\"niveau_risque\":\"faible\",\"recommandation\":\"Profil standard : poursuivre l'instruction habituelle du dossier.\",\"alertes\":[],\"versi"
+ },
+ {
+  "id": "S02",
+  "titre": "Champ obligatoire absent (revenu_mensuel)",
+  "exigences": [
+   "EX06"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 422,
+  "statut_observe": 500,
+  "erreur_attendue": "donnees_invalides",
+  "erreur_observee": "erreur_interne",
+  "details_manquants": [
+   [
+    "revenu_mensuel",
+    "champ_manquant"
+   ]
+  ],
+  "contenu_attendu": "Erreur structurée désignant le champ manquant",
+  "comportement": "Requête rejetée avant tout appel au modèle.",
+  "fuite_technique": true,
+  "conforme": false,
+  "extrait_reponse": "{\"erreur\":\"erreur_interne\",\"message\":\"'revenu_mensuel'\",\"trace\":\"Traceback (most recent call last):\\n  File \\\"/home/user/CreditRisk-Test/app/main.py\\\", line 7"
+ },
+ {
+  "id": "S03",
+  "titre": "Âge négatif",
+  "exigences": [
+   "EX01"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 422,
+  "statut_observe": 422,
+  "erreur_attendue": "donnees_invalides",
+  "erreur_observee": "donnees_invalides",
+  "details_manquants": [],
+  "contenu_attendu": "Détail age / hors_limites avec l'intervalle autorisé",
+  "comportement": "Rejet contrôlé, aucune prédiction.",
+  "fuite_technique": false,
+  "conforme": true,
+  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"025694abf65a4d4b\",\"details\":[{\"champ\":\"age\",\"code\":\"hors_limit"
+ },
+ {
+  "id": "S04",
+  "titre": "Revenu sous forme de texte non numérique",
+  "exigences": [
+   "EX02"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 422,
+  "statut_observe": 422,
+  "erreur_attendue": "donnees_invalides",
+  "erreur_observee": "donnees_invalides",
+  "details_manquants": [],
+  "contenu_attendu": "Détail revenu_mensuel / type_invalide",
+  "comportement": "Aucune conversion implicite ; rejet contrôlé.",
+  "fuite_technique": false,
+  "conforme": true,
+  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"2161c375b33f467a\",\"details\":[{\"champ\":\"revenu_mensuel\",\"code\":"
+ },
+ {
+  "id": "S05",
+  "titre": "Revenu sous forme de chaîne numérique (\"250000\")",
+  "exigences": [
+   "EX02"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 422,
+  "statut_observe": 200,
+  "erreur_attendue": "donnees_invalides",
+  "erreur_observee": null,
+  "details_manquants": [
+   [
+    "revenu_mensuel",
+    "type_invalide"
+   ]
+  ],
+  "contenu_attendu": "Détail revenu_mensuel / type_invalide",
+  "comportement": "Le contrat exige un nombre JSON : pas de coercition silencieuse.",
+  "fuite_technique": false,
+  "conforme": false,
+  "extrait_reponse": "{\"probabilite_defaut\":0.127311,\"niveau_risque\":\"faible\",\"recommandation\":\"Profil standard : poursuivre l'instruction habituelle du dossier.\",\"alertes\":[],\"versi"
+ },
+ {
+  "id": "S06",
+  "titre": "Montant du crédit nul",
+  "exigences": [
+   "EX08"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 422,
+  "statut_observe": 500,
+  "erreur_attendue": "donnees_invalides",
+  "erreur_observee": "erreur_interne",
+  "details_manquants": [
+   [
+    "montant_credit",
+    "hors_limites"
+   ]
+  ],
+  "contenu_attendu": "Détail montant_credit / hors_limites",
+  "comportement": "Rejet contrôlé (évite log(0) = -infini dans le prétraitement).",
+  "fuite_technique": true,
+  "conforme": false,
+  "extrait_reponse": "{\"erreur\":\"erreur_interne\",\"message\":\"Input X contains infinity or a value too large for dtype('float64').\",\"trace\":\"Traceback (most recent call last):\\n  File "
+ },
+ {
+  "id": "S07",
+  "titre": "Montant du crédit négatif",
+  "exigences": [
+   "EX08"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 422,
+  "statut_observe": 422,
+  "erreur_attendue": "donnees_invalides",
+  "erreur_observee": "donnees_invalides",
+  "details_manquants": [],
+  "contenu_attendu": "Détail montant_credit / hors_limites",
+  "comportement": "Rejet contrôlé.",
+  "fuite_technique": false,
+  "conforme": true,
+  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"bdcc3256ec884169\",\"details\":[{\"champ\":\"montant_credit\",\"code\":"
+ },
+ {
+  "id": "S08",
+  "titre": "Durée de crédit non entière (12,5 mois)",
+  "exigences": [
+   "EX03"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 422,
+  "statut_observe": 200,
+  "erreur_attendue": "donnees_invalides",
+  "erreur_observee": null,
+  "details_manquants": [
+   [
+    "duree_mois",
+    "non_entier"
+   ]
+  ],
+  "contenu_attendu": "Détail duree_mois / non_entier",
+  "comportement": "Pas de troncature silencieuse (12,5 ne devient pas 12).",
+  "fuite_technique": false,
+  "conforme": false,
+  "extrait_reponse": "{\"probabilite_defaut\":0.127311,\"niveau_risque\":\"faible\",\"recommandation\":\"Profil standard : poursuivre l'instruction habituelle du dossier.\",\"alertes\":[],\"versi"
+ },
+ {
+  "id": "S09",
+  "titre": "Champ supplémentaire non autorisé (genre)",
+  "exigences": [
+   "EX09"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 422,
+  "statut_observe": 200,
+  "erreur_attendue": "donnees_invalides",
+  "erreur_observee": null,
+  "details_manquants": [
+   [
+    "genre",
+    "champ_non_autorise"
+   ]
+  ],
+  "contenu_attendu": "Détail genre / champ_non_autorise",
+  "comportement": "Schéma strict : un attribut inattendu n'est jamais ignoré en silence.",
+  "fuite_technique": false,
+  "conforme": false,
+  "extrait_reponse": "{\"probabilite_defaut\":0.127311,\"niveau_risque\":\"faible\",\"recommandation\":\"Profil standard : poursuivre l'instruction habituelle du dossier.\",\"alertes\":[],\"versi"
+ },
+ {
+  "id": "S10",
+  "titre": "Valeurs extrêmement élevées sur tous les champs",
+  "exigences": [
+   "EX01",
+   "EX02",
+   "EX03",
+   "EX08"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 422,
+  "statut_observe": 422,
+  "erreur_attendue": "donnees_invalides",
+  "erreur_observee": "donnees_invalides",
+  "details_manquants": [
+   [
+    "revenu_mensuel",
+    "hors_limites"
+   ],
+   [
+    "montant_credit",
+    "hors_limites"
+   ],
+   [
+    "anciennete_activite",
+    "hors_limites"
+   ]
+  ],
+  "contenu_attendu": "Cinq détails hors_limites",
+  "comportement": "Rejet contrôlé ; aucun dépassement numérique.",
+  "fuite_technique": false,
+  "conforme": false,
+  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"9e5aecd2e92d4891\",\"details\":[{\"champ\":\"age\",\"code\":\"hors_limit"
+ },
+ {
+  "id": "S11",
+  "titre": "Modèle indisponible (non chargé)",
+  "exigences": [
+   "EX05"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 503,
+  "statut_observe": 500,
+  "erreur_attendue": "modele_indisponible",
+  "erreur_observee": "erreur_interne",
+  "details_manquants": [],
+  "contenu_attendu": "Erreur modele_indisponible, en-tête Retry-After, aucun détail technique",
+  "comportement": "Indisponibilité signalée proprement ; pas de plantage.",
+  "fuite_technique": true,
+  "conforme": false,
+  "extrait_reponse": "{\"erreur\":\"erreur_interne\",\"message\":\"[Errno 2] No such file or directory: '/home/user/CreditRisk-Test/reports/_tmp/modele_absent.json'\",\"trace\":\"Traceback (m"
+ },
+ {
+  "id": "S12",
+  "titre": "Requête mal formée (JSON tronqué)",
+  "exigences": [
+   "EX10"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 400,
+  "statut_observe": 500,
+  "erreur_attendue": "json_invalide",
+  "erreur_observee": "erreur_interne",
+  "details_manquants": [],
+  "contenu_attendu": "Erreur json_invalide",
+  "comportement": "Rejet 400, aucune trace technique.",
+  "fuite_technique": true,
+  "conforme": false,
+  "extrait_reponse": "{\"erreur\":\"erreur_interne\",\"message\":\"Expecting value: line 1 column 31 (char 30)\",\"trace\":\"Traceback (most recent call last):\\n  File \\\"/home/user/CreditRisk"
+ },
+ {
+  "id": "S13",
+  "titre": "Corps de requête vide",
+  "exigences": [
+   "EX10"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 400,
+  "statut_observe": 500,
+  "erreur_attendue": "json_invalide",
+  "erreur_observee": "erreur_interne",
+  "details_manquants": [],
+  "contenu_attendu": "Erreur json_invalide",
+  "comportement": "Rejet 400.",
+  "fuite_technique": true,
+  "conforme": false,
+  "extrait_reponse": "{\"erreur\":\"erreur_interne\",\"message\":\"Expecting value: line 1 column 1 (char 0)\",\"trace\":\"Traceback (most recent call last):\\n  File \\\"/home/user/CreditRisk-T"
+ },
+ {
+  "id": "S14",
+  "titre": "JSON valide mais qui n'est pas un objet (liste)",
+  "exigences": [
+   "EX10",
+   "EX06"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 422,
+  "statut_observe": 500,
+  "erreur_attendue": "donnees_invalides",
+  "erreur_observee": "erreur_interne",
+  "details_manquants": [
+   [
+    "corps",
+    "schema_invalide"
+   ]
+  ],
+  "contenu_attendu": "Détail corps / schema_invalide",
+  "comportement": "Rejet 422 contrôlé.",
+  "fuite_technique": true,
+  "conforme": false,
+  "extrait_reponse": "{\"erreur\":\"erreur_interne\",\"message\":\"list indices must be integers or slices, not str\",\"trace\":\"Traceback (most recent call last):\\n  File \\\"/home/user/Credi"
+ },
+ {
+  "id": "S15",
+  "titre": "Constante non standard NaN dans le JSON",
+  "exigences": [
+   "EX02",
+   "EX10"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 400,
+  "statut_observe": 500,
+  "erreur_attendue": "json_invalide",
+  "erreur_observee": "erreur_interne",
+  "details_manquants": [],
+  "contenu_attendu": "Erreur json_invalide",
+  "comportement": "NaN n'est pas du JSON (RFC 8259) : rejet 400.",
+  "fuite_technique": true,
+  "conforme": false,
+  "extrait_reponse": "{\"erreur\":\"erreur_interne\",\"message\":\"Input X contains NaN.\\nLogisticRegression does not accept missing values encoded as NaN natively. For supervised learning,"
+ },
+ {
+  "id": "S16",
+  "titre": "Infini obtenu par débordement d'exposant (1e999)",
+  "exigences": [
+   "EX02"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 422,
+  "statut_observe": 500,
+  "erreur_attendue": "donnees_invalides",
+  "erreur_observee": "erreur_interne",
+  "details_manquants": [
+   [
+    "revenu_mensuel",
+    "valeur_non_finie"
+   ]
+  ],
+  "contenu_attendu": "Détail revenu_mensuel / valeur_non_finie",
+  "comportement": "Valeur infinie rejetée avant le prétraitement.",
+  "fuite_technique": true,
+  "conforme": false,
+  "extrait_reponse": "{\"erreur\":\"erreur_interne\",\"message\":\"Input X contains infinity or a value too large for dtype('float64').\",\"trace\":\"Traceback (most recent call last):\\n  File "
+ },
+ {
+  "id": "S17",
+  "titre": "Content-Type non JSON (text/plain)",
+  "exigences": [
+   "EX10"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 415,
+  "statut_observe": 200,
+  "erreur_attendue": "type_contenu_non_supporte",
+  "erreur_observee": null,
+  "details_manquants": [],
+  "contenu_attendu": "Erreur type_contenu_non_supporte",
+  "comportement": "Rejet 415.",
+  "fuite_technique": false,
+  "conforme": false,
+  "extrait_reponse": "{\"probabilite_defaut\":0.127311,\"niveau_risque\":\"faible\",\"recommandation\":\"Profil standard : poursuivre l'instruction habituelle du dossier.\",\"alertes\":[],\"versi"
+ },
+ {
+  "id": "S18",
+  "titre": "Corps de requête volumineux (1 Mo)",
+  "exigences": [
+   "EX10"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 413,
+  "statut_observe": 500,
+  "erreur_attendue": "corps_trop_volumineux",
+  "erreur_observee": "erreur_interne",
+  "details_manquants": [],
+  "contenu_attendu": "Erreur corps_trop_volumineux",
+  "comportement": "Rejet 413 sans analyse du corps.",
+  "fuite_technique": true,
+  "conforme": false,
+  "extrait_reponse": "{\"erreur\":\"erreur_interne\",\"message\":\"'revenu_mensuel'\",\"trace\":\"Traceback (most recent call last):\\n  File \\\"/home/user/CreditRisk-Test/app/main.py\\\", line 7"
+ },
+ {
+  "id": "S19",
+  "titre": "Objet vide {}",
+  "exigences": [
+   "EX06"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 422,
+  "statut_observe": 500,
+  "erreur_attendue": "donnees_invalides",
+  "erreur_observee": "erreur_interne",
+  "details_manquants": [
+   [
+    "age",
+    "champ_manquant"
+   ],
+   [
+    "revenu_mensuel",
+    "champ_manquant"
+   ],
+   [
+    "montant_credit",
+    "champ_manquant"
+   ],
+   [
+    "duree_mois",
+    "champ_manquant"
+   ],
+   [
+    "anciennete_activite",
+    "champ_manquant"
+   ]
+  ],
+  "contenu_attendu": "Cinq détails champ_manquant",
+  "comportement": "Rejet 422 listant tous les champs.",
+  "fuite_technique": true,
+  "conforme": false,
+  "extrait_reponse": "{\"erreur\":\"erreur_interne\",\"message\":\"'age'\",\"trace\":\"Traceback (most recent call last):\\n  File \\\"/home/user/CreditRisk-Test/app/main.py\\\", line 70, in predi"
+ },
+ {
+  "id": "S20",
+  "titre": "Booléen à la place de la durée",
+  "exigences": [
+   "EX03"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 422,
+  "statut_observe": 200,
+  "erreur_attendue": "donnees_invalides",
+  "erreur_observee": null,
+  "details_manquants": [
+   [
+    "duree_mois",
+    "type_invalide"
+   ]
+  ],
+  "contenu_attendu": "Détail duree_mois / type_invalide",
+  "comportement": "true n'est pas assimilé à 1 mois.",
+  "fuite_technique": false,
+  "conforme": false,
+  "extrait_reponse": "{\"probabilite_defaut\":0.999998,\"niveau_risque\":\"eleve\",\"recommandation\":\"Risque élevé : examen renforcé obligatoire. La décision finale revient à l'agent de cré"
+ },
+ {
+  "id": "S21",
+  "titre": "Valeur nulle pour l'âge",
+  "exigences": [
+   "EX06",
+   "EX01"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 422,
+  "statut_observe": 500,
+  "erreur_attendue": "donnees_invalides",
+  "erreur_observee": "erreur_interne",
+  "details_manquants": [
+   [
+    "age",
+    "type_invalide"
+   ]
+  ],
+  "contenu_attendu": "Détail age / type_invalide",
+  "comportement": "null refusé.",
+  "fuite_technique": true,
+  "conforme": false,
+  "extrait_reponse": "{\"erreur\":\"erreur_interne\",\"message\":\"float() argument must be a string or a real number, not 'NoneType'\",\"trace\":\"Traceback (most recent call last):\\n  File \\\""
+ },
+ {
+  "id": "S22",
+  "titre": "Ancienneté incohérente avec l'âge (20 ans, 15 ans d'activité)",
+  "exigences": [
+   "EX12"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 422,
+  "statut_observe": 200,
+  "erreur_attendue": "donnees_invalides",
+  "erreur_observee": null,
+  "details_manquants": [
+   [
+    "anciennete_activite",
+    "incoherence"
+   ]
+  ],
+  "contenu_attendu": "Détail anciennete_activite / incoherence",
+  "comportement": "Contrôle de cohérence inter-champs.",
+  "fuite_technique": false,
+  "conforme": false,
+  "extrait_reponse": "{\"probabilite_defaut\":0.046808,\"niveau_risque\":\"faible\",\"recommandation\":\"Profil standard : poursuivre l'instruction habituelle du dossier.\",\"alertes\":[],\"versi"
+ },
+ {
+  "id": "S23",
+  "titre": "Méthode non autorisée (GET /predict)",
+  "exigences": [
+   "EX10"
+  ],
+  "requete": "GET /predict",
+  "statut_attendu": 405,
+  "statut_observe": 405,
+  "erreur_attendue": "methode_non_autorisee",
+  "erreur_observee": null,
+  "details_manquants": [],
+  "contenu_attendu": "Erreur methode_non_autorisee, en-tête Allow",
+  "comportement": "Rejet 405 au format uniforme.",
+  "fuite_technique": false,
+  "conforme": false,
+  "extrait_reponse": "{\"detail\":\"Method Not Allowed\"}"
+ },
+ {
+  "id": "S24",
+  "titre": "Ressource inconnue (GET /inconnu)",
+  "exigences": [
+   "EX10"
+  ],
+  "requete": "GET /inconnu",
+  "statut_attendu": 404,
+  "statut_observe": 404,
+  "erreur_attendue": "ressource_introuvable",
+  "erreur_observee": null,
+  "details_manquants": [],
+  "contenu_attendu": "Erreur ressource_introuvable",
+  "comportement": "Rejet 404 au format uniforme.",
+  "fuite_technique": false,
+  "conforme": false,
+  "extrait_reponse": "{\"detail\":\"Not Found\"}"
+ },
+ {
+  "id": "S25",
+  "titre": "JSON profondément imbriqué (4 900 niveaux, 9,8 Ko)",
+  "exigences": [
+   "EX10"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 422,
+  "statut_observe": 500,
+  "erreur_attendue": "donnees_invalides",
+  "erreur_observee": "erreur_interne",
+  "details_manquants": [
+   [
+    "corps",
+    "schema_invalide"
+   ]
+  ],
+  "contenu_attendu": "Détail corps / schema_invalide",
+  "comportement": "Aucune récursion non maîtrisée : JSON valide mais non conforme, rejet 422.",
+  "fuite_technique": true,
+  "conforme": false,
+  "extrait_reponse": "{\"erreur\":\"erreur_interne\",\"message\":\"list indices must be integers or slices, not str\",\"trace\":\"Traceback (most recent call last):\\n  File \\\"/home/user/Credi"
+ },
+ {
+  "id": "S26",
+  "titre": "Entier gigantesque (10^400) pour le revenu",
+  "exigences": [
+   "EX02"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 422,
+  "statut_observe": 500,
+  "erreur_attendue": "donnees_invalides",
+  "erreur_observee": "erreur_interne",
+  "details_manquants": [
+   [
+    "revenu_mensuel",
+    "hors_limites"
+   ]
+  ],
+  "contenu_attendu": "Détail revenu_mensuel / hors_limites",
+  "comportement": "Aucune conversion en flottant avant le contrôle des bornes.",
+  "fuite_technique": true,
+  "conforme": false,
+  "extrait_reponse": "{\"erreur\":\"erreur_interne\",\"message\":\"int too large to convert to float\",\"trace\":\"Traceback (most recent call last):\\n  File \\\"/home/user/CreditRisk-Test/app/"
+ },
+ {
+  "id": "S27",
+  "titre": "Clé dupliquée dans le JSON (age deux fois, 35 puis -1)",
+  "exigences": [
+   "EX09",
+   "EX10"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 400,
+  "statut_observe": 422,
+  "erreur_attendue": "json_invalide",
+  "erreur_observee": "donnees_invalides",
+  "details_manquants": [],
+  "contenu_attendu": "Erreur json_invalide",
+  "comportement": "Requête ambiguë refusée : pas de pollution de paramètres.",
+  "fuite_technique": false,
+  "conforme": false,
+  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"9f3dc7011307417b\",\"details\":[{\"champ\":\"age\",\"code\":\"hors_limit"
+ }
+]

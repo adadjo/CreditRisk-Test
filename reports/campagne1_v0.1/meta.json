@@ -1,0 +1,26 @@
+{
+  "etiquette": "v0.1",
+  "version_application": "0.1.0",
+  "commit_git": "non versionné",
+  "debut": "2026-11-01T13:07:52",
+  "duree_s": 16.1,
+  "code_sortie_pytest": 1,
+  "tests": {
+    "total": 455,
+    "passed": 185,
+    "failed": 269,
+    "skipped": 1
+  },
+  "couverture_pct": 99.29,
+  "python": "3.13.18",
+  "systeme": "Linux-6.18.44-fc-v185-x86_64-with-glibc2.39",
+  "bibliotheques": {
+    "fastapi": "0.162.0",
+    "starlette": "1.7.0",
+    "scikit-learn": "1.9.1",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "pytest": "9.1.1",
+    "ruff": "0.17.3"
+  }
+}
