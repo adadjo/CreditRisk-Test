@@ -1,0 +1,496 @@
+[
+ {
+  "id": "S01",
+  "titre": "Requête valide",
+  "exigences": [
+   "EX04",
+   "EX16"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 200,
+  "statut_observe": 200,
+  "erreur_attendue": null,
+  "erreur_observee": null,
+  "details_manquants": [],
+  "contenu_attendu": "probabilite_defaut dans [0 ; 1], niveau_risque, recommandation, alertes, version_modele",
+  "comportement": "Pipeline complet exécuté, aucune erreur.",
+  "fuite_technique": false,
+  "conforme": true,
+  "extrait_reponse": "{\"probabilite_defaut\":0.127311,\"niveau_risque\":\"faible\",\"recommandation\":\"Profil standard : poursuivre l'instruction habituelle du dossier.\",\"alertes\":[],\"versi"
+ },
+ {
+  "id": "S02",
+  "titre": "Champ obligatoire absent (revenu_mensuel)",
+  "exigences": [
+   "EX06"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 422,
+  "statut_observe": 422,
+  "erreur_attendue": "donnees_invalides",
+  "erreur_observee": "donnees_invalides",
+  "details_manquants": [],
+  "contenu_attendu": "Erreur structurée désignant le champ manquant",
+  "comportement": "Requête rejetée avant tout appel au modèle.",
+  "fuite_technique": false,
+  "conforme": true,
+  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"2b6051883beb4c98\",\"details\":[{\"champ\":\"revenu_mensuel\",\"code\":"
+ },
+ {
+  "id": "S03",
+  "titre": "Âge négatif",
+  "exigences": [
+   "EX01"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 422,
+  "statut_observe": 422,
+  "erreur_attendue": "donnees_invalides",
+  "erreur_observee": "donnees_invalides",
+  "details_manquants": [],
+  "contenu_attendu": "Détail age / hors_limites avec l'intervalle autorisé",
+  "comportement": "Rejet contrôlé, aucune prédiction.",
+  "fuite_technique": false,
+  "conforme": true,
+  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"e3b7ae64fc964219\",\"details\":[{\"champ\":\"age\",\"code\":\"hors_limit"
+ },
+ {
+  "id": "S04",
+  "titre": "Revenu sous forme de texte non numérique",
+  "exigences": [
+   "EX02"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 422,
+  "statut_observe": 422,
+  "erreur_attendue": "donnees_invalides",
+  "erreur_observee": "donnees_invalides",
+  "details_manquants": [],
+  "contenu_attendu": "Détail revenu_mensuel / type_invalide",
+  "comportement": "Aucune conversion implicite ; rejet contrôlé.",
+  "fuite_technique": false,
+  "conforme": true,
+  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"7469d5d6a8684ed1\",\"details\":[{\"champ\":\"revenu_mensuel\",\"code\":"
+ },
+ {
+  "id": "S05",
+  "titre": "Revenu sous forme de chaîne numérique (\"250000\")",
+  "exigences": [
+   "EX02"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 422,
+  "statut_observe": 422,
+  "erreur_attendue": "donnees_invalides",
+  "erreur_observee": "donnees_invalides",
+  "details_manquants": [],
+  "contenu_attendu": "Détail revenu_mensuel / type_invalide",
+  "comportement": "Le contrat exige un nombre JSON : pas de coercition silencieuse.",
+  "fuite_technique": false,
+  "conforme": true,
+  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"5f94b46b0da043b2\",\"details\":[{\"champ\":\"revenu_mensuel\",\"code\":"
+ },
+ {
+  "id": "S06",
+  "titre": "Montant du crédit nul",
+  "exigences": [
+   "EX08"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 422,
+  "statut_observe": 422,
+  "erreur_attendue": "donnees_invalides",
+  "erreur_observee": "donnees_invalides",
+  "details_manquants": [],
+  "contenu_attendu": "Détail montant_credit / hors_limites",
+  "comportement": "Rejet contrôlé (évite log(0) = -infini dans le prétraitement).",
+  "fuite_technique": false,
+  "conforme": true,
+  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"b413d29c77d54997\",\"details\":[{\"champ\":\"montant_credit\",\"code\":"
+ },
+ {
+  "id": "S07",
+  "titre": "Montant du crédit négatif",
+  "exigences": [
+   "EX08"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 422,
+  "statut_observe": 422,
+  "erreur_attendue": "donnees_invalides",
+  "erreur_observee": "donnees_invalides",
+  "details_manquants": [],
+  "contenu_attendu": "Détail montant_credit / hors_limites",
+  "comportement": "Rejet contrôlé.",
+  "fuite_technique": false,
+  "conforme": true,
+  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"792a56924db94377\",\"details\":[{\"champ\":\"montant_credit\",\"code\":"
+ },
+ {
+  "id": "S08",
+  "titre": "Durée de crédit non entière (12,5 mois)",
+  "exigences": [
+   "EX03"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 422,
+  "statut_observe": 422,
+  "erreur_attendue": "donnees_invalides",
+  "erreur_observee": "donnees_invalides",
+  "details_manquants": [],
+  "contenu_attendu": "Détail duree_mois / non_entier",
+  "comportement": "Pas de troncature silencieuse (12,5 ne devient pas 12).",
+  "fuite_technique": false,
+  "conforme": true,
+  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"8e19838738c64b31\",\"details\":[{\"champ\":\"duree_mois\",\"code\":\"non"
+ },
+ {
+  "id": "S09",
+  "titre": "Champ supplémentaire non autorisé (genre)",
+  "exigences": [
+   "EX09"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 422,
+  "statut_observe": 422,
+  "erreur_attendue": "donnees_invalides",
+  "erreur_observee": "donnees_invalides",
+  "details_manquants": [],
+  "contenu_attendu": "Détail genre / champ_non_autorise",
+  "comportement": "Schéma strict : un attribut inattendu n'est jamais ignoré en silence.",
+  "fuite_technique": false,
+  "conforme": true,
+  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"2e2b90e794934444\",\"details\":[{\"champ\":\"genre\",\"code\":\"champ_no"
+ },
+ {
+  "id": "S10",
+  "titre": "Valeurs extrêmement élevées sur tous les champs",
+  "exigences": [
+   "EX01",
+   "EX02",
+   "EX03",
+   "EX08"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 422,
+  "statut_observe": 422,
+  "erreur_attendue": "donnees_invalides",
+  "erreur_observee": "donnees_invalides",
+  "details_manquants": [],
+  "contenu_attendu": "Cinq détails hors_limites",
+  "comportement": "Rejet contrôlé ; aucun dépassement numérique.",
+  "fuite_technique": false,
+  "conforme": true,
+  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"6b7d35b79d604ced\",\"details\":[{\"champ\":\"age\",\"code\":\"hors_limit"
+ },
+ {
+  "id": "S11",
+  "titre": "Modèle indisponible (non chargé)",
+  "exigences": [
+   "EX05"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 503,
+  "statut_observe": 503,
+  "erreur_attendue": "modele_indisponible",
+  "erreur_observee": "modele_indisponible",
+  "details_manquants": [],
+  "contenu_attendu": "Erreur modele_indisponible, en-tête Retry-After, aucun détail technique",
+  "comportement": "Indisponibilité signalée proprement ; pas de plantage.",
+  "fuite_technique": false,
+  "conforme": true,
+  "extrait_reponse": "{\"erreur\":\"modele_indisponible\",\"message\":\"Le modèle de prédiction est momentanément indisponible.\",\"id_requete\":\"a7ccc9dc2f104141\"}"
+ },
+ {
+  "id": "S12",
+  "titre": "Requête mal formée (JSON tronqué)",
+  "exigences": [
+   "EX10"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 400,
+  "statut_observe": 400,
+  "erreur_attendue": "json_invalide",
+  "erreur_observee": "json_invalide",
+  "details_manquants": [],
+  "contenu_attendu": "Erreur json_invalide",
+  "comportement": "Rejet 400, aucune trace technique.",
+  "fuite_technique": false,
+  "conforme": true,
+  "extrait_reponse": "{\"erreur\":\"json_invalide\",\"message\":\"Le corps de la requête n'est pas un JSON valide.\",\"id_requete\":\"0992b5f617ce4514\"}"
+ },
+ {
+  "id": "S13",
+  "titre": "Corps de requête vide",
+  "exigences": [
+   "EX10"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 400,
+  "statut_observe": 400,
+  "erreur_attendue": "json_invalide",
+  "erreur_observee": "json_invalide",
+  "details_manquants": [],
+  "contenu_attendu": "Erreur json_invalide",
+  "comportement": "Rejet 400.",
+  "fuite_technique": false,
+  "conforme": true,
+  "extrait_reponse": "{\"erreur\":\"json_invalide\",\"message\":\"Le corps de la requête n'est pas un JSON valide.\",\"id_requete\":\"dbd7f6f3b5ac4221\"}"
+ },
+ {
+  "id": "S14",
+  "titre": "JSON valide mais qui n'est pas un objet (liste)",
+  "exigences": [
+   "EX10",
+   "EX06"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 422,
+  "statut_observe": 422,
+  "erreur_attendue": "donnees_invalides",
+  "erreur_observee": "donnees_invalides",
+  "details_manquants": [],
+  "contenu_attendu": "Détail corps / schema_invalide",
+  "comportement": "Rejet 422 contrôlé.",
+  "fuite_technique": false,
+  "conforme": true,
+  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"40429672a39b4ceb\",\"details\":[{\"champ\":\"corps\",\"code\":\"schema_i"
+ },
+ {
+  "id": "S15",
+  "titre": "Constante non standard NaN dans le JSON",
+  "exigences": [
+   "EX02",
+   "EX10"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 400,
+  "statut_observe": 400,
+  "erreur_attendue": "json_invalide",
+  "erreur_observee": "json_invalide",
+  "details_manquants": [],
+  "contenu_attendu": "Erreur json_invalide",
+  "comportement": "NaN n'est pas du JSON (RFC 8259) : rejet 400.",
+  "fuite_technique": false,
+  "conforme": true,
+  "extrait_reponse": "{\"erreur\":\"json_invalide\",\"message\":\"Le corps de la requête n'est pas un JSON valide.\",\"id_requete\":\"3674270dbd944191\"}"
+ },
+ {
+  "id": "S16",
+  "titre": "Infini obtenu par débordement d'exposant (1e999)",
+  "exigences": [
+   "EX02"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 422,
+  "statut_observe": 422,
+  "erreur_attendue": "donnees_invalides",
+  "erreur_observee": "donnees_invalides",
+  "details_manquants": [],
+  "contenu_attendu": "Détail revenu_mensuel / valeur_non_finie",
+  "comportement": "Valeur infinie rejetée avant le prétraitement.",
+  "fuite_technique": false,
+  "conforme": true,
+  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"754571e9e7294eb4\",\"details\":[{\"champ\":\"revenu_mensuel\",\"code\":"
+ },
+ {
+  "id": "S17",
+  "titre": "Content-Type non JSON (text/plain)",
+  "exigences": [
+   "EX10"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 415,
+  "statut_observe": 415,
+  "erreur_attendue": "type_contenu_non_supporte",
+  "erreur_observee": "type_contenu_non_supporte",
+  "details_manquants": [],
+  "contenu_attendu": "Erreur type_contenu_non_supporte",
+  "comportement": "Rejet 415.",
+  "fuite_technique": false,
+  "conforme": true,
+  "extrait_reponse": "{\"erreur\":\"type_contenu_non_supporte\",\"message\":\"Le Content-Type doit être application/json.\",\"id_requete\":\"d1942440fa124465\"}"
+ },
+ {
+  "id": "S18",
+  "titre": "Corps de requête volumineux (1 Mo)",
+  "exigences": [
+   "EX10"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 413,
+  "statut_observe": 413,
+  "erreur_attendue": "corps_trop_volumineux",
+  "erreur_observee": "corps_trop_volumineux",
+  "details_manquants": [],
+  "contenu_attendu": "Erreur corps_trop_volumineux",
+  "comportement": "Rejet 413 sans analyse du corps.",
+  "fuite_technique": false,
+  "conforme": true,
+  "extrait_reponse": "{\"erreur\":\"corps_trop_volumineux\",\"message\":\"Le corps de la requête dépasse 10000 octets.\",\"id_requete\":\"aee2c41745f4447f\"}"
+ },
+ {
+  "id": "S19",
+  "titre": "Objet vide {}",
+  "exigences": [
+   "EX06"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 422,
+  "statut_observe": 422,
+  "erreur_attendue": "donnees_invalides",
+  "erreur_observee": "donnees_invalides",
+  "details_manquants": [],
+  "contenu_attendu": "Cinq détails champ_manquant",
+  "comportement": "Rejet 422 listant tous les champs.",
+  "fuite_technique": false,
+  "conforme": true,
+  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"492ef3c1da574fa6\",\"details\":[{\"champ\":\"age\",\"code\":\"champ_manq"
+ },
+ {
+  "id": "S20",
+  "titre": "Booléen à la place de la durée",
+  "exigences": [
+   "EX03"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 422,
+  "statut_observe": 422,
+  "erreur_attendue": "donnees_invalides",
+  "erreur_observee": "donnees_invalides",
+  "details_manquants": [],
+  "contenu_attendu": "Détail duree_mois / type_invalide",
+  "comportement": "true n'est pas assimilé à 1 mois.",
+  "fuite_technique": false,
+  "conforme": true,
+  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"ec9fd3f69a154535\",\"details\":[{\"champ\":\"duree_mois\",\"code\":\"typ"
+ },
+ {
+  "id": "S21",
+  "titre": "Valeur nulle pour l'âge",
+  "exigences": [
+   "EX06",
+   "EX01"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 422,
+  "statut_observe": 422,
+  "erreur_attendue": "donnees_invalides",
+  "erreur_observee": "donnees_invalides",
+  "details_manquants": [],
+  "contenu_attendu": "Détail age / type_invalide",
+  "comportement": "null refusé.",
+  "fuite_technique": false,
+  "conforme": true,
+  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"f86a52e9323441ea\",\"details\":[{\"champ\":\"age\",\"code\":\"type_inval"
+ },
+ {
+  "id": "S22",
+  "titre": "Ancienneté incohérente avec l'âge (20 ans, 15 ans d'activité)",
+  "exigences": [
+   "EX12"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 422,
+  "statut_observe": 422,
+  "erreur_attendue": "donnees_invalides",
+  "erreur_observee": "donnees_invalides",
+  "details_manquants": [],
+  "contenu_attendu": "Détail anciennete_activite / incoherence",
+  "comportement": "Contrôle de cohérence inter-champs.",
+  "fuite_technique": false,
+  "conforme": true,
+  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"e0a6ef1a74554233\",\"details\":[{\"champ\":\"anciennete_activite\",\"c"
+ },
+ {
+  "id": "S23",
+  "titre": "Méthode non autorisée (GET /predict)",
+  "exigences": [
+   "EX10"
+  ],
+  "requete": "GET /predict",
+  "statut_attendu": 405,
+  "statut_observe": 405,
+  "erreur_attendue": "methode_non_autorisee",
+  "erreur_observee": "methode_non_autorisee",
+  "details_manquants": [],
+  "contenu_attendu": "Erreur methode_non_autorisee, en-tête Allow",
+  "comportement": "Rejet 405 au format uniforme.",
+  "fuite_technique": false,
+  "conforme": true,
+  "extrait_reponse": "{\"erreur\":\"methode_non_autorisee\",\"message\":\"Méthode HTTP non autorisée pour cette ressource.\",\"id_requete\":\"ba21c55752574dc9\"}"
+ },
+ {
+  "id": "S24",
+  "titre": "Ressource inconnue (GET /inconnu)",
+  "exigences": [
+   "EX10"
+  ],
+  "requete": "GET /inconnu",
+  "statut_attendu": 404,
+  "statut_observe": 404,
+  "erreur_attendue": "ressource_introuvable",
+  "erreur_observee": "ressource_introuvable",
+  "details_manquants": [],
+  "contenu_attendu": "Erreur ressource_introuvable",
+  "comportement": "Rejet 404 au format uniforme.",
+  "fuite_technique": false,
+  "conforme": true,
+  "extrait_reponse": "{\"erreur\":\"ressource_introuvable\",\"message\":\"La ressource demandée n'existe pas.\",\"id_requete\":\"05c321991abc4e0c\"}"
+ },
+ {
+  "id": "S25",
+  "titre": "JSON profondément imbriqué (4 900 niveaux, 9,8 Ko)",
+  "exigences": [
+   "EX10"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 422,
+  "statut_observe": 422,
+  "erreur_attendue": "donnees_invalides",
+  "erreur_observee": "donnees_invalides",
+  "details_manquants": [],
+  "contenu_attendu": "Détail corps / schema_invalide",
+  "comportement": "Aucune récursion non maîtrisée : JSON valide mais non conforme, rejet 422.",
+  "fuite_technique": false,
+  "conforme": true,
+  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"7f0c80a36fd74073\",\"details\":[{\"champ\":\"corps\",\"code\":\"schema_i"
+ },
+ {
+  "id": "S26",
+  "titre": "Entier gigantesque (10^400) pour le revenu",
+  "exigences": [
+   "EX02"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 422,
+  "statut_observe": 422,
+  "erreur_attendue": "donnees_invalides",
+  "erreur_observee": "donnees_invalides",
+  "details_manquants": [],
+  "contenu_attendu": "Détail revenu_mensuel / hors_limites",
+  "comportement": "Aucune conversion en flottant avant le contrôle des bornes.",
+  "fuite_technique": false,
+  "conforme": true,
+  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"3b6d6bca22de4611\",\"details\":[{\"champ\":\"revenu_mensuel\",\"code\":"
+ },
+ {
+  "id": "S27",
+  "titre": "Clé dupliquée dans le JSON (age deux fois, 35 puis -1)",
+  "exigences": [
+   "EX09",
+   "EX10"
+  ],
+  "requete": "POST /predict",
+  "statut_attendu": 400,
+  "statut_observe": 400,
+  "erreur_attendue": "json_invalide",
+  "erreur_observee": "json_invalide",
+  "details_manquants": [],
+  "contenu_attendu": "Erreur json_invalide",
+  "comportement": "Requête ambiguë refusée : pas de pollution de paramètres.",
+  "fuite_technique": false,
+  "conforme": true,
+  "extrait_reponse": "{\"erreur\":\"json_invalide\",\"message\":\"Le corps de la requête n'est pas un JSON valide.\",\"id_requete\":\"d44faaf354754287\"}"
+ }
+]
