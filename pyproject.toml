@@ -1,0 +1,43 @@
+[project]
+name = "creditrisk-test"
+version = "0.2.0"
+description = "Prototype de prédiction du risque de crédit et suite d'assurance qualité (Évaluation formative n°2 - Tests logiciels)"
+readme = "README.md"
+requires-python = ">=3.12"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+extend-exclude = ["reports"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "C4", "SIM"]
+# E501 : le formateur coupe le code ; les chaînes et docstrings en français ne sont pas coupées.
+ignore = ["E501"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["B011"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-ra --strict-markers"
+markers = [
+    "exigence(*ids): rattache le test aux exigences (EXnn) de la matrice de traçabilité",
+    "performance: test de performance léger (latence), exécutable sur un runner CPU standard",
+    "echec_volontaire: test volontairement défaillant, actif uniquement si DEMO_ECHEC=1",
+]
+filterwarnings = [
+    "error::sklearn.exceptions.InconsistentVersionWarning",
+]
+
+[tool.coverage.run]
+source = ["app", "ml"]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+exclude_lines = [
+    "pragma: no cover",
+    "if __name__ == .__main__.:",
+]

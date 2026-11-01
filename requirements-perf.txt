@@ -1,0 +1,4 @@
+# Outils des tests de charge (hors CI) : python -m pip install -r requirements-perf.txt
+-r requirements.txt
+locust==2.47.0
+matplotlib==3.11.2

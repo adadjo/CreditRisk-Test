@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# Outils de test et de qualité
+.pytest_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+reports/htmlcov/
+reports/coverage.xml
+reports/junit.xml
+reports/_tmp/
+
+# Éditeurs et système
+.idea/
+.vscode/
+.DS_Store
