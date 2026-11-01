@@ -1,0 +1,270 @@
+{
+ "seuil_decision": 0.3,
+ "global": {
+  "seuil": 0.3,
+  "n": 3000,
+  "taux_defaut": 0.225,
+  "rappel": 0.6222222222222222,
+  "precision": 0.631578947368421,
+  "f1": 0.6268656716417911,
+  "exactitude": 0.8333333333333334,
+  "auc_roc": 0.8358913580246913,
+  "brier": 0.11579554183833625,
+  "taux_faux_negatifs": 0.37777777777777777,
+  "vp": 420,
+  "fp": 245,
+  "fn": 255,
+  "vn": 2080
+ },
+ "segments_cles": [
+  {
+   "segment": "Ensemble",
+   "n": 3000,
+   "defauts": 675,
+   "faux_negatifs": 255,
+   "rappel": 0.6222222222222222,
+   "taux_faux_negatifs": 0.37777777777777777
+  },
+  {
+   "segment": "18-24 ans",
+   "n": 283,
+   "defauts": 91,
+   "faux_negatifs": 31,
+   "rappel": 0.6593406593406593,
+   "taux_faux_negatifs": 0.34065934065934067
+  },
+  {
+   "segment": "< 2 ans",
+   "n": 359,
+   "defauts": 135,
+   "faux_negatifs": 62,
+   "rappel": 0.5407407407407407,
+   "taux_faux_negatifs": 0.45925925925925926
+  },
+  {
+   "segment": ">= 24 mois",
+   "n": 1072,
+   "defauts": 135,
+   "faux_negatifs": 107,
+   "rappel": 0.2074074074074074,
+   "taux_faux_negatifs": 0.7925925925925926
+  },
+  {
+   "segment": "< 2 ans & >= 24 mois",
+   "n": 116,
+   "defauts": 48,
+   "faux_negatifs": 40,
+   "rappel": 0.16666666666666666,
+   "taux_faux_negatifs": 0.8333333333333334
+  }
+ ],
+ "pires_segments": [
+  {
+   "segment": "< 2 ans & >= 24 mois",
+   "n": 116,
+   "defauts": 48,
+   "faux_negatifs": 40,
+   "rappel": 0.16666666666666666,
+   "taux_faux_negatifs": 0.8333333333333334
+  },
+  {
+   "segment": "35-49 ans & >= 24 mois",
+   "n": 527,
+   "defauts": 60,
+   "faux_negatifs": 50,
+   "rappel": 0.16666666666666666,
+   "taux_faux_negatifs": 0.8333333333333334
+  },
+  {
+   "segment": ">= 24 mois & 120-250 k FCFA",
+   "n": 518,
+   "defauts": 58,
+   "faux_negatifs": 47,
+   "rappel": 0.1896551724137931,
+   "taux_faux_negatifs": 0.8103448275862069
+  },
+  {
+   "segment": ">= 24 mois",
+   "n": 1072,
+   "defauts": 135,
+   "faux_negatifs": 107,
+   "rappel": 0.2074074074074074,
+   "taux_faux_negatifs": 0.7925925925925926
+  },
+  {
+   "segment": "25-34 ans & >= 24 mois",
+   "n": 298,
+   "defauts": 38,
+   "faux_negatifs": 30,
+   "rappel": 0.21052631578947367,
+   "taux_faux_negatifs": 0.7894736842105263
+  },
+  {
+   "segment": ">= 24 mois & < 120 k FCFA",
+   "n": 240,
+   "defauts": 38,
+   "faux_negatifs": 30,
+   "rappel": 0.21052631578947367,
+   "taux_faux_negatifs": 0.7894736842105263
+  },
+  {
+   "segment": ">= 24 mois & > 250 k FCFA",
+   "n": 314,
+   "defauts": 39,
+   "faux_negatifs": 30,
+   "rappel": 0.23076923076923078,
+   "taux_faux_negatifs": 0.7692307692307693
+  },
+  {
+   "segment": "2-5 ans & >= 24 mois",
+   "n": 602,
+   "defauts": 64,
+   "faux_negatifs": 46,
+   "rappel": 0.28125,
+   "taux_faux_negatifs": 0.71875
+  }
+ ],
+ "balayage_seuils": [
+  {
+   "seuil": 0.1,
+   "rappel": 0.917037037037037,
+   "precision": 0.32155844155844154,
+   "f1": 0.47615384615384615,
+   "part_dossiers_signales": 0.6416666666666667,
+   "rappel[< 2 ans]": 0.9777777777777777,
+   "rappel[>= 24 mois]": 0.8148148148148148,
+   "rappel[< 2 ans & >= 24 mois]": 0.9583333333333334,
+   "rappel[18-24 ans]": 0.967032967032967
+  },
+  {
+   "seuil": 0.15,
+   "rappel": 0.8103703703703704,
+   "precision": 0.41345427059712775,
+   "f1": 0.5475475475475475,
+   "part_dossiers_signales": 0.441,
+   "rappel[< 2 ans]": 0.8740740740740741,
+   "rappel[>= 24 mois]": 0.5407407407407407,
+   "rappel[< 2 ans & >= 24 mois]": 0.6875,
+   "rappel[18-24 ans]": 0.8901098901098901
+  },
+  {
+   "seuil": 0.2,
+   "rappel": 0.7274074074074074,
+   "precision": 0.5005096839959225,
+   "f1": 0.5929951690821256,
+   "part_dossiers_signales": 0.327,
+   "rappel[< 2 ans]": 0.7111111111111111,
+   "rappel[>= 24 mois]": 0.35555555555555557,
+   "rappel[< 2 ans & >= 24 mois]": 0.3541666666666667,
+   "rappel[18-24 ans]": 0.8021978021978022
+  },
+  {
+   "seuil": 0.25,
+   "rappel": 0.68,
+   "precision": 0.568069306930693,
+   "f1": 0.6190155091031693,
+   "part_dossiers_signales": 0.2693333333333333,
+   "rappel[< 2 ans]": 0.6370370370370371,
+   "rappel[>= 24 mois]": 0.2740740740740741,
+   "rappel[< 2 ans & >= 24 mois]": 0.25,
+   "rappel[18-24 ans]": 0.7472527472527473
+  },
+  {
+   "seuil": 0.3,
+   "rappel": 0.6222222222222222,
+   "precision": 0.631578947368421,
+   "f1": 0.6268656716417911,
+   "part_dossiers_signales": 0.22166666666666668,
+   "rappel[< 2 ans]": 0.5407407407407407,
+   "rappel[>= 24 mois]": 0.2074074074074074,
+   "rappel[< 2 ans & >= 24 mois]": 0.16666666666666666,
+   "rappel[18-24 ans]": 0.6593406593406593
+  },
+  {
+   "seuil": 0.4,
+   "rappel": 0.5096296296296297,
+   "precision": 0.709278350515464,
+   "f1": 0.593103448275862,
+   "part_dossiers_signales": 0.16166666666666665,
+   "rappel[< 2 ans]": 0.4074074074074074,
+   "rappel[>= 24 mois]": 0.11851851851851852,
+   "rappel[< 2 ans & >= 24 mois]": 0.08333333333333333,
+   "rappel[18-24 ans]": 0.4945054945054945
+  },
+  {
+   "seuil": 0.5,
+   "rappel": 0.43407407407407406,
+   "precision": 0.7855227882037533,
+   "f1": 0.5591603053435115,
+   "part_dossiers_signales": 0.12433333333333334,
+   "rappel[< 2 ans]": 0.34814814814814815,
+   "rappel[>= 24 mois]": 0.05925925925925926,
+   "rappel[< 2 ans & >= 24 mois]": 0.041666666666666664,
+   "rappel[18-24 ans]": 0.4175824175824176
+  }
+ ],
+ "calibration": [
+  {
+   "tranche": "[0.0 ; 0.1[",
+   "n": 1075,
+   "probabilite_moyenne": 0.06395760854623697,
+   "frequence_observee": 0.052093023255813956
+  },
+  {
+   "tranche": "[0.1 ; 0.2[",
+   "n": 944,
+   "probabilite_moyenne": 0.14025668644340727,
+   "frequence_observee": 0.13559322033898305
+  },
+  {
+   "tranche": "[0.2 ; 0.3[",
+   "n": 316,
+   "probabilite_moyenne": 0.24495600959184738,
+   "frequence_observee": 0.22468354430379747
+  },
+  {
+   "tranche": "[0.3 ; 0.4[",
+   "n": 180,
+   "probabilite_moyenne": 0.3476632434909142,
+   "frequence_observee": 0.4222222222222222
+  },
+  {
+   "tranche": "[0.4 ; 0.5[",
+   "n": 112,
+   "probabilite_moyenne": 0.44528519948568285,
+   "frequence_observee": 0.45535714285714285
+  },
+  {
+   "tranche": "[0.5 ; 0.6[",
+   "n": 72,
+   "probabilite_moyenne": 0.5515314006032193,
+   "frequence_observee": 0.5555555555555556
+  },
+  {
+   "tranche": "[0.6 ; 0.7[",
+   "n": 73,
+   "probabilite_moyenne": 0.6497525246800345,
+   "frequence_observee": 0.726027397260274
+  },
+  {
+   "tranche": "[0.7 ; 0.8[",
+   "n": 66,
+   "probabilite_moyenne": 0.7444056230845195,
+   "frequence_observee": 0.8333333333333334
+  },
+  {
+   "tranche": "[0.8 ; 0.9[",
+   "n": 55,
+   "probabilite_moyenne": 0.8520824982154303,
+   "frequence_observee": 0.7818181818181819
+  },
+  {
+   "tranche": "[0.9 ; 1.0[",
+   "n": 107,
+   "probabilite_moyenne": 0.9657625847764524,
+   "frequence_observee": 0.9532710280373832
+  }
+ ],
+ "ece": 0.018346560584773474,
+ "min_defauts": 30
+}

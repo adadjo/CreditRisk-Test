@@ -71,6 +71,7 @@ def evaluer_cas_dores(
     lignes = []
     for cas_i, p_cand in zip(cas, probabilites_candidat, strict=True):
         p_ref = cas_i["probabilite_reference"]
+        p_cand = float(p_cand)
         niveau_ref = interpreter_probabilite(p_ref).niveau
         niveau_cand = interpreter_probabilite(p_cand).niveau
         ecart = p_cand - p_ref
@@ -91,8 +92,10 @@ def evaluer_cas_dores(
         )
     return {
         "ecart_absolu_max": max(abs(ligne["ecart"]) for ligne in lignes),
-        "nb_hors_tolerance": sum(ligne["hors_tolerance"] for ligne in lignes),
-        "nb_changements_niveau": sum(ligne["changement_niveau_injustifie"] for ligne in lignes),
+        "nb_hors_tolerance": int(sum(ligne["hors_tolerance"] for ligne in lignes)),
+        "nb_changements_niveau": int(
+            sum(ligne["changement_niveau_injustifie"] for ligne in lignes)
+        ),
         "cas": lignes,
     }
 

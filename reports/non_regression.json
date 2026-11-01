@@ -1,0 +1,790 @@
+{
+ "date": "2026-11-01",
+ "reference": {
+  "version": "1.0.0",
+  "metriques": {
+   "seuil": 0.3,
+   "n": 3000,
+   "taux_defaut": 0.225,
+   "rappel": 0.6222222222222222,
+   "precision": 0.631578947368421,
+   "f1": 0.6268656716417911,
+   "exactitude": 0.8333333333333334,
+   "auc_roc": 0.8358913580246913,
+   "brier": 0.11579554183833625,
+   "taux_faux_negatifs": 0.37777777777777777,
+   "vp": 420,
+   "fp": 245,
+   "fn": 255,
+   "vn": 2080
+  }
+ },
+ "tolerances": {
+  "version_document": "1.0",
+  "definies_le": "2026-11-01",
+  "regle": "Ces tolérances sont figées AVANT toute comparaison entre la version de référence et une nouvelle version. Toute modification doit être justifiée et validée par revue.",
+  "metriques": {
+   "rappel": {
+    "baisse_max_absolue": 0.03,
+    "plancher_absolu": 0.55,
+    "critique": true,
+    "justification": "Un faux négatif (défaut non détecté) coûte plus cher qu'une fausse alerte : le rappel est le critère critique."
+   },
+   "f1": {
+    "baisse_max_absolue": 0.03,
+    "critique": true,
+    "justification": "Garde-fou contre un gain de rappel obtenu en dégradant massivement la précision."
+   },
+   "auc_roc": {
+    "baisse_max_absolue": 0.02,
+    "critique": false,
+    "justification": "Qualité du classement indépendante du seuil ; une baisse déclenche une revue."
+   },
+   "precision": {
+    "baisse_max_absolue": 0.05,
+    "critique": false,
+    "justification": "Une baisse modérée est acceptable (davantage de dossiers examinés), au-delà elle surcharge les agents."
+   },
+   "brier": {
+    "hausse_max_absolue": 0.01,
+    "critique": false,
+    "justification": "Qualité de calibration des probabilités."
+   }
+  },
+  "cas_dores": {
+   "ecart_probabilite_max": 0.05,
+   "marge_seuil": 0.05,
+   "regle_niveau": "Le niveau de risque d'un cas doré ne doit pas changer, sauf si sa probabilité de référence est à moins de marge_seuil d'un seuil (0.30 ou 0.60)."
+  },
+  "rechargement": {
+   "ecart_max_absolu": 1e-12
+  },
+  "reproductibilite": {
+   "ecart_max_absolu": 1e-12
+  }
+ },
+ "candidats": [
+  {
+   "version": "v1.0.1",
+   "nature": "Équivalent",
+   "description": "Régression logistique, régularisation C = 0,5 (au lieu de 1,0)",
+   "metriques": {
+    "seuil": 0.3,
+    "n": 3000,
+    "taux_defaut": 0.225,
+    "rappel": 0.6222222222222222,
+    "precision": 0.6306306306306306,
+    "f1": 0.6263982102908278,
+    "exactitude": 0.833,
+    "auc_roc": 0.8358442054958184,
+    "brier": 0.1158089041250535,
+    "taux_faux_negatifs": 0.37777777777777777,
+    "vp": 420,
+    "fp": 246,
+    "fn": 255,
+    "vn": 2079
+   },
+   "comparaison": {
+    "verdict": "CONFORME",
+    "controles_metriques": [
+     {
+      "metrique": "rappel",
+      "reference": 0.6222222222222222,
+      "candidat": 0.6222222222222222,
+      "ecart": 0.0,
+      "critique": true,
+      "statut": "OK",
+      "detail": ""
+     },
+     {
+      "metrique": "f1",
+      "reference": 0.6268656716417911,
+      "candidat": 0.6263982102908278,
+      "ecart": -0.0004674613509633163,
+      "critique": true,
+      "statut": "OK",
+      "detail": ""
+     },
+     {
+      "metrique": "auc_roc",
+      "reference": 0.8358913580246913,
+      "candidat": 0.8358442054958184,
+      "ecart": -4.715252887288468e-05,
+      "critique": false,
+      "statut": "OK",
+      "detail": ""
+     },
+     {
+      "metrique": "precision",
+      "reference": 0.631578947368421,
+      "candidat": 0.6306306306306306,
+      "ecart": -0.0009483167377903889,
+      "critique": false,
+      "statut": "OK",
+      "detail": ""
+     },
+     {
+      "metrique": "brier",
+      "reference": 0.11579554183833625,
+      "candidat": 0.1158089041250535,
+      "ecart": 1.3362286717250038e-05,
+      "critique": false,
+      "statut": "OK",
+      "detail": ""
+     }
+    ],
+    "cas_dores": {
+     "ecart_absolu_max": 0.0012017913779346356,
+     "nb_hors_tolerance": 0,
+     "nb_changements_niveau": 0,
+     "cas": [
+      {
+       "id": "G01",
+       "p_reference": 0.1273113126,
+       "p_candidat": 0.12770207080899834,
+       "ecart": 0.00039075820899833746,
+       "niveau_reference": "faible",
+       "niveau_candidat": "faible",
+       "hors_tolerance": false,
+       "changement_niveau_injustifie": false
+      },
+      {
+       "id": "G02",
+       "p_reference": 0.0124710165,
+       "p_candidat": 0.01248017385213023,
+       "ecart": 9.157352130230445e-06,
+       "niveau_reference": "faible",
+       "niveau_candidat": "faible",
+       "hors_tolerance": false,
+       "changement_niveau_injustifie": false
+      },
+      {
+       "id": "G03",
+       "p_reference": 0.0417579709,
+       "p_candidat": 0.04182102394700509,
+       "ecart": 6.305304700509468e-05,
+       "niveau_reference": "faible",
+       "niveau_candidat": "faible",
+       "hors_tolerance": false,
+       "changement_niveau_injustifie": false
+      },
+      {
+       "id": "G04",
+       "p_reference": 0.0042867511,
+       "p_candidat": 0.004298183379387045,
+       "ecart": 1.1432279387045205e-05,
+       "niveau_reference": "faible",
+       "niveau_candidat": "faible",
+       "hors_tolerance": false,
+       "changement_niveau_injustifie": false
+      },
+      {
+       "id": "G05",
+       "p_reference": 0.2129964792,
+       "p_candidat": 0.2135396974224255,
+       "ecart": 0.0005432182224255067,
+       "niveau_reference": "faible",
+       "niveau_candidat": "faible",
+       "hors_tolerance": false,
+       "changement_niveau_injustifie": false
+      },
+      {
+       "id": "G06",
+       "p_reference": 0.8194988272,
+       "p_candidat": 0.8182970358220654,
+       "ecart": -0.0012017913779346356,
+       "niveau_reference": "eleve",
+       "niveau_candidat": "eleve",
+       "hors_tolerance": false,
+       "changement_niveau_injustifie": false
+      },
+      {
+       "id": "G07",
+       "p_reference": 0.9994140717,
+       "p_candidat": 0.9993887601971816,
+       "ecart": -2.5311502818370357e-05,
+       "niveau_reference": "eleve",
+       "niveau_candidat": "eleve",
+       "hors_tolerance": false,
+       "changement_niveau_injustifie": false
+      },
+      {
+       "id": "G08",
+       "p_reference": 0.4082197904,
+       "p_candidat": 0.4084620739344695,
+       "ecart": 0.00024228353446947848,
+       "niveau_reference": "modere",
+       "niveau_candidat": "modere",
+       "hors_tolerance": false,
+       "changement_niveau_injustifie": false
+      },
+      {
+       "id": "G09",
+       "p_reference": 0.3732886015,
+       "p_candidat": 0.37326438639698567,
+       "ecart": -2.42151030143134e-05,
+       "niveau_reference": "modere",
+       "niveau_candidat": "modere",
+       "hors_tolerance": false,
+       "changement_niveau_injustifie": false
+      },
+      {
+       "id": "G10",
+       "p_reference": 0.365262602,
+       "p_candidat": 0.36585575331232423,
+       "ecart": 0.000593151312324236,
+       "niveau_reference": "modere",
+       "niveau_candidat": "modere",
+       "hors_tolerance": false,
+       "changement_niveau_injustifie": false
+      },
+      {
+       "id": "G11",
+       "p_reference": 0.4092031331,
+       "p_candidat": 0.40851871689746483,
+       "ecart": -0.0006844162025351763,
+       "niveau_reference": "modere",
+       "niveau_candidat": "modere",
+       "hors_tolerance": false,
+       "changement_niveau_injustifie": false
+      },
+      {
+       "id": "G12",
+       "p_reference": 0.2908414588,
+       "p_candidat": 0.29157427143445763,
+       "ecart": 0.0007328126344576247,
+       "niveau_reference": "faible",
+       "niveau_candidat": "faible",
+       "hors_tolerance": false,
+       "changement_niveau_injustifie": false
+      },
+      {
+       "id": "G13",
+       "p_reference": 0.3436090042,
+       "p_candidat": 0.34392128143013895,
+       "ecart": 0.0003122772301389354,
+       "niveau_reference": "modere",
+       "niveau_candidat": "modere",
+       "hors_tolerance": false,
+       "changement_niveau_injustifie": false
+      },
+      {
+       "id": "G14",
+       "p_reference": 0.0003234598,
+       "p_candidat": 0.0003282755251729386,
+       "ecart": 4.815725172938599e-06,
+       "niveau_reference": "faible",
+       "niveau_candidat": "faible",
+       "hors_tolerance": false,
+       "changement_niveau_injustifie": false
+      },
+      {
+       "id": "G15",
+       "p_reference": 0.0080730071,
+       "p_candidat": 0.008066776955600133,
+       "ecart": -6.230144399866494e-06,
+       "niveau_reference": "faible",
+       "niveau_candidat": "faible",
+       "hors_tolerance": false,
+       "changement_niveau_injustifie": false
+      },
+      {
+       "id": "G16",
+       "p_reference": 0.9999824183,
+       "p_candidat": 0.999981231031874,
+       "ecart": -1.1872681260349793e-06,
+       "niveau_reference": "eleve",
+       "niveau_candidat": "eleve",
+       "hors_tolerance": false,
+       "changement_niveau_injustifie": false
+      }
+     ]
+    }
+   }
+  },
+  {
+   "version": "v1.1.0",
+   "nature": "Amélioré",
+   "description": "Arbre de gradient (modèle non linéaire)",
+   "metriques": {
+    "seuil": 0.3,
+    "n": 3000,
+    "taux_defaut": 0.225,
+    "rappel": 0.6444444444444445,
+    "precision": 0.6170212765957447,
+    "f1": 0.6304347826086957,
+    "exactitude": 0.83,
+    "auc_roc": 0.8425172441258464,
+    "brier": 0.11355624103863111,
+    "taux_faux_negatifs": 0.35555555555555557,
+    "vp": 435,
+    "fp": 270,
+    "fn": 240,
+    "vn": 2055
+   },
+   "comparaison": {
+    "verdict": "REVUE_REQUISE",
+    "controles_metriques": [
+     {
+      "metrique": "rappel",
+      "reference": 0.6222222222222222,
+      "candidat": 0.6444444444444445,
+      "ecart": 0.022222222222222254,
+      "critique": true,
+      "statut": "OK",
+      "detail": ""
+     },
+     {
+      "metrique": "f1",
+      "reference": 0.6268656716417911,
+      "candidat": 0.6304347826086957,
+      "ecart": 0.0035691109669045984,
+      "critique": true,
+      "statut": "OK",
+      "detail": ""
+     },
+     {
+      "metrique": "auc_roc",
+      "reference": 0.8358913580246913,
+      "candidat": 0.8425172441258464,
+      "ecart": 0.0066258861011551096,
+      "critique": false,
+      "statut": "OK",
+      "detail": ""
+     },
+     {
+      "metrique": "precision",
+      "reference": 0.631578947368421,
+      "candidat": 0.6170212765957447,
+      "ecart": -0.014557670772676334,
+      "critique": false,
+      "statut": "OK",
+      "detail": ""
+     },
+     {
+      "metrique": "brier",
+      "reference": 0.11579554183833625,
+      "candidat": 0.11355624103863111,
+      "ecart": -0.002239300799705135,
+      "critique": false,
+      "statut": "OK",
+      "detail": ""
+     }
+    ],
+    "cas_dores": {
+     "ecart_absolu_max": 0.31776028710537474,
+     "nb_hors_tolerance": 5,
+     "nb_changements_niveau": 1,
+     "cas": [
+      {
+       "id": "G01",
+       "p_reference": 0.1273113126,
+       "p_candidat": 0.11374366370212673,
+       "ecart": -0.013567648897873277,
+       "niveau_reference": "faible",
+       "niveau_candidat": "faible",
+       "hors_tolerance": false,
+       "changement_niveau_injustifie": false
+      },
+      {
+       "id": "G02",
+       "p_reference": 0.0124710165,
+       "p_candidat": 0.09417392002516319,
+       "ecart": 0.08170290352516318,
+       "niveau_reference": "faible",
+       "niveau_candidat": "faible",
+       "hors_tolerance": true,
+       "changement_niveau_injustifie": false
+      },
+      {
+       "id": "G03",
+       "p_reference": 0.0417579709,
+       "p_candidat": 0.042528932917635195,
+       "ecart": 0.0007709620176351989,
+       "niveau_reference": "faible",
+       "niveau_candidat": "faible",
+       "hors_tolerance": false,
+       "changement_niveau_injustifie": false
+      },
+      {
+       "id": "G04",
+       "p_reference": 0.0042867511,
+       "p_candidat": 0.09132865971967075,
+       "ecart": 0.08704190861967075,
+       "niveau_reference": "faible",
+       "niveau_candidat": "faible",
+       "hors_tolerance": true,
+       "changement_niveau_injustifie": false
+      },
+      {
+       "id": "G05",
+       "p_reference": 0.2129964792,
+       "p_candidat": 0.17414528940885285,
+       "ecart": -0.038851189791147156,
+       "niveau_reference": "faible",
+       "niveau_candidat": "faible",
+       "hors_tolerance": false,
+       "changement_niveau_injustifie": false
+      },
+      {
+       "id": "G06",
+       "p_reference": 0.8194988272,
+       "p_candidat": 0.7902848705771577,
+       "ecart": -0.02921395662284232,
+       "niveau_reference": "eleve",
+       "niveau_candidat": "eleve",
+       "hors_tolerance": false,
+       "changement_niveau_injustifie": false
+      },
+      {
+       "id": "G07",
+       "p_reference": 0.9994140717,
+       "p_candidat": 0.9976443532363446,
+       "ecart": -0.0017697184636553676,
+       "niveau_reference": "eleve",
+       "niveau_candidat": "eleve",
+       "hors_tolerance": false,
+       "changement_niveau_injustifie": false
+      },
+      {
+       "id": "G08",
+       "p_reference": 0.4082197904,
+       "p_candidat": 0.4426478653780253,
+       "ecart": 0.0344280749780253,
+       "niveau_reference": "modere",
+       "niveau_candidat": "modere",
+       "hors_tolerance": false,
+       "changement_niveau_injustifie": false
+      },
+      {
+       "id": "G09",
+       "p_reference": 0.3732886015,
+       "p_candidat": 0.6910488886053747,
+       "ecart": 0.31776028710537474,
+       "niveau_reference": "modere",
+       "niveau_candidat": "eleve",
+       "hors_tolerance": true,
+       "changement_niveau_injustifie": true
+      },
+      {
+       "id": "G10",
+       "p_reference": 0.365262602,
+       "p_candidat": 0.3940594650718896,
+       "ecart": 0.02879686307188961,
+       "niveau_reference": "modere",
+       "niveau_candidat": "modere",
+       "hors_tolerance": false,
+       "changement_niveau_injustifie": false
+      },
+      {
+       "id": "G11",
+       "p_reference": 0.4092031331,
+       "p_candidat": 0.39893685722838435,
+       "ecart": -0.01026627587161566,
+       "niveau_reference": "modere",
+       "niveau_candidat": "modere",
+       "hors_tolerance": false,
+       "changement_niveau_injustifie": false
+      },
+      {
+       "id": "G12",
+       "p_reference": 0.2908414588,
+       "p_candidat": 0.23159400213406303,
+       "ecart": -0.059247456665936976,
+       "niveau_reference": "faible",
+       "niveau_candidat": "faible",
+       "hors_tolerance": true,
+       "changement_niveau_injustifie": false
+      },
+      {
+       "id": "G13",
+       "p_reference": 0.3436090042,
+       "p_candidat": 0.3225823907261033,
+       "ecart": -0.021026613473896727,
+       "niveau_reference": "modere",
+       "niveau_candidat": "modere",
+       "hors_tolerance": false,
+       "changement_niveau_injustifie": false
+      },
+      {
+       "id": "G14",
+       "p_reference": 0.0003234598,
+       "p_candidat": 0.05209696615968219,
+       "ecart": 0.05177350635968219,
+       "niveau_reference": "faible",
+       "niveau_candidat": "faible",
+       "hors_tolerance": true,
+       "changement_niveau_injustifie": false
+      },
+      {
+       "id": "G15",
+       "p_reference": 0.0080730071,
+       "p_candidat": 0.04808413014991281,
+       "ecart": 0.040011123049912806,
+       "niveau_reference": "faible",
+       "niveau_candidat": "faible",
+       "hors_tolerance": false,
+       "changement_niveau_injustifie": false
+      },
+      {
+       "id": "G16",
+       "p_reference": 0.9999824183,
+       "p_candidat": 0.9877824949298812,
+       "ecart": -0.01219992337011877,
+       "niveau_reference": "eleve",
+       "niveau_candidat": "eleve",
+       "hors_tolerance": false,
+       "changement_niveau_injustifie": false
+      }
+     ]
+    }
+   }
+  },
+  {
+   "version": "v1.2.0",
+   "nature": "Dégradé",
+   "description": "Régression logistique sur-régularisée, C = 0,0005",
+   "metriques": {
+    "seuil": 0.3,
+    "n": 3000,
+    "taux_defaut": 0.225,
+    "rappel": 0.5377777777777778,
+    "precision": 0.6810506566604128,
+    "f1": 0.6009933774834437,
+    "exactitude": 0.8393333333333334,
+    "auc_roc": 0.8216659498207886,
+    "brier": 0.13494722148102842,
+    "taux_faux_negatifs": 0.4622222222222222,
+    "vp": 363,
+    "fp": 170,
+    "fn": 312,
+    "vn": 2155
+   },
+   "comparaison": {
+    "verdict": "REGRESSION",
+    "controles_metriques": [
+     {
+      "metrique": "rappel",
+      "reference": 0.6222222222222222,
+      "candidat": 0.5377777777777778,
+      "ecart": -0.08444444444444443,
+      "critique": true,
+      "statut": "ECHEC",
+      "detail": "baisse de 0.0844 > 0.03; valeur 0.5378 sous le plancher 0.55"
+     },
+     {
+      "metrique": "f1",
+      "reference": 0.6268656716417911,
+      "candidat": 0.6009933774834437,
+      "ecart": -0.025872294158347353,
+      "critique": true,
+      "statut": "OK",
+      "detail": ""
+     },
+     {
+      "metrique": "auc_roc",
+      "reference": 0.8358913580246913,
+      "candidat": 0.8216659498207886,
+      "ecart": -0.014225408203902723,
+      "critique": false,
+      "statut": "OK",
+      "detail": ""
+     },
+     {
+      "metrique": "precision",
+      "reference": 0.631578947368421,
+      "candidat": 0.6810506566604128,
+      "ecart": 0.04947170929199174,
+      "critique": false,
+      "statut": "OK",
+      "detail": ""
+     },
+     {
+      "metrique": "brier",
+      "reference": 0.11579554183833625,
+      "candidat": 0.13494722148102842,
+      "ecart": 0.019151679642692168,
+      "critique": false,
+      "statut": "ECART",
+      "detail": "hausse de 0.0192 > 0.01"
+     }
+    ],
+    "cas_dores": {
+     "ecart_absolu_max": 0.37007908185830385,
+     "nb_hors_tolerance": 13,
+     "nb_changements_niveau": 5,
+     "cas": [
+      {
+       "id": "G01",
+       "p_reference": 0.1273113126,
+       "p_candidat": 0.2122985159986547,
+       "ecart": 0.0849872033986547,
+       "niveau_reference": "faible",
+       "niveau_candidat": "faible",
+       "hors_tolerance": true,
+       "changement_niveau_injustifie": false
+      },
+      {
+       "id": "G02",
+       "p_reference": 0.0124710165,
+       "p_candidat": 0.09611064647051802,
+       "ecart": 0.08363962997051802,
+       "niveau_reference": "faible",
+       "niveau_candidat": "faible",
+       "hors_tolerance": true,
+       "changement_niveau_injustifie": false
+      },
+      {
+       "id": "G03",
+       "p_reference": 0.0417579709,
+       "p_candidat": 0.12884201148067922,
+       "ecart": 0.08708404058067923,
+       "niveau_reference": "faible",
+       "niveau_candidat": "faible",
+       "hors_tolerance": true,
+       "changement_niveau_injustifie": false
+      },
+      {
+       "id": "G04",
+       "p_reference": 0.0042867511,
+       "p_candidat": 0.07375600367835579,
+       "ecart": 0.06946925257835579,
+       "niveau_reference": "faible",
+       "niveau_candidat": "faible",
+       "hors_tolerance": true,
+       "changement_niveau_injustifie": false
+      },
+      {
+       "id": "G05",
+       "p_reference": 0.2129964792,
+       "p_candidat": 0.25335656181288735,
+       "ecart": 0.040360082612887344,
+       "niveau_reference": "faible",
+       "niveau_candidat": "faible",
+       "hors_tolerance": false,
+       "changement_niveau_injustifie": false
+      },
+      {
+       "id": "G06",
+       "p_reference": 0.8194988272,
+       "p_candidat": 0.44941974534169615,
+       "ecart": -0.37007908185830385,
+       "niveau_reference": "eleve",
+       "niveau_candidat": "modere",
+       "hors_tolerance": true,
+       "changement_niveau_injustifie": true
+      },
+      {
+       "id": "G07",
+       "p_reference": 0.9994140717,
+       "p_candidat": 0.8096050297605979,
+       "ecart": -0.18980904193940207,
+       "niveau_reference": "eleve",
+       "niveau_candidat": "eleve",
+       "hors_tolerance": true,
+       "changement_niveau_injustifie": false
+      },
+      {
+       "id": "G08",
+       "p_reference": 0.4082197904,
+       "p_candidat": 0.2905513235835616,
+       "ecart": -0.11766846681643839,
+       "niveau_reference": "modere",
+       "niveau_candidat": "faible",
+       "hors_tolerance": true,
+       "changement_niveau_injustifie": true
+      },
+      {
+       "id": "G09",
+       "p_reference": 0.3732886015,
+       "p_candidat": 0.23372786572422166,
+       "ecart": -0.13956073577577832,
+       "niveau_reference": "modere",
+       "niveau_candidat": "faible",
+       "hors_tolerance": true,
+       "changement_niveau_injustifie": true
+      },
+      {
+       "id": "G10",
+       "p_reference": 0.365262602,
+       "p_candidat": 0.28005076574241067,
+       "ecart": -0.08521183625758932,
+       "niveau_reference": "modere",
+       "niveau_candidat": "faible",
+       "hors_tolerance": true,
+       "changement_niveau_injustifie": true
+      },
+      {
+       "id": "G11",
+       "p_reference": 0.4092031331,
+       "p_candidat": 0.22552937183676103,
+       "ecart": -0.18367376126323898,
+       "niveau_reference": "modere",
+       "niveau_candidat": "faible",
+       "hors_tolerance": true,
+       "changement_niveau_injustifie": true
+      },
+      {
+       "id": "G12",
+       "p_reference": 0.2908414588,
+       "p_candidat": 0.257383584608287,
+       "ecart": -0.03345787419171303,
+       "niveau_reference": "faible",
+       "niveau_candidat": "faible",
+       "hors_tolerance": false,
+       "changement_niveau_injustifie": false
+      },
+      {
+       "id": "G13",
+       "p_reference": 0.3436090042,
+       "p_candidat": 0.2625298528638927,
+       "ecart": -0.08107915133610732,
+       "niveau_reference": "modere",
+       "niveau_candidat": "faible",
+       "hors_tolerance": true,
+       "changement_niveau_injustifie": false
+      },
+      {
+       "id": "G14",
+       "p_reference": 0.0003234598,
+       "p_candidat": 0.03331748101634323,
+       "ecart": 0.032994021216343226,
+       "niveau_reference": "faible",
+       "niveau_candidat": "faible",
+       "hors_tolerance": false,
+       "changement_niveau_injustifie": false
+      },
+      {
+       "id": "G15",
+       "p_reference": 0.0080730071,
+       "p_candidat": 0.1008653683081072,
+       "ecart": 0.0927923612081072,
+       "niveau_reference": "faible",
+       "niveau_candidat": "faible",
+       "hors_tolerance": true,
+       "changement_niveau_injustifie": false
+      },
+      {
+       "id": "G16",
+       "p_reference": 0.9999824183,
+       "p_candidat": 0.8892485429267957,
+       "ecart": -0.11073387537320434,
+       "niveau_reference": "eleve",
+       "niveau_candidat": "eleve",
+       "hors_tolerance": true,
+       "changement_niveau_injustifie": false
+      }
+     ]
+    }
+   }
+  }
+ ],
+ "regression_logicielle": {
+  "reussis_v0_1": 185,
+  "echecs_v0_1": 269,
+  "reussis_v0_2": 454,
+  "echecs_v0_2": 0,
+  "regressions_introduites": [],
+  "tests_corriges": 269
+ }
+}
