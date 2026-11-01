@@ -5,7 +5,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from pathlib import Path
 
-VERSION_APPLICATION = "0.1.0"
+VERSION_APPLICATION = "0.2.0"
 
 RACINE = Path(__file__).resolve().parent.parent
 CHEMIN_MODELE = RACINE / "model" / "credit_risk_v1.0.0.joblib"
