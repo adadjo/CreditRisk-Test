@@ -1,0 +1,35 @@
+{
+  "version_modele": "1.0.0",
+  "empreinte_modele_sha256": "30da755d9500a89ac8b84b68f395c6d8d423ee15d6af6a1ce43a8c4e72b85492",
+  "jeu_evaluation": {
+    "fichier": "data/jeu_evaluation.csv",
+    "sha256": "321d84c477b6cf972533b0c92dda1ed9c67bca0cbc79fc41295ec5aca960d7ea",
+    "n": 3000
+  },
+  "seuil_decision": 0.3,
+  "metriques": {
+    "seuil": 0.3,
+    "n": 3000,
+    "taux_defaut": 0.225,
+    "rappel": 0.6222222222222222,
+    "precision": 0.631578947368421,
+    "f1": 0.6268656716417911,
+    "exactitude": 0.8333333333333334,
+    "auc_roc": 0.8358913580246913,
+    "brier": 0.11579554183833625,
+    "taux_faux_negatifs": 0.37777777777777777,
+    "vp": 420,
+    "fp": 245,
+    "fn": 255,
+    "vn": 2080
+  },
+  "coefficients_standardises": {
+    "age": -0.22202974862153796,
+    "log_revenu": -0.010546863501860366,
+    "log_montant": -0.003250151020257894,
+    "duree_mois": 0.2719430052838666,
+    "anciennete_activite": -0.436805034390591,
+    "taux_effort": 1.709664738846314
+  },
+  "ordonnee_origine": -1.4944042928899475
+}

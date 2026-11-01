@@ -1,0 +1,37 @@
+{
+  "version_contrat": "1.0",
+  "definition": "Clés et types des réponses de l'API ; toute modification est un changement de contrat à valider explicitement.",
+  "predict_200": {
+    "probabilite_defaut": "float",
+    "niveau_risque": "str",
+    "recommandation": "str",
+    "alertes": "list",
+    "version_modele": "str",
+    "id_requete": "str"
+  },
+  "predict_erreur": {
+    "erreur": "str",
+    "message": "str",
+    "id_requete": "str",
+    "details": "list"
+  },
+  "health_200": {
+    "statut": "str",
+    "modele_charge": "bool",
+    "version_application": "str"
+  },
+  "model_info_200": {
+    "nom": "str",
+    "version": "str",
+    "algorithme": "str",
+    "date_entrainement": "str",
+    "variables": "list",
+    "nb_variables": "int",
+    "empreinte_sha256": "str",
+    "metriques_reference": "dict",
+    "donnees": "dict",
+    "seuils_risque": "dict",
+    "version_application": "str"
+  },
+  "niveaux_risque": ["faible", "modere", "eleve"]
+}

@@ -1,0 +1,62 @@
+{
+  "nom": "credit_risk",
+  "version": "1.0.0",
+  "algorithme": "LogisticRegression",
+  "description": "Régression logistique sur données synthétiques (modèle de test versionné).",
+  "date_entrainement": "2026-11-01",
+  "variables": [
+    "age",
+    "log_revenu",
+    "log_montant",
+    "duree_mois",
+    "anciennete_activite",
+    "taux_effort"
+  ],
+  "empreinte_sha256": "30da755d9500a89ac8b84b68f395c6d8d423ee15d6af6a1ce43a8c4e72b85492",
+  "fichier_modele": "credit_risk_v1.0.0.joblib",
+  "domaine_entrainement": {
+    "age": {
+      "min": 18.0,
+      "max": 70.0
+    },
+    "revenu_mensuel": {
+      "min": 40000.0,
+      "max": 1556000.0
+    },
+    "montant_credit": {
+      "min": 50000.0,
+      "max": 14610000.0
+    },
+    "duree_mois": {
+      "min": 6.0,
+      "max": 48.0
+    },
+    "anciennete_activite": {
+      "min": 0.0,
+      "max": 26.0
+    },
+    "taux_effort": {
+      "min": 0.015801729873586162,
+      "max": 5.070754716981132
+    }
+  },
+  "metriques_reference": {
+    "seuil": 0.3,
+    "rappel": 0.6222222222222222,
+    "precision": 0.631578947368421,
+    "f1": 0.6268656716417911,
+    "auc_roc": 0.8358913580246913,
+    "exactitude": 0.8333333333333334,
+    "brier": 0.11579554183833625
+  },
+  "donnees": {
+    "type": "synthetique",
+    "avertissement": "Données synthétiques générées pour tester le système. Les métriques ne démontrent pas la performance réelle d'un modèle de crédit.",
+    "n_entrainement": 9000,
+    "taux_defaut_entrainement": 0.225
+  },
+  "bibliotheques": {
+    "scikit_learn": "1.9.1",
+    "numpy": "2.5.3"
+  }
+}

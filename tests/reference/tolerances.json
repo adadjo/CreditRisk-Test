@@ -1,0 +1,44 @@
+{
+  "version_document": "1.0",
+  "definies_le": "2026-11-01",
+  "regle": "Ces tolérances sont figées AVANT toute comparaison entre la version de référence et une nouvelle version. Toute modification doit être justifiée et validée par revue.",
+  "metriques": {
+    "rappel": {
+      "baisse_max_absolue": 0.03,
+      "plancher_absolu": 0.55,
+      "critique": true,
+      "justification": "Un faux négatif (défaut non détecté) coûte plus cher qu'une fausse alerte : le rappel est le critère critique."
+    },
+    "f1": {
+      "baisse_max_absolue": 0.03,
+      "critique": true,
+      "justification": "Garde-fou contre un gain de rappel obtenu en dégradant massivement la précision."
+    },
+    "auc_roc": {
+      "baisse_max_absolue": 0.02,
+      "critique": false,
+      "justification": "Qualité du classement indépendante du seuil ; une baisse déclenche une revue."
+    },
+    "precision": {
+      "baisse_max_absolue": 0.05,
+      "critique": false,
+      "justification": "Une baisse modérée est acceptable (davantage de dossiers examinés), au-delà elle surcharge les agents."
+    },
+    "brier": {
+      "hausse_max_absolue": 0.01,
+      "critique": false,
+      "justification": "Qualité de calibration des probabilités."
+    }
+  },
+  "cas_dores": {
+    "ecart_probabilite_max": 0.05,
+    "marge_seuil": 0.05,
+    "regle_niveau": "Le niveau de risque d'un cas doré ne doit pas changer, sauf si sa probabilité de référence est à moins de marge_seuil d'un seuil (0.30 ou 0.60)."
+  },
+  "rechargement": {
+    "ecart_max_absolu": 1e-12
+  },
+  "reproductibilite": {
+    "ecart_max_absolu": 1e-12
+  }
+}

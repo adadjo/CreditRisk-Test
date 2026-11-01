@@ -1,0 +1,194 @@
+[
+  {
+    "id": "G01",
+    "description": "Profil du sujet (exemple de l'énoncé)",
+    "entree": {
+      "age": 35,
+      "revenu_mensuel": 250000,
+      "montant_credit": 1000000,
+      "duree_mois": 12,
+      "anciennete_activite": 4
+    },
+    "probabilite_reference": 0.1273113126
+  },
+  {
+    "id": "G02",
+    "description": "Revenu élevé, crédit modeste, longue durée, ancien",
+    "entree": {
+      "age": 45,
+      "revenu_mensuel": 800000,
+      "montant_credit": 1500000,
+      "duree_mois": 24,
+      "anciennete_activite": 15
+    },
+    "probabilite_reference": 0.0124710165
+  },
+  {
+    "id": "G03",
+    "description": "Revenu moyen, taux d'effort faible, ancienneté solide",
+    "entree": {
+      "age": 40,
+      "revenu_mensuel": 300000,
+      "montant_credit": 900000,
+      "duree_mois": 24,
+      "anciennete_activite": 8
+    },
+    "probabilite_reference": 0.0417579709
+  },
+  {
+    "id": "G04",
+    "description": "Cadre stable, petit crédit court",
+    "entree": {
+      "age": 52,
+      "revenu_mensuel": 600000,
+      "montant_credit": 600000,
+      "duree_mois": 12,
+      "anciennete_activite": 20
+    },
+    "probabilite_reference": 0.0042867511
+  },
+  {
+    "id": "G05",
+    "description": "Taux d'effort modéré, ancienneté moyenne",
+    "entree": {
+      "age": 33,
+      "revenu_mensuel": 200000,
+      "montant_credit": 1200000,
+      "duree_mois": 12,
+      "anciennete_activite": 5
+    },
+    "probabilite_reference": 0.2129964792
+  },
+  {
+    "id": "G06",
+    "description": "Taux d'effort élevé, ancienneté moyenne",
+    "entree": {
+      "age": 30,
+      "revenu_mensuel": 150000,
+      "montant_credit": 1500000,
+      "duree_mois": 9,
+      "anciennete_activite": 3
+    },
+    "probabilite_reference": 0.8194988272
+  },
+  {
+    "id": "G07",
+    "description": "Taux d'effort très élevé, courte durée",
+    "entree": {
+      "age": 28,
+      "revenu_mensuel": 120000,
+      "montant_credit": 1800000,
+      "duree_mois": 6,
+      "anciennete_activite": 2
+    },
+    "probabilite_reference": 0.9994140717
+  },
+  {
+    "id": "G08",
+    "description": "Jeune demandeur, ancienneté nulle, crédit court",
+    "entree": {
+      "age": 21,
+      "revenu_mensuel": 100000,
+      "montant_credit": 600000,
+      "duree_mois": 12,
+      "anciennete_activite": 0
+    },
+    "probabilite_reference": 0.4082197904
+  },
+  {
+    "id": "G09",
+    "description": "Jeune demandeur, ancienneté nulle, durée longue",
+    "entree": {
+      "age": 22,
+      "revenu_mensuel": 110000,
+      "montant_credit": 1300000,
+      "duree_mois": 36,
+      "anciennete_activite": 0
+    },
+    "probabilite_reference": 0.3732886015
+  },
+  {
+    "id": "G10",
+    "description": "Ancienneté faible, durée 24 mois",
+    "entree": {
+      "age": 29,
+      "revenu_mensuel": 180000,
+      "montant_credit": 2000000,
+      "duree_mois": 24,
+      "anciennete_activite": 1
+    },
+    "probabilite_reference": 0.365262602
+  },
+  {
+    "id": "G11",
+    "description": "Ancienneté faible, durée 48 mois",
+    "entree": {
+      "age": 34,
+      "revenu_mensuel": 160000,
+      "montant_credit": 3000000,
+      "duree_mois": 48,
+      "anciennete_activite": 1
+    },
+    "probabilite_reference": 0.4092031331
+  },
+  {
+    "id": "G12",
+    "description": "Revenu modeste, crédit élevé, 18 mois",
+    "entree": {
+      "age": 38,
+      "revenu_mensuel": 90000,
+      "montant_credit": 1000000,
+      "duree_mois": 18,
+      "anciennete_activite": 6
+    },
+    "probabilite_reference": 0.2908414588
+  },
+  {
+    "id": "G13",
+    "description": "Âge minimal autorisé",
+    "entree": {
+      "age": 18,
+      "revenu_mensuel": 80000,
+      "montant_credit": 400000,
+      "duree_mois": 12,
+      "anciennete_activite": 0
+    },
+    "probabilite_reference": 0.3436090042
+  },
+  {
+    "id": "G14",
+    "description": "Âge maximal autorisé",
+    "entree": {
+      "age": 75,
+      "revenu_mensuel": 250000,
+      "montant_credit": 800000,
+      "duree_mois": 24,
+      "anciennete_activite": 40
+    },
+    "probabilite_reference": 0.0003234598
+  },
+  {
+    "id": "G15",
+    "description": "Revenu atypique mais valide (au-dessus du domaine d'entraînement)",
+    "entree": {
+      "age": 45,
+      "revenu_mensuel": 8000000,
+      "montant_credit": 20000000,
+      "duree_mois": 36,
+      "anciennete_activite": 20
+    },
+    "probabilite_reference": 0.0080730071
+  },
+  {
+    "id": "G16",
+    "description": "Crédit atypique mais valide (au-dessus du domaine d'entraînement)",
+    "entree": {
+      "age": 40,
+      "revenu_mensuel": 300000,
+      "montant_credit": 60000000,
+      "duree_mois": 60,
+      "anciennete_activite": 10
+    },
+    "probabilite_reference": 0.9999824183
+  }
+]
