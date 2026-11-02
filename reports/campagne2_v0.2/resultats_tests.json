@@ -8,7 +8,7 @@
     "EX04"
    ],
    "resultat": "passed",
-   "duree_s": 0.0344
+   "duree_s": 0.04
   },
   {
    "test": "tests/test_api.py::test_scenarios_api[S01]",
@@ -18,7 +18,7 @@
     "EX16"
    ],
    "resultat": "passed",
-   "duree_s": 0.0076
+   "duree_s": 0.0079
   },
   {
    "test": "tests/test_api.py::test_scenarios_api[S02]",
@@ -27,7 +27,7 @@
     "EX06"
    ],
    "resultat": "passed",
-   "duree_s": 0.005
+   "duree_s": 0.0051
   },
   {
    "test": "tests/test_api.py::test_scenarios_api[S03]",
@@ -36,7 +36,7 @@
     "EX01"
    ],
    "resultat": "passed",
-   "duree_s": 0.0051
+   "duree_s": 0.0053
   },
   {
    "test": "tests/test_api.py::test_scenarios_api[S04]",
@@ -45,7 +45,7 @@
     "EX02"
    ],
    "resultat": "passed",
-   "duree_s": 0.0048
+   "duree_s": 0.0053
   },
   {
    "test": "tests/test_api.py::test_scenarios_api[S05]",
@@ -54,7 +54,7 @@
     "EX02"
    ],
    "resultat": "passed",
-   "duree_s": 0.0048
+   "duree_s": 0.0049
   },
   {
    "test": "tests/test_api.py::test_scenarios_api[S06]",
@@ -63,7 +63,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0044
+   "duree_s": 0.0054
   },
   {
    "test": "tests/test_api.py::test_scenarios_api[S07]",
@@ -72,7 +72,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0054
+   "duree_s": 0.0066
   },
   {
    "test": "tests/test_api.py::test_scenarios_api[S08]",
@@ -81,7 +81,7 @@
     "EX03"
    ],
    "resultat": "passed",
-   "duree_s": 0.0045
+   "duree_s": 0.0043
   },
   {
    "test": "tests/test_api.py::test_scenarios_api[S09]",
@@ -90,7 +90,7 @@
     "EX09"
    ],
    "resultat": "passed",
-   "duree_s": 0.0048
+   "duree_s": 0.0046
   },
   {
    "test": "tests/test_api.py::test_scenarios_api[S10]",
@@ -111,7 +111,7 @@
     "EX05"
    ],
    "resultat": "passed",
-   "duree_s": 0.0066
+   "duree_s": 0.0063
   },
   {
    "test": "tests/test_api.py::test_scenarios_api[S12]",
@@ -139,7 +139,7 @@
     "EX10"
    ],
    "resultat": "passed",
-   "duree_s": 0.0043
+   "duree_s": 0.0054
   },
   {
    "test": "tests/test_api.py::test_scenarios_api[S15]",
@@ -149,7 +149,7 @@
     "EX10"
    ],
    "resultat": "passed",
-   "duree_s": 0.0043
+   "duree_s": 0.0057
   },
   {
    "test": "tests/test_api.py::test_scenarios_api[S16]",
@@ -158,7 +158,7 @@
     "EX02"
    ],
    "resultat": "passed",
-   "duree_s": 0.0053
+   "duree_s": 0.0066
   },
   {
    "test": "tests/test_api.py::test_scenarios_api[S17]",
@@ -167,7 +167,7 @@
     "EX10"
    ],
    "resultat": "passed",
-   "duree_s": 0.0043
+   "duree_s": 0.0041
   },
   {
    "test": "tests/test_api.py::test_scenarios_api[S18]",
@@ -176,7 +176,7 @@
     "EX10"
    ],
    "resultat": "passed",
-   "duree_s": 0.0041
+   "duree_s": 0.0042
   },
   {
    "test": "tests/test_api.py::test_scenarios_api[S19]",
@@ -185,7 +185,7 @@
     "EX06"
    ],
    "resultat": "passed",
-   "duree_s": 0.0046
+   "duree_s": 0.0049
   },
   {
    "test": "tests/test_api.py::test_scenarios_api[S20]",
@@ -194,7 +194,7 @@
     "EX03"
    ],
    "resultat": "passed",
-   "duree_s": 0.0071
+   "duree_s": 0.005
   },
   {
    "test": "tests/test_api.py::test_scenarios_api[S21]",
@@ -204,7 +204,7 @@
     "EX06"
    ],
    "resultat": "passed",
-   "duree_s": 0.006
+   "duree_s": 0.005
   },
   {
    "test": "tests/test_api.py::test_scenarios_api[S22]",
@@ -213,7 +213,7 @@
     "EX12"
    ],
    "resultat": "passed",
-   "duree_s": 0.0052
+   "duree_s": 0.0048
   },
   {
    "test": "tests/test_api.py::test_scenarios_api[S23]",
@@ -231,7 +231,7 @@
     "EX10"
    ],
    "resultat": "passed",
-   "duree_s": 0.0039
+   "duree_s": 0.0049
   },
   {
    "test": "tests/test_api.py::test_scenarios_api[S25]",
@@ -240,7 +240,7 @@
     "EX10"
    ],
    "resultat": "passed",
-   "duree_s": 0.0068
+   "duree_s": 0.0067
   },
   {
    "test": "tests/test_api.py::test_scenarios_api[S27]",
@@ -250,7 +250,7 @@
     "EX10"
    ],
    "resultat": "passed",
-   "duree_s": 0.005
+   "duree_s": 0.0049
   },
   {
    "test": "tests/test_api.py::test_scenarios_api[S26]",
@@ -259,14 +259,14 @@
     "EX02"
    ],
    "resultat": "passed",
-   "duree_s": 0.0046
+   "duree_s": 0.0051
   },
   {
    "test": "tests/test_api.py::test_scenarios_couvrent_les_cas_obligatoires_de_l_enonce",
    "fonction": "test_scenarios_couvrent_les_cas_obligatoires_de_l_enonce",
    "exigences": [],
    "resultat": "passed",
-   "duree_s": 0.0002
+   "duree_s": 0.0003
   },
   {
    "test": "tests/test_api.py::test_contrat_de_reponse_predict",
@@ -276,7 +276,7 @@
     "EX16"
    ],
    "resultat": "passed",
-   "duree_s": 0.0059
+   "duree_s": 0.0069
   },
   {
    "test": "tests/test_api.py::test_probabilite_valide_sur_demandes_variees[nominal]",
@@ -285,7 +285,7 @@
     "EX04"
    ],
    "resultat": "passed",
-   "duree_s": 0.006
+   "duree_s": 0.007
   },
   {
    "test": "tests/test_api.py::test_probabilite_valide_sur_demandes_variees[age_min]",
@@ -303,7 +303,7 @@
     "EX04"
    ],
    "resultat": "passed",
-   "duree_s": 0.006
+   "duree_s": 0.0076
   },
   {
    "test": "tests/test_api.py::test_probabilite_valide_sur_demandes_variees[duree_min]",
@@ -312,7 +312,7 @@
     "EX04"
    ],
    "resultat": "passed",
-   "duree_s": 0.0068
+   "duree_s": 0.0065
   },
   {
    "test": "tests/test_api.py::test_probabilite_valide_sur_demandes_variees[duree_max]",
@@ -321,7 +321,7 @@
     "EX04"
    ],
    "resultat": "passed",
-   "duree_s": 0.0063
+   "duree_s": 0.0059
   },
   {
    "test": "tests/test_api.py::test_probabilite_valide_sur_demandes_variees[revenu_min]",
@@ -330,7 +330,7 @@
     "EX04"
    ],
    "resultat": "passed",
-   "duree_s": 0.0099
+   "duree_s": 0.0077
   },
   {
    "test": "tests/test_api.py::test_probabilite_valide_sur_demandes_variees[montant_max]",
@@ -339,7 +339,7 @@
     "EX04"
    ],
    "resultat": "passed",
-   "duree_s": 0.007
+   "duree_s": 0.0065
   },
   {
    "test": "tests/test_api.py::test_probabilite_valide_sur_demandes_variees[extremes]",
@@ -348,7 +348,7 @@
     "EX04"
    ],
    "resultat": "passed",
-   "duree_s": 0.0068
+   "duree_s": 0.0063
   },
   {
    "test": "tests/test_api.py::test_identifiant_de_requete_unique",
@@ -358,7 +358,7 @@
     "EX11"
    ],
    "resultat": "passed",
-   "duree_s": 0.0295
+   "duree_s": 0.0299
   },
   {
    "test": "tests/test_api.py::test_validation_prioritaire_sur_la_disponibilite_du_modele",
@@ -368,7 +368,7 @@
     "EX06"
    ],
    "resultat": "passed",
-   "duree_s": 0.0098
+   "duree_s": 0.0113
   },
   {
    "test": "tests/test_api.py::test_health_service_disponible",
@@ -377,7 +377,7 @@
     "EX05"
    ],
    "resultat": "passed",
-   "duree_s": 0.0069
+   "duree_s": 0.0078
   },
   {
    "test": "tests/test_api.py::test_health_signale_l_indisponibilite_du_modele",
@@ -386,7 +386,7 @@
     "EX05"
    ],
    "resultat": "passed",
-   "duree_s": 0.0059
+   "duree_s": 0.0077
   },
   {
    "test": "tests/test_api.py::test_indisponibilite_coherente_sur_les_trois_endpoints",
@@ -395,7 +395,7 @@
     "EX05"
    ],
    "resultat": "passed",
-   "duree_s": 0.019
+   "duree_s": 0.021
   },
   {
    "test": "tests/test_api.py::test_reprise_automatique_apres_indisponibilite",
@@ -404,7 +404,7 @@
     "EX05"
    ],
    "resultat": "passed",
-   "duree_s": 0.0297
+   "duree_s": 0.0249
   },
   {
    "test": "tests/test_api.py::test_model_info_contrat",
@@ -413,7 +413,7 @@
     "EX14"
    ],
    "resultat": "passed",
-   "duree_s": 0.0082
+   "duree_s": 0.0068
   },
   {
    "test": "tests/test_api.py::test_model_info_n_expose_ni_chemin_ni_version_de_bibliotheque",
@@ -423,7 +423,7 @@
     "EX14"
    ],
    "resultat": "passed",
-   "duree_s": 0.006
+   "duree_s": 0.0059
   },
   {
    "test": "tests/test_api.py::test_contrat_openapi_documente_endpoints_et_schema",
@@ -433,7 +433,7 @@
     "EX10"
    ],
    "resultat": "passed",
-   "duree_s": 0.0095
+   "duree_s": 0.0066
   },
   {
    "test": "tests/test_demo_echec.py::test_echec_volontaire_pour_verifier_que_la_ci_bloque",
@@ -442,7 +442,7 @@
     "EX18"
    ],
    "resultat": "skipped",
-   "duree_s": 0.0003
+   "duree_s": 0.0004
   },
   {
    "test": "tests/test_donnees_modele.py::test_generateur_deterministe_pour_une_graine_donnee",
@@ -451,7 +451,7 @@
     "EX13"
    ],
    "resultat": "passed",
-   "duree_s": 0.006
+   "duree_s": 0.0063
   },
   {
    "test": "tests/test_donnees_modele.py::test_jeux_figes_identiques_a_la_regeneration",
@@ -461,7 +461,7 @@
     "EX13"
    ],
    "resultat": "passed",
-   "duree_s": 0.0096
+   "duree_s": 0.0097
   },
   {
    "test": "tests/test_donnees_modele.py::test_toutes_les_lignes_synthetiques_sont_des_demandes_valides",
@@ -474,35 +474,35 @@
     "EX12"
    ],
    "resultat": "passed",
-   "duree_s": 0.1838
+   "duree_s": 0.163
   },
   {
    "test": "tests/test_donnees_modele.py::test_structure_du_jeu_sans_valeur_manquante",
    "fonction": "test_structure_du_jeu_sans_valeur_manquante",
    "exigences": [],
    "resultat": "passed",
-   "duree_s": 0.0045
+   "duree_s": 0.0033
   },
   {
    "test": "tests/test_donnees_modele.py::test_decoupage_stratifie_et_taux_de_defaut",
    "fonction": "test_decoupage_stratifie_et_taux_de_defaut",
    "exigences": [],
    "resultat": "passed",
-   "duree_s": 0.0014
+   "duree_s": 0.0008
   },
   {
    "test": "tests/test_donnees_modele.py::test_interaction_cachee_presente_dans_les_donnees",
    "fonction": "test_interaction_cachee_presente_dans_les_donnees",
    "exigences": [],
    "resultat": "passed",
-   "duree_s": 0.0051
+   "duree_s": 0.0032
   },
   {
    "test": "tests/test_donnees_modele.py::test_metriques_sur_un_exemple_calcule_a_la_main",
    "fonction": "test_metriques_sur_un_exemple_calcule_a_la_main",
    "exigences": [],
    "resultat": "passed",
-   "duree_s": 0.0296
+   "duree_s": 0.0175
   },
   {
    "test": "tests/test_donnees_modele.py::test_entrainement_produit_un_modele_conforme_au_contrat",
@@ -511,14 +511,14 @@
     "EX04"
    ],
    "resultat": "passed",
-   "duree_s": 0.0225
+   "duree_s": 0.0134
   },
   {
    "test": "tests/test_donnees_modele.py::test_domaine_d_entrainement",
    "fonction": "test_domaine_d_entrainement",
    "exigences": [],
    "resultat": "passed",
-   "duree_s": 0.0024
+   "duree_s": 0.0015
   },
   {
    "test": "tests/test_donnees_modele.py::test_modele_sauvegarde_est_recharge_et_verifie_par_le_service",
@@ -528,21 +528,21 @@
     "EX14"
    ],
    "resultat": "passed",
-   "duree_s": 0.0534
+   "duree_s": 0.0275
   },
   {
    "test": "tests/test_donnees_modele.py::test_audit_segments_coherent_avec_les_metriques_globales",
    "fonction": "test_audit_segments_coherent_avec_les_metriques_globales",
    "exigences": [],
    "resultat": "passed",
-   "duree_s": 0.1472
+   "duree_s": 0.1129
   },
   {
    "test": "tests/test_donnees_modele.py::test_audit_detecte_le_segment_a_faux_negatifs_eleves",
    "fonction": "test_audit_detecte_le_segment_a_faux_negatifs_eleves",
    "exigences": [],
    "resultat": "passed",
-   "duree_s": 0.1006
+   "duree_s": 0.0967
   },
   {
    "test": "tests/test_donnees_modele.py::test_cas_dores_du_code_identiques_au_fichier_de_reference",
@@ -562,7 +562,7 @@
     "EX14"
    ],
    "resultat": "passed",
-   "duree_s": 0.0171
+   "duree_s": 0.0174
   },
   {
    "test": "tests/test_integration.py::test_modele_versionne_du_depot_conforme_a_la_reference",
@@ -571,7 +571,7 @@
     "EX14"
    ],
    "resultat": "passed",
-   "duree_s": 0.0003
+   "duree_s": 0.0004
   },
   {
    "test": "tests/test_integration.py::test_chaque_module_est_appele_une_fois_dans_l_ordre",
@@ -581,7 +581,7 @@
     "EX06"
    ],
    "resultat": "passed",
-   "duree_s": 0.0148
+   "duree_s": 0.0134
   },
   {
    "test": "tests/test_integration.py::test_modele_non_chargeable_est_signale_proprement[fichier_absent]",
@@ -591,7 +591,7 @@
     "EX14"
    ],
    "resultat": "passed",
-   "duree_s": 0.0396
+   "duree_s": 0.0315
   },
   {
    "test": "tests/test_integration.py::test_modele_non_chargeable_est_signale_proprement[octets_aleatoires]",
@@ -601,7 +601,7 @@
     "EX14"
    ],
    "resultat": "passed",
-   "duree_s": 0.0353
+   "duree_s": 0.0405
   },
   {
    "test": "tests/test_integration.py::test_modele_non_chargeable_est_signale_proprement[fichier_altere]",
@@ -611,7 +611,7 @@
     "EX14"
    ],
    "resultat": "passed",
-   "duree_s": 0.0302
+   "duree_s": 0.0268
   },
   {
    "test": "tests/test_integration.py::test_modele_non_chargeable_est_signale_proprement[objet_non_conforme]",
@@ -621,7 +621,7 @@
     "EX14"
    ],
    "resultat": "passed",
-   "duree_s": 0.0315
+   "duree_s": 0.0304
   },
   {
    "test": "tests/test_integration.py::test_modele_non_chargeable_est_signale_proprement[modele_a_5_variables]",
@@ -631,7 +631,7 @@
     "EX14"
    ],
    "resultat": "passed",
-   "duree_s": 0.0382
+   "duree_s": 0.0376
   },
   {
    "test": "tests/test_integration.py::test_modele_non_chargeable_est_signale_proprement[metadonnees_incompletes]",
@@ -641,7 +641,7 @@
     "EX14"
    ],
    "resultat": "passed",
-   "duree_s": 0.0294
+   "duree_s": 0.0306
   },
   {
    "test": "tests/test_integration.py::test_modele_non_chargeable_est_signale_proprement[metadonnees_illisibles]",
@@ -651,7 +651,7 @@
     "EX14"
    ],
    "resultat": "passed",
-   "duree_s": 0.0307
+   "duree_s": 0.0331
   },
   {
    "test": "tests/test_integration.py::test_modele_non_chargeable_est_signale_proprement[variables_divergentes]",
@@ -661,7 +661,7 @@
     "EX14"
    ],
    "resultat": "passed",
-   "duree_s": 0.0287
+   "duree_s": 0.0323
   },
   {
    "test": "tests/test_integration.py::test_modele_non_chargeable_est_signale_proprement[metadonnees_absentes]",
@@ -671,7 +671,7 @@
     "EX14"
    ],
    "resultat": "passed",
-   "duree_s": 0.0261
+   "duree_s": 0.0285
   },
   {
    "test": "tests/test_integration.py::test_modele_non_chargeable_est_signale_proprement[modele_substitue]",
@@ -681,7 +681,7 @@
     "EX14"
    ],
    "resultat": "passed",
-   "duree_s": 0.035
+   "duree_s": 0.0403
   },
   {
    "test": "tests/test_integration.py::test_modele_non_chargeable_est_signale_proprement[octets_ajoutes]",
@@ -691,7 +691,7 @@
     "EX14"
    ],
    "resultat": "passed",
-   "duree_s": 0.0264
+   "duree_s": 0.0274
   },
   {
    "test": "tests/test_integration.py::test_modele_non_chargeable_est_signale_proprement[empreinte_metadonnees_erronee]",
@@ -701,7 +701,7 @@
     "EX14"
    ],
    "resultat": "passed",
-   "duree_s": 0.0263
+   "duree_s": 0.0274
   },
   {
    "test": "tests/test_integration.py::test_empreinte_non_conforme_refuse_le_modele_sans_le_deserialiser[fichier_altere]",
@@ -719,7 +719,7 @@
     "EX14"
    ],
    "resultat": "passed",
-   "duree_s": 0.0079
+   "duree_s": 0.0119
   },
   {
    "test": "tests/test_integration.py::test_empreinte_non_conforme_refuse_le_modele_sans_le_deserialiser[octets_ajoutes]",
@@ -737,7 +737,7 @@
     "EX14"
    ],
    "resultat": "passed",
-   "duree_s": 0.0016
+   "duree_s": 0.0019
   },
   {
    "test": "tests/test_integration.py::test_modele_conforme_est_deserialise_une_seule_fois",
@@ -746,7 +746,7 @@
     "EX14"
    ],
    "resultat": "passed",
-   "duree_s": 0.0014
+   "duree_s": 0.0016
   },
   {
    "test": "tests/test_integration.py::test_variable_attendue_absente_apres_validation",
@@ -756,7 +756,7 @@
     "EX11"
    ],
    "resultat": "passed",
-   "duree_s": 0.0102
+   "duree_s": 0.0116
   },
   {
    "test": "tests/test_integration.py::test_erreur_de_pretraitement_ne_fuit_pas_et_est_journalisee",
@@ -765,7 +765,7 @@
     "EX11"
    ],
    "resultat": "passed",
-   "duree_s": 0.0096
+   "duree_s": 0.0112
   },
   {
    "test": "tests/test_integration.py::test_exception_imprevue_donne_une_erreur_generique",
@@ -774,7 +774,7 @@
     "EX11"
    ],
    "resultat": "passed",
-   "duree_s": 0.0121
+   "duree_s": 0.0127
   },
   {
    "test": "tests/test_integration.py::test_dimensions_incompatibles_avec_le_modele[1x5]",
@@ -784,7 +784,7 @@
     "EX11"
    ],
    "resultat": "passed",
-   "duree_s": 0.0112
+   "duree_s": 0.01
   },
   {
    "test": "tests/test_integration.py::test_dimensions_incompatibles_avec_le_modele[1x7]",
@@ -794,7 +794,7 @@
     "EX11"
    ],
    "resultat": "passed",
-   "duree_s": 0.0098
+   "duree_s": 0.0121
   },
   {
    "test": "tests/test_integration.py::test_dimensions_incompatibles_avec_le_modele[2x6]",
@@ -804,7 +804,7 @@
     "EX11"
    ],
    "resultat": "passed",
-   "duree_s": 0.0098
+   "duree_s": 0.011
   },
   {
    "test": "tests/test_integration.py::test_dimensions_incompatibles_avec_le_modele[6]",
@@ -814,7 +814,7 @@
     "EX11"
    ],
    "resultat": "passed",
-   "duree_s": 0.0097
+   "duree_s": 0.0094
   },
   {
    "test": "tests/test_integration.py::test_dimensions_incompatibles_avec_le_modele[1x6x1]",
@@ -824,7 +824,7 @@
     "EX11"
    ],
    "resultat": "passed",
-   "duree_s": 0.0108
+   "duree_s": 0.0115
   },
   {
    "test": "tests/test_integration.py::test_erreur_interne_pendant_la_prediction",
@@ -833,7 +833,7 @@
     "EX11"
    ],
    "resultat": "passed",
-   "duree_s": 0.012
+   "duree_s": 0.015
   },
   {
    "test": "tests/test_integration.py::test_probabilite_invalide_du_modele_jamais_transmise[nan]",
@@ -843,7 +843,7 @@
     "EX11"
    ],
    "resultat": "passed",
-   "duree_s": 0.0111
+   "duree_s": 0.0133
   },
   {
    "test": "tests/test_integration.py::test_probabilite_invalide_du_modele_jamais_transmise[infini]",
@@ -853,7 +853,7 @@
     "EX11"
    ],
    "resultat": "passed",
-   "duree_s": 0.0106
+   "duree_s": 0.0143
   },
   {
    "test": "tests/test_integration.py::test_probabilite_invalide_du_modele_jamais_transmise[negative]",
@@ -863,7 +863,7 @@
     "EX11"
    ],
    "resultat": "passed",
-   "duree_s": 0.0117
+   "duree_s": 0.0139
   },
   {
    "test": "tests/test_integration.py::test_probabilite_invalide_du_modele_jamais_transmise[superieure_a_1]",
@@ -873,7 +873,7 @@
     "EX11"
    ],
    "resultat": "passed",
-   "duree_s": 0.0104
+   "duree_s": 0.0096
   },
   {
    "test": "tests/test_integration.py::test_probabilite_invalide_du_modele_jamais_transmise[deux]",
@@ -883,7 +883,7 @@
     "EX11"
    ],
    "resultat": "passed",
-   "duree_s": 0.0099
+   "duree_s": 0.0095
   },
   {
    "test": "tests/test_integration.py::test_probabilites_extremes_valides_acceptees[zero]",
@@ -892,7 +892,7 @@
     "EX04"
    ],
    "resultat": "passed",
-   "duree_s": 0.0091
+   "duree_s": 0.0094
   },
   {
    "test": "tests/test_integration.py::test_probabilites_extremes_valides_acceptees[un]",
@@ -901,7 +901,7 @@
     "EX04"
    ],
    "resultat": "passed",
-   "duree_s": 0.0121
+   "duree_s": 0.0125
   },
   {
    "test": "tests/test_integration.py::test_entree_non_finie_ou_non_numerique_refusee_par_le_service",
@@ -929,7 +929,7 @@
     "EX17"
    ],
    "resultat": "passed",
-   "duree_s": 0.1382
+   "duree_s": 0.1476
   },
   {
    "test": "tests/test_performance.py::test_latence_api_p95_et_debit_minimal",
@@ -938,7 +938,7 @@
     "EX17"
    ],
    "resultat": "passed",
-   "duree_s": 1.287
+   "duree_s": 1.2899
   },
   {
    "test": "tests/test_regression.py::test_jeu_d_evaluation_et_modele_de_reference_figes",
@@ -948,7 +948,7 @@
     "EX14"
    ],
    "resultat": "passed",
-   "duree_s": 0.0006
+   "duree_s": 0.0008
   },
   {
    "test": "tests/test_regression.py::test_tolerances_definies_avant_la_comparaison_et_completes",
@@ -957,7 +957,7 @@
     "EX07"
    ],
    "resultat": "passed",
-   "duree_s": 0.0002
+   "duree_s": 0.0003
   },
   {
    "test": "tests/test_regression.py::test_metriques_du_modele_courant_conformes_a_la_reference",
@@ -966,7 +966,7 @@
     "EX07"
    ],
    "resultat": "passed",
-   "duree_s": 0.0005
+   "duree_s": 0.0004
   },
   {
    "test": "tests/test_regression.py::test_regles_de_tolerance_aux_bornes[identique]",
@@ -975,7 +975,7 @@
     "EX07"
    ],
    "resultat": "passed",
-   "duree_s": 0.0003
+   "duree_s": 0.0002
   },
   {
    "test": "tests/test_regression.py::test_regles_de_tolerance_aux_bornes[rappel_-0.029]",
@@ -1002,7 +1002,7 @@
     "EX07"
    ],
    "resultat": "passed",
-   "duree_s": 0.0002
+   "duree_s": 0.0003
   },
   {
    "test": "tests/test_regression.py::test_regles_de_tolerance_aux_bornes[f1_-0.031]",
@@ -1074,7 +1074,7 @@
     "EX07"
    ],
    "resultat": "passed",
-   "duree_s": 0.0385
+   "duree_s": 0.0297
   },
   {
    "test": "tests/test_regression.py::test_candidat_sur_regularise_est_detecte_comme_regression",
@@ -1083,7 +1083,7 @@
     "EX07"
    ],
    "resultat": "passed",
-   "duree_s": 0.027
+   "duree_s": 0.03
   },
   {
    "test": "tests/test_regression.py::test_candidat_ameliore_n_est_pas_une_regression",
@@ -1092,7 +1092,7 @@
     "EX07"
    ],
    "resultat": "passed",
-   "duree_s": 0.1703
+   "duree_s": 0.1618
   },
   {
    "test": "tests/test_regression.py::test_cas_dores_identiques_a_la_reference",
@@ -1102,7 +1102,7 @@
     "EX13"
    ],
    "resultat": "passed",
-   "duree_s": 0.0093
+   "duree_s": 0.0089
   },
   {
    "test": "tests/test_regression.py::test_cas_dores_via_l_api[G01]",
@@ -1113,7 +1113,7 @@
     "EX16"
    ],
    "resultat": "passed",
-   "duree_s": 0.0089
+   "duree_s": 0.0076
   },
   {
    "test": "tests/test_regression.py::test_cas_dores_via_l_api[G02]",
@@ -1124,7 +1124,7 @@
     "EX16"
    ],
    "resultat": "passed",
-   "duree_s": 0.0071
+   "duree_s": 0.0068
   },
   {
    "test": "tests/test_regression.py::test_cas_dores_via_l_api[G03]",
@@ -1135,7 +1135,7 @@
     "EX16"
    ],
    "resultat": "passed",
-   "duree_s": 0.0063
+   "duree_s": 0.0066
   },
   {
    "test": "tests/test_regression.py::test_cas_dores_via_l_api[G04]",
@@ -1146,7 +1146,7 @@
     "EX16"
    ],
    "resultat": "passed",
-   "duree_s": 0.0069
+   "duree_s": 0.0063
   },
   {
    "test": "tests/test_regression.py::test_cas_dores_via_l_api[G05]",
@@ -1157,7 +1157,7 @@
     "EX16"
    ],
    "resultat": "passed",
-   "duree_s": 0.0071
+   "duree_s": 0.0056
   },
   {
    "test": "tests/test_regression.py::test_cas_dores_via_l_api[G06]",
@@ -1168,7 +1168,7 @@
     "EX16"
    ],
    "resultat": "passed",
-   "duree_s": 0.0064
+   "duree_s": 0.006
   },
   {
    "test": "tests/test_regression.py::test_cas_dores_via_l_api[G07]",
@@ -1179,7 +1179,7 @@
     "EX16"
    ],
    "resultat": "passed",
-   "duree_s": 0.0063
+   "duree_s": 0.006
   },
   {
    "test": "tests/test_regression.py::test_cas_dores_via_l_api[G08]",
@@ -1201,7 +1201,7 @@
     "EX16"
    ],
    "resultat": "passed",
-   "duree_s": 0.0064
+   "duree_s": 0.0061
   },
   {
    "test": "tests/test_regression.py::test_cas_dores_via_l_api[G10]",
@@ -1212,7 +1212,7 @@
     "EX16"
    ],
    "resultat": "passed",
-   "duree_s": 0.0073
+   "duree_s": 0.0112
   },
   {
    "test": "tests/test_regression.py::test_cas_dores_via_l_api[G11]",
@@ -1223,7 +1223,7 @@
     "EX16"
    ],
    "resultat": "passed",
-   "duree_s": 0.0062
+   "duree_s": 0.0074
   },
   {
    "test": "tests/test_regression.py::test_cas_dores_via_l_api[G12]",
@@ -1234,7 +1234,7 @@
     "EX16"
    ],
    "resultat": "passed",
-   "duree_s": 0.0059
+   "duree_s": 0.0073
   },
   {
    "test": "tests/test_regression.py::test_cas_dores_via_l_api[G13]",
@@ -1245,7 +1245,7 @@
     "EX16"
    ],
    "resultat": "passed",
-   "duree_s": 0.0059
+   "duree_s": 0.0072
   },
   {
    "test": "tests/test_regression.py::test_cas_dores_via_l_api[G14]",
@@ -1267,7 +1267,7 @@
     "EX16"
    ],
    "resultat": "passed",
-   "duree_s": 0.0067
+   "duree_s": 0.0077
   },
   {
    "test": "tests/test_regression.py::test_cas_dores_via_l_api[G16]",
@@ -1278,7 +1278,7 @@
     "EX16"
    ],
    "resultat": "passed",
-   "duree_s": 0.006
+   "duree_s": 0.0075
   },
   {
    "test": "tests/test_regression.py::test_contrat_des_sorties_inchange",
@@ -1287,7 +1287,7 @@
     "EX07"
    ],
    "resultat": "passed",
-   "duree_s": 0.1183
+   "duree_s": 0.1218
   },
   {
    "test": "tests/test_regression.py::test_comportement_fonctionnel_identique_sur_une_instance_neuve",
@@ -1296,7 +1296,7 @@
     "EX07"
    ],
    "resultat": "passed",
-   "duree_s": 0.2917
+   "duree_s": 0.2382
   },
   {
    "test": "tests/test_regression.py::test_predictions_identiques_apres_sauvegarde_et_rechargement",
@@ -1306,7 +1306,7 @@
     "EX14"
    ],
    "resultat": "passed",
-   "duree_s": 0.0064
+   "duree_s": 0.006
   },
   {
    "test": "tests/test_regression.py::test_reentrainement_reproductible_et_conforme_a_la_reference",
@@ -1316,7 +1316,7 @@
     "EX13"
    ],
    "resultat": "passed",
-   "duree_s": 0.0271
+   "duree_s": 0.0265
   },
   {
    "test": "tests/test_regression.py::test_graine_differente_reste_dans_la_tolerance",
@@ -1325,7 +1325,7 @@
     "EX13"
    ],
    "resultat": "passed",
-   "duree_s": 0.0326
+   "duree_s": 0.027
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_manquantes[absent-age]",
@@ -1334,7 +1334,7 @@
     "EX06"
    ],
    "resultat": "passed",
-   "duree_s": 0.0129
+   "duree_s": 0.0072
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_manquantes[absent-revenu_mensuel]",
@@ -1343,7 +1343,7 @@
     "EX06"
    ],
    "resultat": "passed",
-   "duree_s": 0.006
+   "duree_s": 0.0067
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_manquantes[absent-montant_credit]",
@@ -1352,7 +1352,7 @@
     "EX06"
    ],
    "resultat": "passed",
-   "duree_s": 0.0051
+   "duree_s": 0.0063
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_manquantes[absent-duree_mois]",
@@ -1361,7 +1361,7 @@
     "EX06"
    ],
    "resultat": "passed",
-   "duree_s": 0.0057
+   "duree_s": 0.0051
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_manquantes[absent-anciennete_activite]",
@@ -1370,7 +1370,7 @@
     "EX06"
    ],
    "resultat": "passed",
-   "duree_s": 0.005
+   "duree_s": 0.0043
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_manquantes[nul-age]",
@@ -1379,7 +1379,7 @@
     "EX06"
    ],
    "resultat": "passed",
-   "duree_s": 0.006
+   "duree_s": 0.0051
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_manquantes[nul-revenu_mensuel]",
@@ -1388,7 +1388,7 @@
     "EX06"
    ],
    "resultat": "passed",
-   "duree_s": 0.0054
+   "duree_s": 0.004
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_manquantes[nul-montant_credit]",
@@ -1397,7 +1397,7 @@
     "EX06"
    ],
    "resultat": "passed",
-   "duree_s": 0.0058
+   "duree_s": 0.0042
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_manquantes[nul-duree_mois]",
@@ -1406,7 +1406,7 @@
     "EX06"
    ],
    "resultat": "passed",
-   "duree_s": 0.0046
+   "duree_s": 0.0044
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_manquantes[nul-anciennete_activite]",
@@ -1415,7 +1415,7 @@
     "EX06"
    ],
    "resultat": "passed",
-   "duree_s": 0.0048
+   "duree_s": 0.0045
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[str-abc-age]",
@@ -1427,7 +1427,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0051
+   "duree_s": 0.0059
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[str-abc-revenu_mensuel]",
@@ -1439,7 +1439,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0055
+   "duree_s": 0.0051
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[str-abc-montant_credit]",
@@ -1451,7 +1451,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0054
+   "duree_s": 0.0044
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[str-abc-duree_mois]",
@@ -1463,7 +1463,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0053
+   "duree_s": 0.0043
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[str-abc-anciennete_activite]",
@@ -1475,7 +1475,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0071
+   "duree_s": 0.0051
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[str--age]",
@@ -1487,7 +1487,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.005
+   "duree_s": 0.0051
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[str--revenu_mensuel]",
@@ -1499,7 +1499,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0048
+   "duree_s": 0.0045
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[str--montant_credit]",
@@ -1511,7 +1511,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0048
+   "duree_s": 0.0042
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[str--duree_mois]",
@@ -1523,7 +1523,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0045
+   "duree_s": 0.0046
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[str--anciennete_activite]",
@@ -1535,7 +1535,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0042
+   "duree_s": 0.0046
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[str- -age]",
@@ -1547,7 +1547,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.005
+   "duree_s": 0.0045
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[str- -revenu_mensuel]",
@@ -1559,7 +1559,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0057
+   "duree_s": 0.0045
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[str- -montant_credit]",
@@ -1571,7 +1571,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0302
+   "duree_s": 0.0048
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[str- -duree_mois]",
@@ -1583,7 +1583,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0069
+   "duree_s": 0.0059
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[str- -anciennete_activite]",
@@ -1595,7 +1595,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.006
+   "duree_s": 0.0044
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[str-1e5-age]",
@@ -1607,7 +1607,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0079
+   "duree_s": 0.005
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[str-1e5-revenu_mensuel]",
@@ -1619,7 +1619,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0069
+   "duree_s": 0.0045
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[str-1e5-montant_credit]",
@@ -1631,7 +1631,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.007
+   "duree_s": 0.0047
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[str-1e5-duree_mois]",
@@ -1643,7 +1643,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.006
+   "duree_s": 0.0084
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[str-1e5-anciennete_activite]",
@@ -1655,7 +1655,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0052
+   "duree_s": 0.0066
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[str-\\u0663\\u0665-age]",
@@ -1667,7 +1667,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0057
+   "duree_s": 0.0048
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[str-\\u0663\\u0665-revenu_mensuel]",
@@ -1679,7 +1679,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0054
+   "duree_s": 0.0041
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[str-\\u0663\\u0665-montant_credit]",
@@ -1691,7 +1691,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0056
+   "duree_s": 0.006
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[str-\\u0663\\u0665-duree_mois]",
@@ -1703,7 +1703,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0053
+   "duree_s": 0.0041
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[str-\\u0663\\u0665-anciennete_activite]",
@@ -1715,7 +1715,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0067
+   "duree_s": 0.0044
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[str-\\U0001f4b0-age]",
@@ -1727,7 +1727,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0055
+   "duree_s": 0.0051
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[str-\\U0001f4b0-revenu_mensuel]",
@@ -1739,7 +1739,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0077
+   "duree_s": 0.0043
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[str-\\U0001f4b0-montant_credit]",
@@ -1751,7 +1751,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0051
+   "duree_s": 0.0047
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[str-\\U0001f4b0-duree_mois]",
@@ -1763,7 +1763,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.005
+   "duree_s": 0.0045
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[str-\\U0001f4b0-anciennete_activite]",
@@ -1775,7 +1775,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0052
+   "duree_s": 0.0044
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[str-NaN-age]",
@@ -1799,7 +1799,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0064
+   "duree_s": 0.0066
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[str-NaN-montant_credit]",
@@ -1811,7 +1811,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0055
+   "duree_s": 0.0054
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[str-NaN-duree_mois]",
@@ -1823,7 +1823,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0059
+   "duree_s": 0.0062
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[str-NaN-anciennete_activite]",
@@ -1835,7 +1835,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0064
+   "duree_s": 0.005
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[str-Infini-age]",
@@ -1847,7 +1847,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0052
+   "duree_s": 0.0051
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[str-Infini-revenu_mensuel]",
@@ -1859,7 +1859,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0052
+   "duree_s": 0.0047
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[str-Infini-montant_credit]",
@@ -1871,7 +1871,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0062
+   "duree_s": 0.0045
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[str-Infini-duree_mois]",
@@ -1883,7 +1883,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.006
+   "duree_s": 0.0051
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[str-Infini-anciennete_activite]",
@@ -1895,7 +1895,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.005
+   "duree_s": 0.0046
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[bool-True-age]",
@@ -1907,7 +1907,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.006
+   "duree_s": 0.0057
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[bool-True-revenu_mensuel]",
@@ -1919,7 +1919,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.005
+   "duree_s": 0.0043
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[bool-True-montant_credit]",
@@ -1931,7 +1931,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0055
+   "duree_s": 0.005
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[bool-True-duree_mois]",
@@ -1943,7 +1943,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0044
+   "duree_s": 0.0049
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[bool-True-anciennete_activite]",
@@ -1955,7 +1955,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0052
+   "duree_s": 0.0048
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[bool-False-age]",
@@ -1967,7 +1967,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0052
+   "duree_s": 0.0042
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[bool-False-revenu_mensuel]",
@@ -1979,7 +1979,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0049
+   "duree_s": 0.0042
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[bool-False-montant_credit]",
@@ -1991,7 +1991,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0048
+   "duree_s": 0.004
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[bool-False-duree_mois]",
@@ -2003,7 +2003,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0046
+   "duree_s": 0.0047
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[bool-False-anciennete_activite]",
@@ -2015,7 +2015,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.007
+   "duree_s": 0.0073
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[list-[]-age]",
@@ -2027,7 +2027,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.006
+   "duree_s": 0.0057
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[list-[]-revenu_mensuel]",
@@ -2039,7 +2039,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0047
+   "duree_s": 0.0045
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[list-[]-montant_credit]",
@@ -2051,7 +2051,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.005
+   "duree_s": 0.0043
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[list-[]-duree_mois]",
@@ -2063,7 +2063,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0049
+   "duree_s": 0.0047
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[list-[]-anciennete_activite]",
@@ -2075,7 +2075,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0046
+   "duree_s": 0.0052
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[list-[1]-age]",
@@ -2087,7 +2087,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0047
+   "duree_s": 0.0048
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[list-[1]-revenu_mensuel]",
@@ -2099,7 +2099,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0048
+   "duree_s": 0.0053
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[list-[1]-montant_credit]",
@@ -2111,7 +2111,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0052
+   "duree_s": 0.0059
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[list-[1]-duree_mois]",
@@ -2123,7 +2123,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.006
+   "duree_s": 0.0065
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[list-[1]-anciennete_activite]",
@@ -2135,7 +2135,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0051
+   "duree_s": 0.0047
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[dict-{}-age]",
@@ -2147,7 +2147,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0048
+   "duree_s": 0.0042
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[dict-{}-revenu_mensuel]",
@@ -2159,7 +2159,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0053
+   "duree_s": 0.0045
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[dict-{}-montant_credit]",
@@ -2171,7 +2171,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.005
+   "duree_s": 0.0046
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[dict-{}-duree_mois]",
@@ -2183,7 +2183,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0047
+   "duree_s": 0.0049
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[dict-{}-anciennete_activite]",
@@ -2195,7 +2195,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0046
+   "duree_s": 0.0049
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[dict-{'a': -age]",
@@ -2207,7 +2207,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0046
+   "duree_s": 0.0042
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[dict-{'a': -revenu_mensuel]",
@@ -2219,7 +2219,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0053
+   "duree_s": 0.0045
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[dict-{'a': -montant_credit]",
@@ -2231,7 +2231,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0059
+   "duree_s": 0.0055
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[dict-{'a': -duree_mois]",
@@ -2243,7 +2243,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0047
+   "duree_s": 0.0045
   },
   {
    "test": "tests/test_robustness.py::test_valeurs_non_numeriques[dict-{'a': -anciennete_activite]",
@@ -2255,7 +2255,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0058
+   "duree_s": 0.0043
   },
   {
    "test": "tests/test_robustness.py::test_constantes_non_standard_refusees[NaN-age]",
@@ -2265,7 +2265,7 @@
     "EX10"
    ],
    "resultat": "passed",
-   "duree_s": 0.0051
+   "duree_s": 0.0041
   },
   {
    "test": "tests/test_robustness.py::test_constantes_non_standard_refusees[NaN-revenu_mensuel]",
@@ -2275,7 +2275,7 @@
     "EX10"
    ],
    "resultat": "passed",
-   "duree_s": 0.0048
+   "duree_s": 0.005
   },
   {
    "test": "tests/test_robustness.py::test_constantes_non_standard_refusees[NaN-montant_credit]",
@@ -2285,7 +2285,7 @@
     "EX10"
    ],
    "resultat": "passed",
-   "duree_s": 0.0047
+   "duree_s": 0.0049
   },
   {
    "test": "tests/test_robustness.py::test_constantes_non_standard_refusees[NaN-duree_mois]",
@@ -2295,7 +2295,7 @@
     "EX10"
    ],
    "resultat": "passed",
-   "duree_s": 0.0045
+   "duree_s": 0.0042
   },
   {
    "test": "tests/test_robustness.py::test_constantes_non_standard_refusees[NaN-anciennete_activite]",
@@ -2305,7 +2305,7 @@
     "EX10"
    ],
    "resultat": "passed",
-   "duree_s": 0.0048
+   "duree_s": 0.0055
   },
   {
    "test": "tests/test_robustness.py::test_constantes_non_standard_refusees[Infinity-age]",
@@ -2315,7 +2315,7 @@
     "EX10"
    ],
    "resultat": "passed",
-   "duree_s": 0.0049
+   "duree_s": 0.0045
   },
   {
    "test": "tests/test_robustness.py::test_constantes_non_standard_refusees[Infinity-revenu_mensuel]",
@@ -2325,7 +2325,7 @@
     "EX10"
    ],
    "resultat": "passed",
-   "duree_s": 0.0067
+   "duree_s": 0.0054
   },
   {
    "test": "tests/test_robustness.py::test_constantes_non_standard_refusees[Infinity-montant_credit]",
@@ -2335,7 +2335,7 @@
     "EX10"
    ],
    "resultat": "passed",
-   "duree_s": 0.0057
+   "duree_s": 0.0045
   },
   {
    "test": "tests/test_robustness.py::test_constantes_non_standard_refusees[Infinity-duree_mois]",
@@ -2345,7 +2345,7 @@
     "EX10"
    ],
    "resultat": "passed",
-   "duree_s": 0.0052
+   "duree_s": 0.0043
   },
   {
    "test": "tests/test_robustness.py::test_constantes_non_standard_refusees[Infinity-anciennete_activite]",
@@ -2355,7 +2355,7 @@
     "EX10"
    ],
    "resultat": "passed",
-   "duree_s": 0.0051
+   "duree_s": 0.0047
   },
   {
    "test": "tests/test_robustness.py::test_constantes_non_standard_refusees[-Infinity-age]",
@@ -2365,7 +2365,7 @@
     "EX10"
    ],
    "resultat": "passed",
-   "duree_s": 0.0051
+   "duree_s": 0.0045
   },
   {
    "test": "tests/test_robustness.py::test_constantes_non_standard_refusees[-Infinity-revenu_mensuel]",
@@ -2375,7 +2375,7 @@
     "EX10"
    ],
    "resultat": "passed",
-   "duree_s": 0.0045
+   "duree_s": 0.0049
   },
   {
    "test": "tests/test_robustness.py::test_constantes_non_standard_refusees[-Infinity-montant_credit]",
@@ -2385,7 +2385,7 @@
     "EX10"
    ],
    "resultat": "passed",
-   "duree_s": 0.0047
+   "duree_s": 0.0046
   },
   {
    "test": "tests/test_robustness.py::test_constantes_non_standard_refusees[-Infinity-duree_mois]",
@@ -2395,7 +2395,7 @@
     "EX10"
    ],
    "resultat": "passed",
-   "duree_s": 0.0047
+   "duree_s": 0.008
   },
   {
    "test": "tests/test_robustness.py::test_constantes_non_standard_refusees[-Infinity-anciennete_activite]",
@@ -2405,7 +2405,7 @@
     "EX10"
    ],
    "resultat": "passed",
-   "duree_s": 0.0047
+   "duree_s": 0.0045
   },
   {
    "test": "tests/test_robustness.py::test_infinis_par_debordement_refuses[1e999-age]",
@@ -2417,7 +2417,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0052
+   "duree_s": 0.0053
   },
   {
    "test": "tests/test_robustness.py::test_infinis_par_debordement_refuses[1e999-revenu_mensuel]",
@@ -2429,7 +2429,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0043
+   "duree_s": 0.0041
   },
   {
    "test": "tests/test_robustness.py::test_infinis_par_debordement_refuses[1e999-montant_credit]",
@@ -2441,7 +2441,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0052
+   "duree_s": 0.0044
   },
   {
    "test": "tests/test_robustness.py::test_infinis_par_debordement_refuses[1e999-duree_mois]",
@@ -2453,7 +2453,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0057
+   "duree_s": 0.005
   },
   {
    "test": "tests/test_robustness.py::test_infinis_par_debordement_refuses[1e999-anciennete_activite]",
@@ -2465,7 +2465,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.005
+   "duree_s": 0.0046
   },
   {
    "test": "tests/test_robustness.py::test_infinis_par_debordement_refuses[-1e999-age]",
@@ -2477,7 +2477,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.005
+   "duree_s": 0.0045
   },
   {
    "test": "tests/test_robustness.py::test_infinis_par_debordement_refuses[-1e999-revenu_mensuel]",
@@ -2489,7 +2489,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0048
+   "duree_s": 0.004
   },
   {
    "test": "tests/test_robustness.py::test_infinis_par_debordement_refuses[-1e999-montant_credit]",
@@ -2501,7 +2501,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0054
+   "duree_s": 0.0039
   },
   {
    "test": "tests/test_robustness.py::test_infinis_par_debordement_refuses[-1e999-duree_mois]",
@@ -2513,7 +2513,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0056
+   "duree_s": 0.0048
   },
   {
    "test": "tests/test_robustness.py::test_infinis_par_debordement_refuses[-1e999-anciennete_activite]",
@@ -2525,7 +2525,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0071
+   "duree_s": 0.0054
   },
   {
    "test": "tests/test_robustness.py::test_octets_invalides_refuses[\\xff\\xff\\xff]",
@@ -2534,7 +2534,7 @@
     "EX10"
    ],
    "resultat": "passed",
-   "duree_s": 0.0044
+   "duree_s": 0.0039
   },
   {
    "test": "tests/test_robustness.py::test_octets_invalides_refuses[{\"age\": \"\\xff\"}]",
@@ -2543,7 +2543,7 @@
     "EX10"
    ],
    "resultat": "passed",
-   "duree_s": 0.0054
+   "duree_s": 0.0038
   },
   {
    "test": "tests/test_robustness.py::test_octets_invalides_refuses[\\x00\\x01\\x02]",
@@ -2552,7 +2552,7 @@
     "EX10"
    ],
    "resultat": "passed",
-   "duree_s": 0.0045
+   "duree_s": 0.004
   },
   {
    "test": "tests/test_robustness.py::test_octets_invalides_refuses[\\xff\\xfe{\\x00\"\\x00a\\x00g\\x00e\\x00\"\\x00:\\x00 \\x003\\x005\\x00}\\x00]",
@@ -2561,7 +2561,7 @@
     "EX10"
    ],
    "resultat": "passed",
-   "duree_s": 0.0045
+   "duree_s": 0.0042
   },
   {
    "test": "tests/test_robustness.py::test_limites_incluses_acceptees[age]",
@@ -2575,7 +2575,7 @@
     "EX12"
    ],
    "resultat": "passed",
-   "duree_s": 0.0169
+   "duree_s": 0.0113
   },
   {
    "test": "tests/test_robustness.py::test_limites_incluses_acceptees[revenu_mensuel]",
@@ -2589,7 +2589,7 @@
     "EX12"
    ],
    "resultat": "passed",
-   "duree_s": 0.0133
+   "duree_s": 0.0118
   },
   {
    "test": "tests/test_robustness.py::test_limites_incluses_acceptees[montant_credit]",
@@ -2603,7 +2603,7 @@
     "EX12"
    ],
    "resultat": "passed",
-   "duree_s": 0.016
+   "duree_s": 0.013
   },
   {
    "test": "tests/test_robustness.py::test_limites_incluses_acceptees[duree_mois]",
@@ -2617,7 +2617,7 @@
     "EX12"
    ],
    "resultat": "passed",
-   "duree_s": 0.0192
+   "duree_s": 0.0117
   },
   {
    "test": "tests/test_robustness.py::test_limites_incluses_acceptees[anciennete_activite]",
@@ -2631,7 +2631,7 @@
     "EX12"
    ],
    "resultat": "passed",
-   "duree_s": 0.0148
+   "duree_s": 0.013
   },
   {
    "test": "tests/test_robustness.py::test_limites_depassees_refusees[age]",
@@ -2644,7 +2644,7 @@
     "EX12"
    ],
    "resultat": "passed",
-   "duree_s": 0.0113
+   "duree_s": 0.0095
   },
   {
    "test": "tests/test_robustness.py::test_limites_depassees_refusees[revenu_mensuel]",
@@ -2657,7 +2657,7 @@
     "EX12"
    ],
    "resultat": "passed",
-   "duree_s": 0.0114
+   "duree_s": 0.0085
   },
   {
    "test": "tests/test_robustness.py::test_limites_depassees_refusees[montant_credit]",
@@ -2670,7 +2670,7 @@
     "EX12"
    ],
    "resultat": "passed",
-   "duree_s": 0.0127
+   "duree_s": 0.0095
   },
   {
    "test": "tests/test_robustness.py::test_limites_depassees_refusees[duree_mois]",
@@ -2683,7 +2683,7 @@
     "EX12"
    ],
    "resultat": "passed",
-   "duree_s": 0.0094
+   "duree_s": 0.0099
   },
   {
    "test": "tests/test_robustness.py::test_limites_depassees_refusees[anciennete_activite]",
@@ -2696,7 +2696,7 @@
     "EX12"
    ],
    "resultat": "passed",
-   "duree_s": 0.0107
+   "duree_s": 0.0098
   },
   {
    "test": "tests/test_robustness.py::test_entrees_atypiques_valides_signalees[revenu_20M]",
@@ -2706,7 +2706,7 @@
     "EX15"
    ],
    "resultat": "passed",
-   "duree_s": 0.0067
+   "duree_s": 0.0062
   },
   {
    "test": "tests/test_robustness.py::test_entrees_atypiques_valides_signalees[revenu_1_FCFA]",
@@ -2716,7 +2716,7 @@
     "EX15"
    ],
    "resultat": "passed",
-   "duree_s": 0.0071
+   "duree_s": 0.006
   },
   {
    "test": "tests/test_robustness.py::test_entrees_atypiques_valides_signalees[montant_200M]",
@@ -2726,7 +2726,7 @@
     "EX15"
    ],
    "resultat": "passed",
-   "duree_s": 0.0066
+   "duree_s": 0.0057
   },
   {
    "test": "tests/test_robustness.py::test_entrees_atypiques_valides_signalees[duree_120]",
@@ -2736,7 +2736,7 @@
     "EX15"
    ],
    "resultat": "passed",
-   "duree_s": 0.0066
+   "duree_s": 0.0059
   },
   {
    "test": "tests/test_robustness.py::test_entrees_atypiques_valides_signalees[age_75]",
@@ -2746,7 +2746,7 @@
     "EX15"
    ],
    "resultat": "passed",
-   "duree_s": 0.0075
+   "duree_s": 0.0068
   },
   {
    "test": "tests/test_robustness.py::test_entrees_atypiques_valides_signalees[anciennete_59]",
@@ -2756,7 +2756,7 @@
     "EX15"
    ],
    "resultat": "passed",
-   "duree_s": 0.0072
+   "duree_s": 0.0056
   },
   {
    "test": "tests/test_robustness.py::test_entrees_atypiques_valides_signalees[tout_extreme]",
@@ -2766,7 +2766,7 @@
     "EX15"
    ],
    "resultat": "passed",
-   "duree_s": 0.0068
+   "duree_s": 0.0077
   },
   {
    "test": "tests/test_robustness.py::test_distinction_entree_invalide_et_entree_inhabituelle",
@@ -2776,7 +2776,7 @@
     "EX15"
    ],
    "resultat": "passed",
-   "duree_s": 0.0106
+   "duree_s": 0.0109
   },
   {
    "test": "tests/test_robustness.py::test_schema_incorrect_refuse[casse_differente]",
@@ -2787,7 +2787,7 @@
     "EX10"
    ],
    "resultat": "passed",
-   "duree_s": 0.005
+   "duree_s": 0.0045
   },
   {
    "test": "tests/test_robustness.py::test_schema_incorrect_refuse[imbrique]",
@@ -2798,7 +2798,7 @@
     "EX10"
    ],
    "resultat": "passed",
-   "duree_s": 0.0051
+   "duree_s": 0.0053
   },
   {
    "test": "tests/test_robustness.py::test_schema_incorrect_refuse[lot_de_demandes]",
@@ -2809,7 +2809,7 @@
     "EX10"
    ],
    "resultat": "passed",
-   "duree_s": 0.0046
+   "duree_s": 0.0053
   },
   {
    "test": "tests/test_robustness.py::test_schema_incorrect_refuse[alias_anglais]",
@@ -2820,7 +2820,7 @@
     "EX10"
    ],
    "resultat": "passed",
-   "duree_s": 0.0052
+   "duree_s": 0.0045
   },
   {
    "test": "tests/test_robustness.py::test_schema_incorrect_refuse[valeurs_dans_des_listes]",
@@ -2831,7 +2831,7 @@
     "EX10"
    ],
    "resultat": "passed",
-   "duree_s": 0.0049
+   "duree_s": 0.0058
   },
   {
    "test": "tests/test_robustness.py::test_schema_incorrect_refuse[champ_supplementaire_imbrique]",
@@ -2842,7 +2842,7 @@
     "EX10"
    ],
    "resultat": "passed",
-   "duree_s": 0.0057
+   "duree_s": 0.0054
   },
   {
    "test": "tests/test_robustness.py::test_schema_incorrect_refuse[tableau_vide]",
@@ -2853,7 +2853,7 @@
     "EX10"
    ],
    "resultat": "passed",
-   "duree_s": 0.0052
+   "duree_s": 0.0041
   },
   {
    "test": "tests/test_robustness.py::test_schema_incorrect_refuse[chaine]",
@@ -2864,7 +2864,7 @@
     "EX10"
    ],
    "resultat": "passed",
-   "duree_s": 0.0051
+   "duree_s": 0.0043
   },
   {
    "test": "tests/test_robustness.py::test_meme_requete_meme_resultat",
@@ -2873,7 +2873,7 @@
     "EX13"
    ],
    "resultat": "passed",
-   "duree_s": 0.1144
+   "duree_s": 0.1089
   },
   {
    "test": "tests/test_robustness.py::test_ordre_des_cles_et_representation_numerique_sans_effet",
@@ -2882,7 +2882,7 @@
     "EX13"
    ],
    "resultat": "passed",
-   "duree_s": 0.0242
+   "duree_s": 0.0287
   },
   {
    "test": "tests/test_robustness.py::test_aucune_fuite_d_etat_entre_requetes",
@@ -2891,7 +2891,7 @@
     "EX13"
    ],
    "resultat": "passed",
-   "duree_s": 0.1323
+   "duree_s": 0.1243
   },
   {
    "test": "tests/test_robustness.py::test_requetes_concurrentes_coherentes_avec_le_resultat_sequentiel",
@@ -2900,7 +2900,7 @@
     "EX13"
    ],
    "resultat": "passed",
-   "duree_s": 1.5983
+   "duree_s": 1.2538
   },
   {
    "test": "tests/test_robustness.py::test_monotonie_metier_dans_le_domaine_d_entrainement[0-revenu_mensuel]",
@@ -2910,7 +2910,7 @@
     "EX13"
    ],
    "resultat": "passed",
-   "duree_s": 0.0158
+   "duree_s": 0.0089
   },
   {
    "test": "tests/test_robustness.py::test_monotonie_metier_dans_le_domaine_d_entrainement[0-montant_credit]",
@@ -2920,7 +2920,7 @@
     "EX13"
    ],
    "resultat": "passed",
-   "duree_s": 0.0164
+   "duree_s": 0.0086
   },
   {
    "test": "tests/test_robustness.py::test_monotonie_metier_dans_le_domaine_d_entrainement[0-anciennete_activite]",
@@ -2930,7 +2930,7 @@
     "EX13"
    ],
    "resultat": "passed",
-   "duree_s": 0.0101
+   "duree_s": 0.0072
   },
   {
    "test": "tests/test_robustness.py::test_monotonie_metier_dans_le_domaine_d_entrainement[0-age]",
@@ -2940,7 +2940,7 @@
     "EX13"
    ],
    "resultat": "passed",
-   "duree_s": 0.0069
+   "duree_s": 0.006
   },
   {
    "test": "tests/test_robustness.py::test_monotonie_metier_dans_le_domaine_d_entrainement[1-revenu_mensuel]",
@@ -2950,7 +2950,7 @@
     "EX13"
    ],
    "resultat": "passed",
-   "duree_s": 0.0119
+   "duree_s": 0.0089
   },
   {
    "test": "tests/test_robustness.py::test_monotonie_metier_dans_le_domaine_d_entrainement[1-montant_credit]",
@@ -2960,7 +2960,7 @@
     "EX13"
    ],
    "resultat": "passed",
-   "duree_s": 0.0096
+   "duree_s": 0.0109
   },
   {
    "test": "tests/test_robustness.py::test_monotonie_metier_dans_le_domaine_d_entrainement[1-anciennete_activite]",
@@ -2970,7 +2970,7 @@
     "EX13"
    ],
    "resultat": "passed",
-   "duree_s": 0.0063
+   "duree_s": 0.0071
   },
   {
    "test": "tests/test_robustness.py::test_monotonie_metier_dans_le_domaine_d_entrainement[1-age]",
@@ -2980,7 +2980,7 @@
     "EX13"
    ],
    "resultat": "passed",
-   "duree_s": 0.008
+   "duree_s": 0.0059
   },
   {
    "test": "tests/test_robustness.py::test_monotonie_metier_dans_le_domaine_d_entrainement[2-revenu_mensuel]",
@@ -2990,7 +2990,7 @@
     "EX13"
    ],
    "resultat": "passed",
-   "duree_s": 0.0107
+   "duree_s": 0.0086
   },
   {
    "test": "tests/test_robustness.py::test_monotonie_metier_dans_le_domaine_d_entrainement[2-montant_credit]",
@@ -3000,7 +3000,7 @@
     "EX13"
    ],
    "resultat": "passed",
-   "duree_s": 0.009
+   "duree_s": 0.0081
   },
   {
    "test": "tests/test_robustness.py::test_monotonie_metier_dans_le_domaine_d_entrainement[2-anciennete_activite]",
@@ -3010,7 +3010,7 @@
     "EX13"
    ],
    "resultat": "passed",
-   "duree_s": 0.0064
+   "duree_s": 0.0067
   },
   {
    "test": "tests/test_robustness.py::test_monotonie_metier_dans_le_domaine_d_entrainement[2-age]",
@@ -3020,7 +3020,7 @@
     "EX13"
    ],
    "resultat": "passed",
-   "duree_s": 0.0087
+   "duree_s": 0.0067
   },
   {
    "test": "tests/test_robustness.py::test_fuzzing_aucune_erreur_serveur",
@@ -3032,7 +3032,7 @@
     "EX11"
    ],
    "resultat": "passed",
-   "duree_s": 4.1807
+   "duree_s": 3.9188
   },
   {
    "test": "tests/test_tracabilite.py::test_sept_exigences_imposees_et_au_moins_cinq_ajoutees",
@@ -3046,7 +3046,7 @@
    "fonction": "test_priorites_calculees_a_partir_de_la_gravite_et_de_la_probabilite",
    "exigences": [],
    "resultat": "passed",
-   "duree_s": 0.0003
+   "duree_s": 0.0002
   },
   {
    "test": "tests/test_tracabilite.py::test_chaque_exigence_est_couverte_par_au_moins_un_test",
@@ -3060,7 +3060,7 @@
    "fonction": "test_plan_de_test_reference_des_exigences_et_des_tests_existants",
    "exigences": [],
    "resultat": "passed",
-   "duree_s": 0.0006
+   "duree_s": 0.0007
   },
   {
    "test": "tests/test_tracabilite.py::test_workflow_ci_conforme",
@@ -3069,7 +3069,7 @@
     "EX18"
    ],
    "resultat": "passed",
-   "duree_s": 0.0087
+   "duree_s": 0.0086
   },
   {
    "test": "tests/test_tracabilite.py::test_requirements_figees",
@@ -3078,7 +3078,7 @@
     "EX18"
    ],
    "resultat": "passed",
-   "duree_s": 0.0006
+   "duree_s": 0.0005
   },
   {
    "test": "tests/test_tracabilite.py::test_arborescence_conforme_a_l_enonce",
@@ -3087,7 +3087,7 @@
     "EX18"
    ],
    "resultat": "passed",
-   "duree_s": 0.0004
+   "duree_s": 0.0009
   },
   {
    "test": "tests/test_tracabilite.py::test_gitignore_exclut_les_artefacts_generes",
@@ -3105,7 +3105,7 @@
     "EX18"
    ],
    "resultat": "passed",
-   "duree_s": 0.0003
+   "duree_s": 0.0002
   },
   {
    "test": "tests/test_validation.py::test_demande_valide_est_normalisee",
@@ -3117,7 +3117,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0002
+   "duree_s": 0.0003
   },
   {
    "test": "tests/test_validation.py::test_age_accepte[min]",
@@ -3135,7 +3135,7 @@
     "EX01"
    ],
    "resultat": "passed",
-   "duree_s": 0.0002
+   "duree_s": 0.0003
   },
   {
    "test": "tests/test_validation.py::test_age_accepte[typique]",
@@ -3144,7 +3144,7 @@
     "EX01"
    ],
    "resultat": "passed",
-   "duree_s": 0.0002
+   "duree_s": 0.0003
   },
   {
    "test": "tests/test_validation.py::test_age_accepte[flottant_entier]",
@@ -3153,7 +3153,7 @@
     "EX01"
    ],
    "resultat": "passed",
-   "duree_s": 0.0002
+   "duree_s": 0.0003
   },
   {
    "test": "tests/test_validation.py::test_age_accepte[trente]",
@@ -3180,7 +3180,7 @@
     "EX01"
    ],
    "resultat": "passed",
-   "duree_s": 0.0002
+   "duree_s": 0.0003
   },
   {
    "test": "tests/test_validation.py::test_age_hors_limites_refuse[0]",
@@ -3225,7 +3225,7 @@
     "EX01"
    ],
    "resultat": "passed",
-   "duree_s": 0.0003
+   "duree_s": 0.0002
   },
   {
    "test": "tests/test_validation.py::test_age_hors_limites_refuse[10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]",
@@ -3243,7 +3243,7 @@
     "EX01"
    ],
    "resultat": "passed",
-   "duree_s": 0.0002
+   "duree_s": 0.0003
   },
   {
    "test": "tests/test_validation.py::test_age_type_ou_valeur_invalide[nul]",
@@ -3252,7 +3252,7 @@
     "EX01"
    ],
    "resultat": "passed",
-   "duree_s": 0.0003
+   "duree_s": 0.0002
   },
   {
    "test": "tests/test_validation.py::test_age_type_ou_valeur_invalide[vrai]",
@@ -3279,7 +3279,7 @@
     "EX01"
    ],
    "resultat": "passed",
-   "duree_s": 0.0002
+   "duree_s": 0.0003
   },
   {
    "test": "tests/test_validation.py::test_age_type_ou_valeur_invalide[objet]",
@@ -3325,7 +3325,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0002
+   "duree_s": 0.0003
   },
   {
    "test": "tests/test_validation.py::test_montants_valides_acceptes[min-montant_credit]",
@@ -3415,7 +3415,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0002
+   "duree_s": 0.0003
   },
   {
    "test": "tests/test_validation.py::test_montants_hors_limites_refuses[-1-revenu_mensuel]",
@@ -3425,7 +3425,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0003
+   "duree_s": 0.0002
   },
   {
    "test": "tests/test_validation.py::test_montants_hors_limites_refuses[-1-montant_credit]",
@@ -3445,7 +3445,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0002
+   "duree_s": 0.0004
   },
   {
    "test": "tests/test_validation.py::test_montants_hors_limites_refuses[-250000-montant_credit]",
@@ -3525,7 +3525,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0003
+   "duree_s": 0.0002
   },
   {
    "test": "tests/test_validation.py::test_montants_hors_limites_refuses[1e+308-montant_credit]",
@@ -3545,7 +3545,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0006
+   "duree_s": 0.0003
   },
   {
    "test": "tests/test_validation.py::test_montants_hors_limites_refuses[10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000-montant_credit]",
@@ -3555,7 +3555,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0003
+   "duree_s": 0.0002
   },
   {
    "test": "tests/test_validation.py::test_montants_type_invalide[chaine_numerique-revenu_mensuel]",
@@ -3575,7 +3575,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0005
+   "duree_s": 0.0002
   },
   {
    "test": "tests/test_validation.py::test_montants_type_invalide[texte-revenu_mensuel]",
@@ -3605,7 +3605,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0004
+   "duree_s": 0.0002
   },
   {
    "test": "tests/test_validation.py::test_montants_type_invalide[vide-montant_credit]",
@@ -3615,7 +3615,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0002
+   "duree_s": 0.0003
   },
   {
    "test": "tests/test_validation.py::test_montants_type_invalide[nul-revenu_mensuel]",
@@ -3625,7 +3625,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0003
+   "duree_s": 0.0002
   },
   {
    "test": "tests/test_validation.py::test_montants_type_invalide[nul-montant_credit]",
@@ -3635,7 +3635,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0003
+   "duree_s": 0.0002
   },
   {
    "test": "tests/test_validation.py::test_montants_type_invalide[booleen-revenu_mensuel]",
@@ -3655,7 +3655,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0003
+   "duree_s": 0.0002
   },
   {
    "test": "tests/test_validation.py::test_montants_type_invalide[liste-revenu_mensuel]",
@@ -3665,7 +3665,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0003
+   "duree_s": 0.0002
   },
   {
    "test": "tests/test_validation.py::test_montants_type_invalide[liste-montant_credit]",
@@ -3685,7 +3685,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0003
+   "duree_s": 0.0002
   },
   {
    "test": "tests/test_validation.py::test_montants_type_invalide[objet-montant_credit]",
@@ -3695,7 +3695,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0003
+   "duree_s": 0.0002
   },
   {
    "test": "tests/test_validation.py::test_montants_type_invalide[texte_nan-revenu_mensuel]",
@@ -3705,7 +3705,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0003
+   "duree_s": 0.0002
   },
   {
    "test": "tests/test_validation.py::test_montants_type_invalide[texte_nan-montant_credit]",
@@ -3725,7 +3725,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0003
+   "duree_s": 0.0002
   },
   {
    "test": "tests/test_validation.py::test_montants_non_finis_refuses[nan-montant_credit]",
@@ -3745,7 +3745,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0003
+   "duree_s": 0.0002
   },
   {
    "test": "tests/test_validation.py::test_montants_non_finis_refuses[plus_infini-montant_credit]",
@@ -3782,7 +3782,7 @@
    "fonction": "test_plafond_revenu_depasse_par_un",
    "exigences": [],
    "resultat": "passed",
-   "duree_s": 0.0011
+   "duree_s": 0.0003
   },
   {
    "test": "tests/test_validation.py::test_duree_valide_acceptee[min]",
@@ -3818,7 +3818,7 @@
     "EX03"
    ],
    "resultat": "passed",
-   "duree_s": 0.0002
+   "duree_s": 0.0003
   },
   {
    "test": "tests/test_validation.py::test_duree_invalide_refusee[0-hors_limites]",
@@ -3827,7 +3827,7 @@
     "EX03"
    ],
    "resultat": "passed",
-   "duree_s": 0.0002
+   "duree_s": 0.0003
   },
   {
    "test": "tests/test_validation.py::test_duree_invalide_refusee[-12-hors_limites]",
@@ -3845,7 +3845,7 @@
     "EX03"
    ],
    "resultat": "passed",
-   "duree_s": 0.0002
+   "duree_s": 0.0003
   },
   {
    "test": "tests/test_validation.py::test_duree_invalide_refusee[1000000000-hors_limites]",
@@ -3863,7 +3863,7 @@
     "EX03"
    ],
    "resultat": "passed",
-   "duree_s": 0.0003
+   "duree_s": 0.0002
   },
   {
    "test": "tests/test_validation.py::test_duree_invalide_refusee[0.5-non_entier]",
@@ -3872,7 +3872,7 @@
     "EX03"
    ],
    "resultat": "passed",
-   "duree_s": 0.0003
+   "duree_s": 0.0002
   },
   {
    "test": "tests/test_validation.py::test_duree_invalide_refusee[12-type_invalide]",
@@ -3908,7 +3908,7 @@
     "EX03"
    ],
    "resultat": "passed",
-   "duree_s": 0.0003
+   "duree_s": 0.0002
   },
   {
    "test": "tests/test_validation.py::test_duree_invalide_refusee[inf-valeur_non_finie]",
@@ -3917,7 +3917,7 @@
     "EX03"
    ],
    "resultat": "passed",
-   "duree_s": 0.0002
+   "duree_s": 0.0003
   },
   {
    "test": "tests/test_validation.py::test_coherence_acceptee[limite_20_4]",
@@ -3935,7 +3935,7 @@
     "EX12"
    ],
    "resultat": "passed",
-   "duree_s": 0.0003
+   "duree_s": 0.0002
   },
   {
    "test": "tests/test_validation.py::test_coherence_acceptee[zero]",
@@ -3944,7 +3944,7 @@
     "EX12"
    ],
    "resultat": "passed",
-   "duree_s": 0.0003
+   "duree_s": 0.0002
   },
   {
    "test": "tests/test_validation.py::test_coherence_acceptee[limite_75_59]",
@@ -3989,7 +3989,7 @@
     "EX12"
    ],
    "resultat": "passed",
-   "duree_s": 0.0003
+   "duree_s": 0.0002
   },
   {
    "test": "tests/test_validation.py::test_incoherence_age_anciennete_refusee[20_ans_15]",
@@ -3998,7 +3998,7 @@
     "EX12"
    ],
    "resultat": "passed",
-   "duree_s": 0.0003
+   "duree_s": 0.0004
   },
   {
    "test": "tests/test_validation.py::test_incoherence_age_anciennete_refusee[75_ans_60]",
@@ -4016,7 +4016,7 @@
     "EX12"
    ],
    "resultat": "passed",
-   "duree_s": 0.0028
+   "duree_s": 0.0002
   },
   {
    "test": "tests/test_validation.py::test_anciennete_invalide[61-hors_limites]",
@@ -4025,7 +4025,7 @@
     "EX12"
    ],
    "resultat": "passed",
-   "duree_s": 0.0026
+   "duree_s": 0.0003
   },
   {
    "test": "tests/test_validation.py::test_anciennete_invalide[4-type_invalide]",
@@ -4034,7 +4034,7 @@
     "EX12"
    ],
    "resultat": "passed",
-   "duree_s": 0.0009
+   "duree_s": 0.0002
   },
   {
    "test": "tests/test_validation.py::test_anciennete_invalide[nan-valeur_non_finie]",
@@ -4043,7 +4043,7 @@
     "EX12"
    ],
    "resultat": "passed",
-   "duree_s": 0.0009
+   "duree_s": 0.0002
   },
   {
    "test": "tests/test_validation.py::test_anciennete_invalide[None-type_invalide]",
@@ -4052,7 +4052,7 @@
     "EX12"
    ],
    "resultat": "passed",
-   "duree_s": 0.0003
+   "duree_s": 0.0002
   },
   {
    "test": "tests/test_validation.py::test_champ_obligatoire_absent[age]",
@@ -4079,7 +4079,7 @@
     "EX06"
    ],
    "resultat": "passed",
-   "duree_s": 0.0003
+   "duree_s": 0.0002
   },
   {
    "test": "tests/test_validation.py::test_champ_obligatoire_absent[duree_mois]",
@@ -4088,7 +4088,7 @@
     "EX06"
    ],
    "resultat": "passed",
-   "duree_s": 0.0003
+   "duree_s": 0.0002
   },
   {
    "test": "tests/test_validation.py::test_champ_obligatoire_absent[anciennete_activite]",
@@ -4097,7 +4097,7 @@
     "EX06"
    ],
    "resultat": "passed",
-   "duree_s": 0.0003
+   "duree_s": 0.0002
   },
   {
    "test": "tests/test_validation.py::test_objet_vide_liste_tous_les_champs_manquants",
@@ -4106,7 +4106,7 @@
     "EX06"
    ],
    "resultat": "passed",
-   "duree_s": 0.0003
+   "duree_s": 0.0002
   },
   {
    "test": "tests/test_validation.py::test_corps_non_objet_refuse[nul]",
@@ -4136,7 +4136,7 @@
     "EX10"
    ],
    "resultat": "passed",
-   "duree_s": 0.0003
+   "duree_s": 0.0002
   },
   {
    "test": "tests/test_validation.py::test_corps_non_objet_refuse[texte]",
@@ -4194,7 +4194,7 @@
     "EX09"
    ],
    "resultat": "passed",
-   "duree_s": 0.0004
+   "duree_s": 0.0002
   },
   {
    "test": "tests/test_validation.py::test_cles_proches_ou_en_majuscules_refusees[AGE]",
@@ -4212,7 +4212,7 @@
     "EX09"
    ],
    "resultat": "passed",
-   "duree_s": 0.0003
+   "duree_s": 0.0002
   },
   {
    "test": "tests/test_validation.py::test_cles_proches_ou_en_majuscules_refusees[revenu]",
@@ -4221,7 +4221,7 @@
     "EX09"
    ],
    "resultat": "passed",
-   "duree_s": 0.0002
+   "duree_s": 0.0004
   },
   {
    "test": "tests/test_validation.py::test_cles_proches_ou_en_majuscules_refusees[salaire]",
@@ -4230,7 +4230,7 @@
     "EX09"
    ],
    "resultat": "passed",
-   "duree_s": 0.0004
+   "duree_s": 0.0002
   },
   {
    "test": "tests/test_validation.py::test_cles_proches_ou_en_majuscules_refusees[age\\u200b]",
@@ -4239,7 +4239,7 @@
     "EX09"
    ],
    "resultat": "passed",
-   "duree_s": 0.0002
+   "duree_s": 0.0003
   },
   {
    "test": "tests/test_validation.py::test_nom_de_champ_inconnu_tronque",
@@ -4259,7 +4259,7 @@
     "EX11"
    ],
    "resultat": "passed",
-   "duree_s": 0.0003
+   "duree_s": 0.0025
   },
   {
    "test": "tests/test_validation.py::test_aucune_alerte_dans_le_domaine",
@@ -4268,7 +4268,7 @@
     "EX15"
    ],
    "resultat": "passed",
-   "duree_s": 0.0009
+   "duree_s": 0.0002
   },
   {
    "test": "tests/test_validation.py::test_alerte_hors_domaine[modifs0-revenu_mensuel]",
@@ -4277,7 +4277,7 @@
     "EX15"
    ],
    "resultat": "passed",
-   "duree_s": 0.0002
+   "duree_s": 0.0005
   },
   {
    "test": "tests/test_validation.py::test_alerte_hors_domaine[modifs1-revenu_mensuel]",
@@ -4286,7 +4286,7 @@
     "EX15"
    ],
    "resultat": "passed",
-   "duree_s": 0.0002
+   "duree_s": 0.0004
   },
   {
    "test": "tests/test_validation.py::test_alerte_hors_domaine[modifs2-montant_credit]",
@@ -4295,7 +4295,7 @@
     "EX15"
    ],
    "resultat": "passed",
-   "duree_s": 0.0004
+   "duree_s": 0.0002
   },
   {
    "test": "tests/test_validation.py::test_alerte_hors_domaine[modifs3-duree_mois]",
@@ -4304,7 +4304,7 @@
     "EX15"
    ],
    "resultat": "passed",
-   "duree_s": 0.0003
+   "duree_s": 0.0002
   },
   {
    "test": "tests/test_validation.py::test_alerte_hors_domaine[modifs4-duree_mois]",
@@ -4313,7 +4313,7 @@
     "EX15"
    ],
    "resultat": "passed",
-   "duree_s": 0.0002
+   "duree_s": 0.0003
   },
   {
    "test": "tests/test_validation.py::test_alerte_hors_domaine[modifs5-age]",
@@ -4349,7 +4349,7 @@
     "EX15"
    ],
    "resultat": "passed",
-   "duree_s": 0.0002
+   "duree_s": 0.0006
   },
   {
    "test": "tests/test_validation.py::test_champ_absent_du_domaine_ignore",
@@ -4358,7 +4358,7 @@
     "EX15"
    ],
    "resultat": "passed",
-   "duree_s": 0.0002
+   "duree_s": 0.0003
   },
   {
    "test": "tests/test_validation.py::test_caracteristiques_calculees_et_ordonnees",
@@ -4368,7 +4368,7 @@
     "EX13"
    ],
    "resultat": "passed",
-   "duree_s": 0.0007
+   "duree_s": 0.0009
   },
   {
    "test": "tests/test_validation.py::test_transformation_unitaire_identique_a_la_transformation_par_lot",
@@ -4377,7 +4377,7 @@
     "EX13"
    ],
    "resultat": "passed",
-   "duree_s": 0.0011
+   "duree_s": 0.0005
   },
   {
    "test": "tests/test_validation.py::test_pretraitement_refuse_les_entrees_non_transformables[revenu_nul]",
@@ -4417,7 +4417,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0002
+   "duree_s": 0.0003
   },
   {
    "test": "tests/test_validation.py::test_pretraitement_refuse_les_entrees_non_transformables[nan]",
@@ -4447,7 +4447,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0002
+   "duree_s": 0.0003
   },
   {
    "test": "tests/test_validation.py::test_pretraitement_refuse_les_entrees_non_transformables[longueurs_differentes]",
@@ -4457,7 +4457,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0003
+   "duree_s": 0.0004
   },
   {
    "test": "tests/test_validation.py::test_pretraitement_refuse_les_entrees_non_transformables[entier_geant]",
@@ -4467,7 +4467,7 @@
     "EX08"
    ],
    "resultat": "passed",
-   "duree_s": 0.0002
+   "duree_s": 0.0003
   },
   {
    "test": "tests/test_validation.py::test_variable_attendue_absente_du_pretraitement",
@@ -4477,7 +4477,7 @@
     "EX11"
    ],
    "resultat": "passed",
-   "duree_s": 0.0003
+   "duree_s": 0.0005
   },
   {
    "test": "tests/test_validation.py::test_niveaux_de_risque_aux_bornes[0.0-faible]",
@@ -4486,7 +4486,7 @@
     "EX16"
    ],
    "resultat": "passed",
-   "duree_s": 0.0002
+   "duree_s": 0.0003
   },
   {
    "test": "tests/test_validation.py::test_niveaux_de_risque_aux_bornes[0.2999-faible]",
@@ -4513,7 +4513,7 @@
     "EX16"
    ],
    "resultat": "passed",
-   "duree_s": 0.0001
+   "duree_s": 0.0002
   },
   {
    "test": "tests/test_validation.py::test_niveaux_de_risque_aux_bornes[0.5999-modere]",
@@ -4522,7 +4522,7 @@
     "EX16"
    ],
    "resultat": "passed",
-   "duree_s": 0.0001
+   "duree_s": 0.0002
   },
   {
    "test": "tests/test_validation.py::test_niveaux_de_risque_aux_bornes[0.6-eleve]",
@@ -4531,7 +4531,7 @@
     "EX16"
    ],
    "resultat": "passed",
-   "duree_s": 0.0001
+   "duree_s": 0.0002
   },
   {
    "test": "tests/test_validation.py::test_niveaux_de_risque_aux_bornes[0.6001-eleve]",
@@ -4540,7 +4540,7 @@
     "EX16"
    ],
    "resultat": "passed",
-   "duree_s": 0.0001
+   "duree_s": 0.0003
   },
   {
    "test": "tests/test_validation.py::test_niveaux_de_risque_aux_bornes[1.0-eleve]",
@@ -4559,7 +4559,7 @@
     "EX16"
    ],
    "resultat": "passed",
-   "duree_s": 0.0003
+   "duree_s": 0.0004
   },
   {
    "test": "tests/test_validation.py::test_probabilite_invalide_refusee_par_l_interpretation[1.0001]",
@@ -4579,7 +4579,7 @@
     "EX16"
    ],
    "resultat": "passed",
-   "duree_s": 0.0002
+   "duree_s": 0.0003
   },
   {
    "test": "tests/test_validation.py::test_probabilite_invalide_refusee_par_l_interpretation[inf]",
@@ -4589,7 +4589,7 @@
     "EX16"
    ],
    "resultat": "passed",
-   "duree_s": 0.0002
+   "duree_s": 0.0004
   },
   {
    "test": "tests/test_validation.py::test_probabilite_invalide_refusee_par_l_interpretation[-inf]",
@@ -4599,7 +4599,7 @@
     "EX16"
    ],
    "resultat": "passed",
-   "duree_s": 0.0002
+   "duree_s": 0.0003
   },
   {
    "test": "tests/test_validation.py::test_probabilite_invalide_refusee_par_l_interpretation[0.5]",
@@ -4609,7 +4609,7 @@
     "EX16"
    ],
    "resultat": "passed",
-   "duree_s": 0.0005
+   "duree_s": 0.0002
   },
   {
    "test": "tests/test_validation.py::test_probabilite_invalide_refusee_par_l_interpretation[None]",
@@ -4619,7 +4619,7 @@
     "EX16"
    ],
    "resultat": "passed",
-   "duree_s": 0.0003
+   "duree_s": 0.0002
   },
   {
    "test": "tests/test_validation.py::test_probabilite_invalide_refusee_par_l_interpretation[True]",

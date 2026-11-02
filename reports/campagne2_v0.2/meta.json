@@ -1,9 +1,10 @@
 {
   "etiquette": "v0.2",
   "version_application": "0.2.0",
-  "commit_git": "8373603",
-  "debut": "2026-11-02T19:25:24",
-  "duree_s": 18.6,
+  "commit_git": "c4b79e6",
+  "commit_application": "c4b79e6",
+  "debut": "2026-11-02T19:26:19",
+  "duree_s": 17.4,
   "code_sortie_pytest": 0,
   "tests": {
     "total": 463,

@@ -34,7 +34,7 @@
   "comportement": "Requête rejetée avant tout appel au modèle.",
   "fuite_technique": false,
   "conforme": true,
-  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"feb56e4aa67b4bc0\",\"details\":[{\"champ\":\"revenu_mensuel\",\"code\":"
+  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"0ef6572e1a9e4c5c\",\"details\":[{\"champ\":\"revenu_mensuel\",\"code\":"
  },
  {
   "id": "S03",
@@ -52,7 +52,7 @@
   "comportement": "Rejet contrôlé, aucune prédiction.",
   "fuite_technique": false,
   "conforme": true,
-  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"7c2f7f5840ae46f6\",\"details\":[{\"champ\":\"age\",\"code\":\"hors_limit"
+  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"d67a09cec4d74836\",\"details\":[{\"champ\":\"age\",\"code\":\"hors_limit"
  },
  {
   "id": "S04",
@@ -70,7 +70,7 @@
   "comportement": "Aucune conversion implicite ; rejet contrôlé.",
   "fuite_technique": false,
   "conforme": true,
-  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"ce88a348e11a41b4\",\"details\":[{\"champ\":\"revenu_mensuel\",\"code\":"
+  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"6f6c5249d190449b\",\"details\":[{\"champ\":\"revenu_mensuel\",\"code\":"
  },
  {
   "id": "S05",
@@ -88,7 +88,7 @@
   "comportement": "Le contrat exige un nombre JSON : pas de coercition silencieuse.",
   "fuite_technique": false,
   "conforme": true,
-  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"099227810d3f4e2c\",\"details\":[{\"champ\":\"revenu_mensuel\",\"code\":"
+  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"b9fae7697495469f\",\"details\":[{\"champ\":\"revenu_mensuel\",\"code\":"
  },
  {
   "id": "S06",
@@ -106,7 +106,7 @@
   "comportement": "Rejet contrôlé (évite log(0) = -infini dans le prétraitement).",
   "fuite_technique": false,
   "conforme": true,
-  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"eb6967b6363443ed\",\"details\":[{\"champ\":\"montant_credit\",\"code\":"
+  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"f23692cdcea54fb6\",\"details\":[{\"champ\":\"montant_credit\",\"code\":"
  },
  {
   "id": "S07",
@@ -124,7 +124,7 @@
   "comportement": "Rejet contrôlé.",
   "fuite_technique": false,
   "conforme": true,
-  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"0ec0647c2a084ddf\",\"details\":[{\"champ\":\"montant_credit\",\"code\":"
+  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"e3bbfbcf1f5f4c19\",\"details\":[{\"champ\":\"montant_credit\",\"code\":"
  },
  {
   "id": "S08",
@@ -142,7 +142,7 @@
   "comportement": "Pas de troncature silencieuse (12,5 ne devient pas 12).",
   "fuite_technique": false,
   "conforme": true,
-  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"9309855ca4cb4e9c\",\"details\":[{\"champ\":\"duree_mois\",\"code\":\"non"
+  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"d29abfc2f48844d8\",\"details\":[{\"champ\":\"duree_mois\",\"code\":\"non"
  },
  {
   "id": "S09",
@@ -160,7 +160,7 @@
   "comportement": "Schéma strict : un attribut inattendu n'est jamais ignoré en silence.",
   "fuite_technique": false,
   "conforme": true,
-  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"21b44253fff3489a\",\"details\":[{\"champ\":\"genre\",\"code\":\"champ_no"
+  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"d7174712c5c34408\",\"details\":[{\"champ\":\"genre\",\"code\":\"champ_no"
  },
  {
   "id": "S10",
@@ -181,7 +181,7 @@
   "comportement": "Rejet contrôlé ; aucun dépassement numérique.",
   "fuite_technique": false,
   "conforme": true,
-  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"d4773fea295541c0\",\"details\":[{\"champ\":\"age\",\"code\":\"hors_limit"
+  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"0382568fa4f24b03\",\"details\":[{\"champ\":\"age\",\"code\":\"hors_limit"
  },
  {
   "id": "S11",
@@ -199,7 +199,7 @@
   "comportement": "Indisponibilité signalée proprement ; pas de plantage.",
   "fuite_technique": false,
   "conforme": true,
-  "extrait_reponse": "{\"erreur\":\"modele_indisponible\",\"message\":\"Le modèle de prédiction est momentanément indisponible.\",\"id_requete\":\"a8c0f2662b374be1\"}"
+  "extrait_reponse": "{\"erreur\":\"modele_indisponible\",\"message\":\"Le modèle de prédiction est momentanément indisponible.\",\"id_requete\":\"5478102234184ec8\"}"
  },
  {
   "id": "S12",
@@ -217,7 +217,7 @@
   "comportement": "Rejet 400, aucune trace technique.",
   "fuite_technique": false,
   "conforme": true,
-  "extrait_reponse": "{\"erreur\":\"json_invalide\",\"message\":\"Le corps de la requête n'est pas un JSON valide.\",\"id_requete\":\"886246b2e352468c\"}"
+  "extrait_reponse": "{\"erreur\":\"json_invalide\",\"message\":\"Le corps de la requête n'est pas un JSON valide.\",\"id_requete\":\"96575255b7bb4ca0\"}"
  },
  {
   "id": "S13",
@@ -235,7 +235,7 @@
   "comportement": "Rejet 400.",
   "fuite_technique": false,
   "conforme": true,
-  "extrait_reponse": "{\"erreur\":\"json_invalide\",\"message\":\"Le corps de la requête n'est pas un JSON valide.\",\"id_requete\":\"178cae2fc82c4678\"}"
+  "extrait_reponse": "{\"erreur\":\"json_invalide\",\"message\":\"Le corps de la requête n'est pas un JSON valide.\",\"id_requete\":\"30fff1a1c3c04c8a\"}"
  },
  {
   "id": "S14",
@@ -254,7 +254,7 @@
   "comportement": "Rejet 422 contrôlé.",
   "fuite_technique": false,
   "conforme": true,
-  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"c61a69f20c2749a5\",\"details\":[{\"champ\":\"corps\",\"code\":\"schema_i"
+  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"3a86f9082af34e9b\",\"details\":[{\"champ\":\"corps\",\"code\":\"schema_i"
  },
  {
   "id": "S15",
@@ -273,7 +273,7 @@
   "comportement": "NaN n'est pas du JSON (RFC 8259) : rejet 400.",
   "fuite_technique": false,
   "conforme": true,
-  "extrait_reponse": "{\"erreur\":\"json_invalide\",\"message\":\"Le corps de la requête n'est pas un JSON valide.\",\"id_requete\":\"f9763f4dcef44849\"}"
+  "extrait_reponse": "{\"erreur\":\"json_invalide\",\"message\":\"Le corps de la requête n'est pas un JSON valide.\",\"id_requete\":\"675c0c18d4824677\"}"
  },
  {
   "id": "S16",
@@ -291,7 +291,7 @@
   "comportement": "Valeur infinie rejetée avant le prétraitement.",
   "fuite_technique": false,
   "conforme": true,
-  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"9c2c57f4aec44a41\",\"details\":[{\"champ\":\"revenu_mensuel\",\"code\":"
+  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"ea17513fa917451c\",\"details\":[{\"champ\":\"revenu_mensuel\",\"code\":"
  },
  {
   "id": "S17",
@@ -309,7 +309,7 @@
   "comportement": "Rejet 415.",
   "fuite_technique": false,
   "conforme": true,
-  "extrait_reponse": "{\"erreur\":\"type_contenu_non_supporte\",\"message\":\"Le Content-Type doit être application/json.\",\"id_requete\":\"8c8bafd0c87f444d\"}"
+  "extrait_reponse": "{\"erreur\":\"type_contenu_non_supporte\",\"message\":\"Le Content-Type doit être application/json.\",\"id_requete\":\"4395989bba424203\"}"
  },
  {
   "id": "S18",
@@ -327,7 +327,7 @@
   "comportement": "Rejet 413 sans analyse du corps.",
   "fuite_technique": false,
   "conforme": true,
-  "extrait_reponse": "{\"erreur\":\"corps_trop_volumineux\",\"message\":\"Le corps de la requête dépasse 10000 octets.\",\"id_requete\":\"3dcae0878cb44a87\"}"
+  "extrait_reponse": "{\"erreur\":\"corps_trop_volumineux\",\"message\":\"Le corps de la requête dépasse 10000 octets.\",\"id_requete\":\"6f92675eb4694591\"}"
  },
  {
   "id": "S19",
@@ -345,7 +345,7 @@
   "comportement": "Rejet 422 listant tous les champs.",
   "fuite_technique": false,
   "conforme": true,
-  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"ea7d127dcfb14abe\",\"details\":[{\"champ\":\"age\",\"code\":\"champ_manq"
+  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"e4537be437d247a1\",\"details\":[{\"champ\":\"age\",\"code\":\"champ_manq"
  },
  {
   "id": "S20",
@@ -363,7 +363,7 @@
   "comportement": "true n'est pas assimilé à 1 mois.",
   "fuite_technique": false,
   "conforme": true,
-  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"f3ac19ad204c4ad3\",\"details\":[{\"champ\":\"duree_mois\",\"code\":\"typ"
+  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"6aa4885975134d54\",\"details\":[{\"champ\":\"duree_mois\",\"code\":\"typ"
  },
  {
   "id": "S21",
@@ -382,7 +382,7 @@
   "comportement": "null refusé.",
   "fuite_technique": false,
   "conforme": true,
-  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"3b2469829c1a448f\",\"details\":[{\"champ\":\"age\",\"code\":\"type_inval"
+  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"52bc9b57aaea4920\",\"details\":[{\"champ\":\"age\",\"code\":\"type_inval"
  },
  {
   "id": "S22",
@@ -400,7 +400,7 @@
   "comportement": "Contrôle de cohérence inter-champs.",
   "fuite_technique": false,
   "conforme": true,
-  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"7bdd47e686074199\",\"details\":[{\"champ\":\"anciennete_activite\",\"c"
+  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"abaa31e5ba9f4f62\",\"details\":[{\"champ\":\"anciennete_activite\",\"c"
  },
  {
   "id": "S23",
@@ -418,7 +418,7 @@
   "comportement": "Rejet 405 au format uniforme.",
   "fuite_technique": false,
   "conforme": true,
-  "extrait_reponse": "{\"erreur\":\"methode_non_autorisee\",\"message\":\"Méthode HTTP non autorisée pour cette ressource.\",\"id_requete\":\"8709a9729d6c4349\"}"
+  "extrait_reponse": "{\"erreur\":\"methode_non_autorisee\",\"message\":\"Méthode HTTP non autorisée pour cette ressource.\",\"id_requete\":\"7f3baf97a9664de0\"}"
  },
  {
   "id": "S24",
@@ -436,7 +436,7 @@
   "comportement": "Rejet 404 au format uniforme.",
   "fuite_technique": false,
   "conforme": true,
-  "extrait_reponse": "{\"erreur\":\"ressource_introuvable\",\"message\":\"La ressource demandée n'existe pas.\",\"id_requete\":\"7bea39a7d26b40f6\"}"
+  "extrait_reponse": "{\"erreur\":\"ressource_introuvable\",\"message\":\"La ressource demandée n'existe pas.\",\"id_requete\":\"fb1d7cbf75a346a3\"}"
  },
  {
   "id": "S25",
@@ -454,7 +454,7 @@
   "comportement": "Aucune récursion non maîtrisée : JSON valide mais non conforme, rejet 422.",
   "fuite_technique": false,
   "conforme": true,
-  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"700f8779d087478e\",\"details\":[{\"champ\":\"corps\",\"code\":\"schema_i"
+  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"e9621630ce0c4984\",\"details\":[{\"champ\":\"corps\",\"code\":\"schema_i"
  },
  {
   "id": "S26",
@@ -472,7 +472,7 @@
   "comportement": "Aucune conversion en flottant avant le contrôle des bornes.",
   "fuite_technique": false,
   "conforme": true,
-  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"81fc1d08edf84747\",\"details\":[{\"champ\":\"revenu_mensuel\",\"code\":"
+  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"0dd12867da7240a2\",\"details\":[{\"champ\":\"revenu_mensuel\",\"code\":"
  },
  {
   "id": "S27",
@@ -491,6 +491,6 @@
   "comportement": "Requête ambiguë refusée : pas de pollution de paramètres.",
   "fuite_technique": false,
   "conforme": true,
-  "extrait_reponse": "{\"erreur\":\"json_invalide\",\"message\":\"Le corps de la requête n'est pas un JSON valide.\",\"id_requete\":\"3b7e63cd7e214134\"}"
+  "extrait_reponse": "{\"erreur\":\"json_invalide\",\"message\":\"Le corps de la requête n'est pas un JSON valide.\",\"id_requete\":\"19d4d79886b7432b\"}"
  }
 ]

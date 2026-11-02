@@ -1,14 +1,15 @@
 {
   "etiquette": "v0.1",
   "version_application": "0.1.0",
-  "commit_git": "non versionné",
-  "debut": "2026-11-01T13:07:52",
-  "duree_s": 16.1,
+  "commit_git": "c4b79e6",
+  "commit_application": "1987160",
+  "debut": "2026-11-02T19:26:36",
+  "duree_s": 19.8,
   "code_sortie_pytest": 1,
   "tests": {
-    "total": 455,
-    "passed": 185,
-    "failed": 269,
+    "total": 463,
+    "passed": 186,
+    "failed": 276,
     "skipped": 1
   },
   "couverture_pct": 99.29,

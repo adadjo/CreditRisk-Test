@@ -1,0 +1,22 @@
+# Matrice de traçabilité
+
+| ID | Exigence | Priorité | Cas de test | Fonctions pytest | Réussis v0.1 | Réussis v0.2 |
+|---|---|---|---|---|---|---|
+| EX01 | L'âge est compris dans l'intervalle autorisé [18 ; 75] | P1 | TC02, TC10, TC20, TC21, TC22, TC34 | 13 | 42/117 | 117/117 |
+| EX02 | Le revenu est numérique, fini et positif | P1 | TC03, TC10, TC17, TC20, TC21, TC22, TC27, TC34 | 19 | 47/170 | 170/170 |
+| EX03 | La durée est un entier valide [1 ; 120] mois | P2 | TC04, TC10, TC20, TC21, TC22, TC34 | 12 | 37/110 | 110/110 |
+| EX04 | La prédiction retourne une probabilité valide | P1 | TC01, TC13, TC18, TC19, TC22, TC23, TC26, TC27, TC28, TC32 | 29 | 48/77 | 77/77 |
+| EX05 | Le modèle est disponible | P1 | TC10, TC11, TC14 | 8 | 1/18 | 18/18 |
+| EX06 | Une entrée incomplète est soumise à validation | P1 | TC06, TC10, TC13, TC16, TC20, TC24 | 14 | 1/40 | 40/40 |
+| EX07 | Une nouvelle version ne dégrade pas les critères critiques | P1 | TC29, TC30, TC31, TC32, TC33 | 18 | 38/39 | 39/39 |
+| EX08 | Le montant du crédit est numérique, strictement positif et plafonné | P1 | TC05, TC10, TC17, TC20, TC21, TC22, TC34 | 15 | 47/150 | 150/150 |
+| EX09 | Les champs non autorisés sont rejetés (schéma strict) | P2 | TC07, TC10, TC12, TC24 | 10 | 0/19 | 19/19 |
+| EX10 | Les requêtes mal formées sont traitées de façon contrôlée | P1 | TC10, TC12, TC21, TC24, TC27 | 11 | 1/47 | 47/47 |
+| EX11 | Les erreurs n'exposent aucune information technique sensible | P1 | TC16, TC17, TC18, TC19, TC27 | 12 | 1/21 | 21/21 |
+| EX12 | L'ancienneté d'activité est valide et cohérente avec l'âge | P2 | TC08, TC10, TC22, TC34 | 8 | 15/27 | 27/27 |
+| EX13 | Les résultats sont déterministes et reproductibles | P2 | TC13, TC25, TC26, TC28, TC32, TC33 | 20 | 25/26 | 26/26 |
+| EX14 | Le modèle chargé est celui qui est documenté (intégrité et métadonnées) | P2 | TC12, TC13, TC14, TC15, TC29, TC33 | 18 | 6/25 | 25/25 |
+| EX15 | Les entrées atypiques mais valides sont signalées | P1 | TC23 | 7 | 4/19 | 19/19 |
+| EX16 | La probabilité est interprétée en niveau de risque avec des seuils exacts | P1 | TC01, TC09, TC32 | 10 | 25/35 | 35/35 |
+| EX17 | Le système respecte les objectifs de performance | P3 | TC35, TC36 | 2 | 2/2 | 2/2 |
+| EX18 | La chaîne CI exécute les tests et bloque en cas d'échec | P2 | TC37, TC38 | 6 | 5/5 | 5/5 |

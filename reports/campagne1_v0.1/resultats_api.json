@@ -39,7 +39,7 @@
   "comportement": "Requête rejetée avant tout appel au modèle.",
   "fuite_technique": true,
   "conforme": false,
-  "extrait_reponse": "{\"erreur\":\"erreur_interne\",\"message\":\"'revenu_mensuel'\",\"trace\":\"Traceback (most recent call last):\\n  File \\\"/home/user/CreditRisk-Test/app/main.py\\\", line 7"
+  "extrait_reponse": "{\"erreur\":\"erreur_interne\",\"message\":\"'revenu_mensuel'\",\"trace\":\"Traceback (most recent call last):\\n  File \\\"/tmp/"
  },
  {
   "id": "S03",
@@ -57,7 +57,7 @@
   "comportement": "Rejet contrôlé, aucune prédiction.",
   "fuite_technique": false,
   "conforme": true,
-  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"025694abf65a4d4b\",\"details\":[{\"champ\":\"age\",\"code\":\"hors_limit"
+  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"71e959e434044c97\",\"details\":[{\"champ\":\"age\",\"code\":\"hors_limit"
  },
  {
   "id": "S04",
@@ -75,7 +75,7 @@
   "comportement": "Aucune conversion implicite ; rejet contrôlé.",
   "fuite_technique": false,
   "conforme": true,
-  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"2161c375b33f467a\",\"details\":[{\"champ\":\"revenu_mensuel\",\"code\":"
+  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"11e99c98138a42ab\",\"details\":[{\"champ\":\"revenu_mensuel\",\"code\":"
  },
  {
   "id": "S05",
@@ -139,7 +139,7 @@
   "comportement": "Rejet contrôlé.",
   "fuite_technique": false,
   "conforme": true,
-  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"bdcc3256ec884169\",\"details\":[{\"champ\":\"montant_credit\",\"code\":"
+  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"a5aabf4865b24786\",\"details\":[{\"champ\":\"montant_credit\",\"code\":"
  },
  {
   "id": "S08",
@@ -219,7 +219,7 @@
   "comportement": "Rejet contrôlé ; aucun dépassement numérique.",
   "fuite_technique": false,
   "conforme": false,
-  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"9e5aecd2e92d4891\",\"details\":[{\"champ\":\"age\",\"code\":\"hors_limit"
+  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"3c37a1ebba874848\",\"details\":[{\"champ\":\"age\",\"code\":\"hors_limit"
  },
  {
   "id": "S11",
@@ -237,7 +237,7 @@
   "comportement": "Indisponibilité signalée proprement ; pas de plantage.",
   "fuite_technique": true,
   "conforme": false,
-  "extrait_reponse": "{\"erreur\":\"erreur_interne\",\"message\":\"[Errno 2] No such file or directory: '/home/user/CreditRisk-Test/reports/_tmp/modele_absent.json'\",\"trace\":\"Traceback (m"
+  "extrait_reponse": "{\"erreur\":\"erreur_interne\",\"message\":\"[Errno 2] No such file or directory: '/tmp/wt_v01/re"
  },
  {
   "id": "S12",
@@ -255,7 +255,7 @@
   "comportement": "Rejet 400, aucune trace technique.",
   "fuite_technique": true,
   "conforme": false,
-  "extrait_reponse": "{\"erreur\":\"erreur_interne\",\"message\":\"Expecting value: line 1 column 31 (char 30)\",\"trace\":\"Traceback (most recent call last):\\n  File \\\"/home/user/CreditRisk"
+  "extrait_reponse": "{\"erreur\":\"erreur_interne\",\"message\":\"Expecting value: line 1 column 31 (char 30)\",\"trace\":\"Traceback (most recent call last):\\n  File \\\"/tmp/"
  },
  {
   "id": "S13",
@@ -273,7 +273,7 @@
   "comportement": "Rejet 400.",
   "fuite_technique": true,
   "conforme": false,
-  "extrait_reponse": "{\"erreur\":\"erreur_interne\",\"message\":\"Expecting value: line 1 column 1 (char 0)\",\"trace\":\"Traceback (most recent call last):\\n  File \\\"/home/user/CreditRisk-T"
+  "extrait_reponse": "{\"erreur\":\"erreur_interne\",\"message\":\"Expecting value: line 1 column 1 (char 0)\",\"trace\":\"Traceback (most recent call last):\\n  File \\\"/tmp/"
  },
  {
   "id": "S14",
@@ -297,7 +297,7 @@
   "comportement": "Rejet 422 contrôlé.",
   "fuite_technique": true,
   "conforme": false,
-  "extrait_reponse": "{\"erreur\":\"erreur_interne\",\"message\":\"list indices must be integers or slices, not str\",\"trace\":\"Traceback (most recent call last):\\n  File \\\"/home/user/Credi"
+  "extrait_reponse": "{\"erreur\":\"erreur_interne\",\"message\":\"list indices must be integers or slices, not str\",\"trace\":\"Traceback (most recent call last):\\n  File \\\"/tmp/"
  },
  {
   "id": "S15",
@@ -375,7 +375,7 @@
   "comportement": "Rejet 413 sans analyse du corps.",
   "fuite_technique": true,
   "conforme": false,
-  "extrait_reponse": "{\"erreur\":\"erreur_interne\",\"message\":\"'revenu_mensuel'\",\"trace\":\"Traceback (most recent call last):\\n  File \\\"/home/user/CreditRisk-Test/app/main.py\\\", line 7"
+  "extrait_reponse": "{\"erreur\":\"erreur_interne\",\"message\":\"'revenu_mensuel'\",\"trace\":\"Traceback (most recent call last):\\n  File \\\"/tmp/"
  },
  {
   "id": "S19",
@@ -414,7 +414,7 @@
   "comportement": "Rejet 422 listant tous les champs.",
   "fuite_technique": true,
   "conforme": false,
-  "extrait_reponse": "{\"erreur\":\"erreur_interne\",\"message\":\"'age'\",\"trace\":\"Traceback (most recent call last):\\n  File \\\"/home/user/CreditRisk-Test/app/main.py\\\", line 70, in predi"
+  "extrait_reponse": "{\"erreur\":\"erreur_interne\",\"message\":\"'age'\",\"trace\":\"Traceback (most recent call last):\\n  File \\\"/tmp/"
  },
  {
   "id": "S20",
@@ -543,7 +543,7 @@
   "comportement": "Aucune récursion non maîtrisée : JSON valide mais non conforme, rejet 422.",
   "fuite_technique": true,
   "conforme": false,
-  "extrait_reponse": "{\"erreur\":\"erreur_interne\",\"message\":\"list indices must be integers or slices, not str\",\"trace\":\"Traceback (most recent call last):\\n  File \\\"/home/user/Credi"
+  "extrait_reponse": "{\"erreur\":\"erreur_interne\",\"message\":\"list indices must be integers or slices, not str\",\"trace\":\"Traceback (most recent call last):\\n  File \\\"/tmp/"
  },
  {
   "id": "S26",
@@ -566,7 +566,7 @@
   "comportement": "Aucune conversion en flottant avant le contrôle des bornes.",
   "fuite_technique": true,
   "conforme": false,
-  "extrait_reponse": "{\"erreur\":\"erreur_interne\",\"message\":\"int too large to convert to float\",\"trace\":\"Traceback (most recent call last):\\n  File \\\"/home/user/CreditRisk-Test/app/"
+  "extrait_reponse": "{\"erreur\":\"erreur_interne\",\"message\":\"int too large to convert to float\",\"trace\":\"Traceback (most recent call last):\\n  File \\\"/tmp/"
  },
  {
   "id": "S27",
@@ -585,6 +585,6 @@
   "comportement": "Requête ambiguë refusée : pas de pollution de paramètres.",
   "fuite_technique": false,
   "conforme": false,
-  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"9f3dc7011307417b\",\"details\":[{\"champ\":\"age\",\"code\":\"hors_limit"
+  "extrait_reponse": "{\"erreur\":\"donnees_invalides\",\"message\":\"Les données de la demande sont invalides.\",\"id_requete\":\"970219ad8c4c462e\",\"details\":[{\"champ\":\"age\",\"code\":\"hors_limit"
  }
 ]
