@@ -149,6 +149,9 @@ def rejouer_pannes() -> list[dict]:
         "metadonnees_illisibles": "Métadonnées illisibles (JSON invalide)",
         "variables_divergentes": "Variables des métadonnées dans un autre ordre",
         "metadonnees_absentes": "Fichier de métadonnées absent",
+        "modele_substitue": "Autre modèle valide (6 variables) sous le nom du modèle versionné",
+        "octets_ajoutes": "Octets ajoutés en fin de fichier (le fichier reste chargeable)",
+        "empreinte_metadonnees_erronee": "Empreinte SHA-256 des métadonnées erronée",
     }
     for defaut in DEFAUTS_MODELE:
         with tempfile.TemporaryDirectory() as dossier:
