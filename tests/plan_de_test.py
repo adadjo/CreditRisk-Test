@@ -214,17 +214,33 @@ PLAN: tuple[CasDeTest, ...] = (
     ),
     CasDeTest(
         "TC14",
-        "Le modèle ne peut pas être chargé (9 défauts)",
+        "Le modèle ne peut pas être chargé (12 défauts)",
         ("EX05", "EX14"),
         INTEG,
         "Fichiers de modèle ou de métadonnées défectueux",
         "Absent, octets aléatoires, fichier altéré, objet non conforme, 5 variables, métadonnées incomplètes / "
-        "illisibles / absentes, variables divergentes",
+        "illisibles / absentes, variables divergentes ; trois défauts silencieux (modèle substitué, octets "
+        "ajoutés, empreinte des métadonnées erronée)",
         "ModeleIndisponible ; 503 sur les trois endpoints ; aucune fuite ; refus journalisé",
         ("test_modele_non_chargeable_est_signale_proprement",),
     ),
     CasDeTest(
         "TC15",
+        "Empreinte SHA-256 non conforme : refus avant désérialisation",
+        ("EX14",),
+        INTEG,
+        "Modèle chargeable et conforme au contrat, mais dont l'empreinte diffère de celle des métadonnées",
+        "Octet altéré, autre modèle valide à 6 variables, octets ajoutés, empreinte des métadonnées erronée ; "
+        "témoin positif : modèle versionné intact",
+        "ModeleIndisponible dont le motif cite l'empreinte ; `joblib.load` jamais appelé sur le fichier suspect "
+        "(le format pickle exécute du code à la lecture) ; modèle conforme désérialisé une seule fois",
+        (
+            "test_empreinte_non_conforme_refuse_le_modele_sans_le_deserialiser",
+            "test_modele_conforme_est_deserialise_une_seule_fois",
+        ),
+    ),
+    CasDeTest(
+        "TC16",
         "Variable attendue absente après validation",
         ("EX06", "EX11"),
         INTEG,
@@ -237,7 +253,7 @@ PLAN: tuple[CasDeTest, ...] = (
         ),
     ),
     CasDeTest(
-        "TC16",
+        "TC17",
         "Le prétraitement échoue",
         ("EX11", "EX02", "EX08"),
         INTEG,
@@ -251,7 +267,7 @@ PLAN: tuple[CasDeTest, ...] = (
         ),
     ),
     CasDeTest(
-        "TC17",
+        "TC18",
         "Dimensions incompatibles avec le modèle",
         ("EX04", "EX11"),
         INTEG,
@@ -261,7 +277,7 @@ PLAN: tuple[CasDeTest, ...] = (
         ("test_dimensions_incompatibles_avec_le_modele",),
     ),
     CasDeTest(
-        "TC18",
+        "TC19",
         "Erreur interne et probabilité invalide du modèle",
         ("EX04", "EX11"),
         INTEG,
@@ -277,7 +293,7 @@ PLAN: tuple[CasDeTest, ...] = (
         ),
     ),
     CasDeTest(
-        "TC19",
+        "TC20",
         "Valeurs manquantes, nulles ou non numériques",
         ("EX06", "EX01", "EX02", "EX03", "EX08"),
         ROB,
@@ -287,7 +303,7 @@ PLAN: tuple[CasDeTest, ...] = (
         ("test_valeurs_manquantes", "test_valeurs_non_numeriques"),
     ),
     CasDeTest(
-        "TC20",
+        "TC21",
         "Valeurs infinies ou non finies",
         ("EX02", "EX10", "EX01", "EX03", "EX08"),
         ROB,
@@ -301,7 +317,7 @@ PLAN: tuple[CasDeTest, ...] = (
         ),
     ),
     CasDeTest(
-        "TC21",
+        "TC22",
         "Valeurs aux limites des intervalles",
         ("EX01", "EX02", "EX03", "EX08", "EX12", "EX04"),
         ROB,
@@ -311,7 +327,7 @@ PLAN: tuple[CasDeTest, ...] = (
         ("test_limites_incluses_acceptees", "test_limites_depassees_refusees"),
     ),
     CasDeTest(
-        "TC22",
+        "TC23",
         "Entrées valides mais éloignées des données d'entraînement",
         ("EX15", "EX04"),
         ROB,
@@ -329,7 +345,7 @@ PLAN: tuple[CasDeTest, ...] = (
         ),
     ),
     CasDeTest(
-        "TC23",
+        "TC24",
         "Schéma incorrect",
         ("EX09", "EX06", "EX10"),
         ROB,
@@ -339,7 +355,7 @@ PLAN: tuple[CasDeTest, ...] = (
         ("test_schema_incorrect_refuse",),
     ),
     CasDeTest(
-        "TC24",
+        "TC25",
         "Déterminisme et indépendance des requêtes",
         ("EX13",),
         ROB,
@@ -354,7 +370,7 @@ PLAN: tuple[CasDeTest, ...] = (
         ),
     ),
     CasDeTest(
-        "TC25",
+        "TC26",
         "Monotonie métier (test métamorphique)",
         ("EX13", "EX04"),
         ROB,
@@ -364,7 +380,7 @@ PLAN: tuple[CasDeTest, ...] = (
         ("test_monotonie_metier_dans_le_domaine_d_entrainement",),
     ),
     CasDeTest(
-        "TC26",
+        "TC27",
         "Fuzzing reproductible",
         ("EX10", "EX02", "EX04", "EX11"),
         ROB,
@@ -374,7 +390,7 @@ PLAN: tuple[CasDeTest, ...] = (
         ("test_fuzzing_aucune_erreur_serveur",),
     ),
     CasDeTest(
-        "TC27",
+        "TC28",
         "Prétraitement cohérent",
         ("EX04", "EX13"),
         UNIT,
@@ -387,7 +403,7 @@ PLAN: tuple[CasDeTest, ...] = (
         ),
     ),
     CasDeTest(
-        "TC28",
+        "TC29",
         "Référence et tolérances figées",
         ("EX07", "EX14"),
         REG,
@@ -400,7 +416,7 @@ PLAN: tuple[CasDeTest, ...] = (
         ),
     ),
     CasDeTest(
-        "TC29",
+        "TC30",
         "Métriques du modèle courant contre la référence",
         ("EX07",),
         REG,
@@ -414,7 +430,7 @@ PLAN: tuple[CasDeTest, ...] = (
         ),
     ),
     CasDeTest(
-        "TC30",
+        "TC31",
         "Candidats : équivalent, amélioré, dégradé",
         ("EX07",),
         REG,
@@ -428,7 +444,7 @@ PLAN: tuple[CasDeTest, ...] = (
         ),
     ),
     CasDeTest(
-        "TC31",
+        "TC32",
         "Cas dorés et contrat de sortie",
         ("EX07", "EX13", "EX04", "EX16"),
         REG,
@@ -443,7 +459,7 @@ PLAN: tuple[CasDeTest, ...] = (
         ),
     ),
     CasDeTest(
-        "TC32",
+        "TC33",
         "Sauvegarde, rechargement et réentraînement",
         ("EX13", "EX14", "EX07"),
         REG,
@@ -460,7 +476,7 @@ PLAN: tuple[CasDeTest, ...] = (
         ),
     ),
     CasDeTest(
-        "TC33",
+        "TC34",
         "Qualité des données synthétiques",
         ("EX01", "EX02", "EX03", "EX08", "EX12"),
         UNIT,
@@ -470,7 +486,7 @@ PLAN: tuple[CasDeTest, ...] = (
         ("test_toutes_les_lignes_synthetiques_sont_des_demandes_valides",),
     ),
     CasDeTest(
-        "TC34",
+        "TC35",
         "Latence d'inférence (P95)",
         ("EX17",),
         PERF,
@@ -480,7 +496,7 @@ PLAN: tuple[CasDeTest, ...] = (
         ("test_latence_d_inference_p95",),
     ),
     CasDeTest(
-        "TC35",
+        "TC36",
         "Latence de l'API (P95) et débit",
         ("EX17",),
         PERF,
@@ -490,7 +506,7 @@ PLAN: tuple[CasDeTest, ...] = (
         ("test_latence_api_p95_et_debit_minimal",),
     ),
     CasDeTest(
-        "TC36",
+        "TC37",
         "Workflow CI et conformité du dépôt",
         ("EX18",),
         CI,
@@ -506,7 +522,7 @@ PLAN: tuple[CasDeTest, ...] = (
         ),
     ),
     CasDeTest(
-        "TC37",
+        "TC38",
         "Échec volontaire de la CI",
         ("EX18",),
         CI,

@@ -132,6 +132,13 @@ git push -u origin main
   le job s'arrête en échec (croix rouge). Sur une Pull Request, la fusion est alors bloquée si la
   règle de protection de branche exige ce contrôle.
 
+**Rejouer la chaîne localement, dans un environnement vierge** (installation figée, Ruff, Pytest et
+couverture, test volontairement défaillant, défauts injectés un à un dans le code) :
+
+```bash
+python -m scripts.preuve_ci --venv-vierge      # environ 4 min ; écrit reports/preuve_ci_locale.md
+```
+
 ## Régénérer les données et le modèle
 
 ```bash

@@ -11,6 +11,8 @@ import joblib
 import numpy as np
 import pytest
 from sklearn.linear_model import LogisticRegression
+from sklearn.pipeline import make_pipeline
+from sklearn.preprocessing import StandardScaler
 
 from app import config, prediction, preprocessing, validation
 from app.prediction import (
@@ -132,6 +134,17 @@ DEFAUTS_MODELE = [
     "metadonnees_illisibles",
     "variables_divergentes",
     "metadonnees_absentes",
+    # Défauts « silencieux » : le fichier reste chargeable et conforme au contrat, seule son
+    # empreinte SHA-256 trahit le changement. Sans le contrôle d'empreinte, ils passeraient.
+    "modele_substitue",
+    "octets_ajoutes",
+    "empreinte_metadonnees_erronee",
+]
+DEFAUTS_EMPREINTE = [
+    "fichier_altere",
+    "modele_substitue",
+    "octets_ajoutes",
+    "empreinte_metadonnees_erronee",
 ]
 
 
@@ -159,6 +172,17 @@ def preparer_modele_defectueux(dossier, defaut):
         del contenu["version"]
     elif defaut == "variables_divergentes":
         contenu["variables"] = list(reversed(contenu["variables"]))
+    elif defaut == "modele_substitue":
+        # Autre modèle, valide et à 6 variables, déposé sous le nom du modèle versionné ;
+        # les métadonnées gardent l'empreinte du modèle d'origine.
+        graine = np.random.default_rng(1)
+        remplacant = make_pipeline(StandardScaler(), LogisticRegression())
+        joblib.dump(remplacant.fit(graine.random((60, 6)), np.tile([0, 1], 30)), modele)
+    elif defaut == "octets_ajoutes":
+        with modele.open("ab") as fichier:  # joblib ignore les octets en fin de fichier
+            fichier.write(b"\x00" * 16)
+    elif defaut == "empreinte_metadonnees_erronee":
+        contenu["empreinte_sha256"] = "0" * 64
     if defaut == "metadonnees_illisibles":
         meta.write_text("{ceci n'est pas du json", encoding="utf-8")
     elif defaut != "metadonnees_absentes":
@@ -184,6 +208,41 @@ def test_modele_non_chargeable_est_signale_proprement(
         aucune_fuite(reponse)
     assert client.post("/predict", json=PAYLOAD_VALIDE).json()["erreur"] == "modele_indisponible"
     assert any("Chargement du modèle" in m for m in journal_serveur.messages)
+
+
+@pytest.fixture
+def espion_deserialisation(monkeypatch):
+    """Liste des fichiers que `joblib.load` a reçu l'ordre de désérialiser."""
+    ouverts: list[str] = []
+    original = joblib.load
+
+    def espion(chemin, *args, **kwargs):
+        ouverts.append(str(chemin))
+        return original(chemin, *args, **kwargs)
+
+    monkeypatch.setattr(joblib, "load", espion)
+    return ouverts
+
+
+@pytest.mark.exigence("EX14")
+@pytest.mark.parametrize("defaut", DEFAUTS_EMPREINTE)
+def test_empreinte_non_conforme_refuse_le_modele_sans_le_deserialiser(
+    tmp_path, defaut, espion_deserialisation
+):
+    """Le refus vient bien de l'empreinte, et un fichier suspect n'est jamais désérialisé (pickle)."""
+    modele, meta = preparer_modele_defectueux(tmp_path, defaut)
+    with pytest.raises(ModeleIndisponible, match="empreinte"):
+        ServicePrediction(modele, meta).charger()
+    assert espion_deserialisation == [], "un fichier à l'empreinte inattendue a été désérialisé"
+
+
+@pytest.mark.exigence("EX14")
+def test_modele_conforme_est_deserialise_une_seule_fois(espion_deserialisation):
+    """Témoin positif de l'espion : sans lui, le test précédent pourrait réussir à vide."""
+    service = ServicePrediction()
+    service.charger()
+    assert service.est_charge
+    assert espion_deserialisation == [str(config.CHEMIN_MODELE)]
 
 
 # --- Pannes injectées dans les étages du pipeline ---------------------------------------

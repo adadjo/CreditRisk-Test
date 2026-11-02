@@ -101,7 +101,7 @@ def test_requirements_figees():
         re.fullmatch(r"[A-Za-z0-9_.-]+==[0-9][0-9A-Za-z.]*", ligne) for ligne in lignes
     ), lignes
     paquets = {ligne.split("==")[0].lower() for ligne in lignes}
-    assert {"fastapi", "scikit-learn", "pytest", "pytest-cov", "ruff", "httpx"} <= paquets
+    assert {"fastapi", "scikit-learn", "pytest", "pytest-cov", "ruff", "httpx2"} <= paquets
 
 
 @pytest.mark.exigence("EX18")
