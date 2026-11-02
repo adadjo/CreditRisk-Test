@@ -1,0 +1,13 @@
+Réutilisation d'une connexion persistante après une période d'inactivité
+(serveur uvicorn par défaut : --timeout-keep-alive 5)
+
+Inactivité (s) | requêtes réussies | connexion fermée ou réinitialisée
+---------------|-------------------|----------------------------------
+          3.00 |        5 sur 5 |          0 sur 5
+          4.50 |        5 sur 5 |          0 sur 5
+          4.90 |        5 sur 5 |          0 sur 5
+          4.97 |        5 sur 5 |          0 sur 5
+          5.00 |        1 sur 5 |          4 sur 5
+          5.03 |        0 sur 5 |          5 sur 5
+          5.10 |        0 sur 5 |          5 sur 5
+          6.00 |        0 sur 5 |          5 sur 5

@@ -1,0 +1,21 @@
+Essai préliminaire (non retenu) : Locust avec une cadence strictement constante (1 requête/s par utilisateur)
+==========================================================================================================
+Serveur : uvicorn, 1 processus, épinglé sur le cœur 0 ; générateur sur le cœur 1 ; 28 s par essai, statistiques
+remises à zéro après la montée en charge (--reset-stats). Même machine que les mesures finales.
+
+classe          utilisateurs   débit (req/s)   P50 (ms)   P95 (ms)   P99 (ms)
+FastHttpUser          5            5,2             8          12         26
+FastHttpUser         50           51,8            54          78        140
+FastHttpUser        200          206,3           210         320        350
+HttpUser             50           51,8            65          96        130
+HttpUser            200          205,6           230         300        320
+
+Contre-essai : client asyncio indépendant, arrivées étalées dans la seconde (même serveur)
+  50 connexions   : P50 = 5,0 ms ; P95 = 7,1 ms
+  200 connexions  : P50 = 3,2 ms ; P95 = 5,5 ms
+
+Interprétation : avec constant_throughput, tous les utilisateurs créés en même temps restent « en phase » ; leurs
+requêtes arrivent par rafales de N requêtes que le serveur, mono-processus, traite l'une après l'autre
+(≈ 1 à 1,5 ms chacune). La latence mesurée croît donc avec N (≈ N × durée de service), sans que le serveur
+soit lent à charge égale. Le profil final utilise des arrivées aléatoires (temps de réflexion exponentiel),
+et les rafales réelles sont mesurées séparément (rafales de 10 à 200 requêtes simultanées).

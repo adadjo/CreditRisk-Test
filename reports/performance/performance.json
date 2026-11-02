@@ -1,0 +1,2870 @@
+{
+ "micro_mesures": {
+  "inference_modele_brut": {
+   "n": 3000,
+   "moyenne_ms": 0.1894,
+   "ecart_type_ms": 0.0352,
+   "min_ms": 0.16,
+   "p50_ms": 0.1795,
+   "p95_ms": 0.2368,
+   "p99_ms": 0.298,
+   "max_ms": 0.9953,
+   "debit_sequentiel_req_s": 5280.4
+  },
+  "inference_service": {
+   "n": 3000,
+   "moyenne_ms": 0.2324,
+   "ecart_type_ms": 0.1003,
+   "min_ms": 0.1682,
+   "p50_ms": 0.1958,
+   "p95_ms": 0.3663,
+   "p99_ms": 0.733,
+   "max_ms": 1.7426,
+   "debit_sequentiel_req_s": 4303.3
+  },
+  "chaine_applicative": {
+   "n": 3000,
+   "moyenne_ms": 0.2738,
+   "ecart_type_ms": 0.129,
+   "min_ms": 0.1632,
+   "p50_ms": 0.2443,
+   "p95_ms": 0.4533,
+   "p99_ms": 0.6968,
+   "max_ms": 2.13,
+   "debit_sequentiel_req_s": 3651.9
+  },
+  "modele_lot_1000": {
+   "taille_lot": 1000,
+   "duree_mediane_ms": 0.207,
+   "predictions_par_s": 4825533
+  },
+  "api_en_memoire": {
+   "n": 1000,
+   "moyenne_ms": 3.3471,
+   "ecart_type_ms": 0.6462,
+   "min_ms": 2.4336,
+   "p50_ms": 3.1833,
+   "p95_ms": 4.4484,
+   "p99_ms": 5.6958,
+   "max_ms": 9.7646,
+   "debit_sequentiel_req_s": 298.8
+  },
+  "api_http_local": {
+   "n": 1500,
+   "moyenne_ms": 2.4083,
+   "ecart_type_ms": 0.4289,
+   "min_ms": 1.6703,
+   "p50_ms": 2.3383,
+   "p95_ms": 3.0741,
+   "p99_ms": 3.8693,
+   "max_ms": 6.8117,
+   "debit_sequentiel_req_s": 415.2
+  },
+  "sante_http_local": {
+   "n": 500,
+   "moyenne_ms": 1.4546,
+   "ecart_type_ms": 0.2892,
+   "min_ms": 1.1053,
+   "p50_ms": 1.4043,
+   "p95_ms": 1.901,
+   "p99_ms": 2.198,
+   "max_ms": 5.5037,
+   "debit_sequentiel_req_s": 687.5
+  },
+  "rafales": {
+   "10": {
+    "n": 150,
+    "moyenne_ms": 11.9124,
+    "ecart_type_ms": 1.919,
+    "min_ms": 9.0475,
+    "p50_ms": 11.3874,
+    "p95_ms": 17.0957,
+    "p99_ms": 17.5525,
+    "max_ms": 17.6523,
+    "rafales": 15,
+    "echecs": 0,
+    "duree_rafale_mediane_ms": 11.8,
+    "debit_pendant_rafale_req_s": 845
+   },
+   "25": {
+    "n": 375,
+    "moyenne_ms": 27.4837,
+    "ecart_type_ms": 4.8202,
+    "min_ms": 18.9093,
+    "p50_ms": 27.2234,
+    "p95_ms": 41.2226,
+    "p99_ms": 42.797,
+    "max_ms": 43.1152,
+    "rafales": 15,
+    "echecs": 0,
+    "duree_rafale_mediane_ms": 28.6,
+    "debit_pendant_rafale_req_s": 875
+   },
+   "50": {
+    "n": 750,
+    "moyenne_ms": 52.4493,
+    "ecart_type_ms": 14.0746,
+    "min_ms": 37.5737,
+    "p50_ms": 48.8215,
+    "p95_ms": 100.6717,
+    "p99_ms": 105.6381,
+    "max_ms": 106.262,
+    "rafales": 15,
+    "echecs": 0,
+    "duree_rafale_mediane_ms": 50.5,
+    "debit_pendant_rafale_req_s": 990
+   },
+   "100": {
+    "n": 1500,
+    "moyenne_ms": 101.892,
+    "ecart_type_ms": 17.0396,
+    "min_ms": 59.4231,
+    "p50_ms": 101.6938,
+    "p95_ms": 137.681,
+    "p99_ms": 141.0512,
+    "max_ms": 141.835,
+    "rafales": 15,
+    "echecs": 0,
+    "duree_rafale_mediane_ms": 105.0,
+    "debit_pendant_rafale_req_s": 952
+   },
+   "200": {
+    "n": 3000,
+    "moyenne_ms": 214.391,
+    "ecart_type_ms": 35.4123,
+    "min_ms": 130.1555,
+    "p50_ms": 210.356,
+    "p95_ms": 277.1555,
+    "p99_ms": 286.291,
+    "max_ms": 288.4613,
+    "rafales": 15,
+    "echecs": 0,
+    "duree_rafale_mediane_ms": 218.6,
+    "debit_pendant_rafale_req_s": 915
+   }
+  },
+  "debit_sature": {
+   "concurrence": 16,
+   "duree_mesure_s": 10.0,
+   "debit_req_s": 637.2,
+   "echecs": 0,
+   "cpu_serveur_pct": 95.6,
+   "n": 6372,
+   "p50_ms": 22.6056,
+   "p95_ms": 40.136,
+   "p99_ms": 90.0636,
+   "max_ms": 188.0749
+  },
+  "demarrage": {
+   "durees_s": [
+    1.34,
+    1.05,
+    1.25
+   ],
+   "mediane_s": 1.25,
+   "definition": "lancement du processus uvicorn jusqu'à la première réponse 200 de /health"
+  },
+  "memoire_serveur": {
+   "apres_demarrage": {
+    "rss_mo": 164.7,
+    "pic_rss_mo": 164.7
+   },
+   "apres_les_mesures": {
+    "rss_mo": 182.4,
+    "pic_rss_mo": 182.4
+   }
+  },
+  "isolement_cpu": {
+   "serveur": 0,
+   "client": 1
+  }
+ },
+ "objectifs": {
+  "p95_inference_ms": 20.0,
+  "p95_api_ms": 200.0,
+  "debit_min_req_s": 50.0,
+  "taux_echec_max": 0.0,
+  "recuperation_p95_max_facteur": 1.5
+ },
+ "configuration": {
+  "date_utc": "2026-11-02 01:24:10",
+  "materiel": {
+   "processeur": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+   "frequence_mhz": 2100.0,
+   "coeurs_logiques": 2,
+   "coeurs_utilisables": 2,
+   "memoire_vive_go": 7.8,
+   "virtualise": true,
+   "quota_cpu_cgroup": null,
+   "gpu": "aucun (inférence sur CPU)"
+  },
+  "logiciel": {
+   "systeme": "Linux-6.18.44-fc-v185-x86_64-with-glibc2.39",
+   "noyau": "6.18.44-fc-v185",
+   "python": "3.13.18",
+   "implementation": "CPython",
+   "paquets": {
+    "fastapi": "0.162.0",
+    "starlette": "1.7.0",
+    "uvicorn": "0.54.0",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "joblib": "1.6.0",
+    "pandas": "3.0.5",
+    "httpx": "0.28.1",
+    "locust": "2.47.0",
+    "pytest": "9.1.1"
+   },
+   "boucle_evenements_uvicorn": "asyncio",
+   "analyseur_http_uvicorn": "h11"
+  },
+  "application": {
+   "version_application": "0.2.0",
+   "version_modele": "1.0.0",
+   "taille_modele_ko": 1.5,
+   "commit": "536f953",
+   "commande_serveur": "python -m uvicorn app.main:app --host 127.0.0.1 --port <port> (1 processus, journal d'accès activé)"
+  }
+ },
+ "charge": {
+  "profil": {
+   "etapes": [
+    [
+     5,
+     30
+    ],
+    [
+     10,
+     30
+    ],
+    [
+     20,
+     30
+    ],
+    [
+     50,
+     25
+    ],
+    [
+     100,
+     25
+    ],
+    [
+     200,
+     25
+    ],
+    [
+     300,
+     25
+    ],
+    [
+     400,
+     25
+    ],
+    [
+     500,
+     25
+    ],
+    [
+     600,
+     25
+    ],
+    [
+     700,
+     25
+    ],
+    [
+     10,
+     30
+    ]
+   ],
+   "debit_par_utilisateur_req_s": 1.0,
+   "arrivees": "aléatoires (temps de réflexion exponentiel, moyenne 1 s par utilisateur)",
+   "part_requetes_invalides": 0.05,
+   "chauffe_ignoree_par_palier_s": 7.0,
+   "generateur": "Locust FastHttpUser, 1 processus"
+  },
+  "isolement_cpu": {
+   "serveur": 0,
+   "generateur": 1
+  },
+  "duree_reelle_s": 321.3,
+  "code_retour_locust": 0,
+  "avertissement_cpu_generateur": false,
+  "demarrage_serveur_s": 1.3,
+  "memoire_serveur": {
+   "avant": {
+    "rss_mo": 165.8,
+    "pic_rss_mo": 165.8
+   },
+   "apres": {
+    "rss_mo": 179.6,
+    "pic_rss_mo": 179.6
+   }
+  },
+  "sante_apres_charge": 200,
+  "erreurs_journal_serveur": {
+   "traceback": 0,
+   "statuts_5xx": 0
+  },
+  "etapes": [
+   {
+    "palier": 1,
+    "cible_req_s": 5,
+    "duree_palier_s": 30,
+    "duree_mesuree_s": 23.0,
+    "n_requetes": 130,
+    "n_valides": 125,
+    "debit_observe_req_s": 5.7,
+    "p50_ms": 3.52,
+    "p95_ms": 5.51,
+    "p99_ms": 8.11,
+    "max_ms": 8.64,
+    "p95_invalides_ms": 3.66,
+    "echecs": 0,
+    "taux_echec": 0.0,
+    "cpu_serveur_pct": 1.9,
+    "cpu_generateur_pct": 0.7,
+    "conforme_latence": true,
+    "conforme_objectif": true
+   },
+   {
+    "palier": 2,
+    "cible_req_s": 10,
+    "duree_palier_s": 30,
+    "duree_mesuree_s": 23.0,
+    "n_requetes": 240,
+    "n_valides": 229,
+    "debit_observe_req_s": 10.4,
+    "p50_ms": 3.44,
+    "p95_ms": 4.91,
+    "p99_ms": 7.44,
+    "max_ms": 9.66,
+    "p95_invalides_ms": 5.75,
+    "echecs": 0,
+    "taux_echec": 0.0,
+    "cpu_serveur_pct": 3.2,
+    "cpu_generateur_pct": 1.1,
+    "conforme_latence": true,
+    "conforme_objectif": true
+   },
+   {
+    "palier": 3,
+    "cible_req_s": 20,
+    "duree_palier_s": 30,
+    "duree_mesuree_s": 23.0,
+    "n_requetes": 443,
+    "n_valides": 419,
+    "debit_observe_req_s": 19.3,
+    "p50_ms": 3.42,
+    "p95_ms": 5.09,
+    "p99_ms": 7.99,
+    "max_ms": 31.25,
+    "p95_invalides_ms": 2.98,
+    "echecs": 0,
+    "taux_echec": 0.0,
+    "cpu_serveur_pct": 5.5,
+    "cpu_generateur_pct": 2.0,
+    "conforme_latence": true,
+    "conforme_objectif": true
+   },
+   {
+    "palier": 4,
+    "cible_req_s": 50,
+    "duree_palier_s": 25,
+    "duree_mesuree_s": 18.0,
+    "n_requetes": 902,
+    "n_valides": 853,
+    "debit_observe_req_s": 50.1,
+    "p50_ms": 3.04,
+    "p95_ms": 4.68,
+    "p99_ms": 7.16,
+    "max_ms": 22.45,
+    "p95_invalides_ms": 4.78,
+    "echecs": 0,
+    "taux_echec": 0.0,
+    "cpu_serveur_pct": 12.0,
+    "cpu_generateur_pct": 4.2,
+    "conforme_latence": true,
+    "conforme_objectif": true
+   },
+   {
+    "palier": 5,
+    "cible_req_s": 100,
+    "duree_palier_s": 25,
+    "duree_mesuree_s": 18.0,
+    "n_requetes": 1771,
+    "n_valides": 1688,
+    "debit_observe_req_s": 98.4,
+    "p50_ms": 2.76,
+    "p95_ms": 5.43,
+    "p99_ms": 8.65,
+    "max_ms": 20.4,
+    "p95_invalides_ms": 4.03,
+    "echecs": 0,
+    "taux_echec": 0.0,
+    "cpu_serveur_pct": 20.6,
+    "cpu_generateur_pct": 6.8,
+    "conforme_latence": true,
+    "conforme_objectif": true
+   },
+   {
+    "palier": 6,
+    "cible_req_s": 200,
+    "duree_palier_s": 25,
+    "duree_mesuree_s": 18.0,
+    "n_requetes": 3420,
+    "n_valides": 3234,
+    "debit_observe_req_s": 190.0,
+    "p50_ms": 2.7,
+    "p95_ms": 6.56,
+    "p99_ms": 30.95,
+    "max_ms": 68.38,
+    "p95_invalides_ms": 6.45,
+    "echecs": 0,
+    "taux_echec": 0.0,
+    "cpu_serveur_pct": 34.4,
+    "cpu_generateur_pct": 10.9,
+    "conforme_latence": true,
+    "conforme_objectif": true
+   },
+   {
+    "palier": 7,
+    "cible_req_s": 300,
+    "duree_palier_s": 25,
+    "duree_mesuree_s": 18.0,
+    "n_requetes": 5424,
+    "n_valides": 5169,
+    "debit_observe_req_s": 301.3,
+    "p50_ms": 3.28,
+    "p95_ms": 10.26,
+    "p99_ms": 26.13,
+    "max_ms": 89.5,
+    "p95_invalides_ms": 8.3,
+    "echecs": 0,
+    "taux_echec": 0.0,
+    "cpu_serveur_pct": 53.8,
+    "cpu_generateur_pct": 16.1,
+    "conforme_latence": true,
+    "conforme_objectif": true
+   },
+   {
+    "palier": 8,
+    "cible_req_s": 400,
+    "duree_palier_s": 25,
+    "duree_mesuree_s": 18.0,
+    "n_requetes": 7139,
+    "n_valides": 6802,
+    "debit_observe_req_s": 396.6,
+    "p50_ms": 3.48,
+    "p95_ms": 10.82,
+    "p99_ms": 17.29,
+    "max_ms": 63.32,
+    "p95_invalides_ms": 10.84,
+    "echecs": 0,
+    "taux_echec": 0.0,
+    "cpu_serveur_pct": 63.8,
+    "cpu_generateur_pct": 19.0,
+    "conforme_latence": true,
+    "conforme_objectif": true
+   },
+   {
+    "palier": 9,
+    "cible_req_s": 500,
+    "duree_palier_s": 25,
+    "duree_mesuree_s": 18.0,
+    "n_requetes": 8946,
+    "n_valides": 8514,
+    "debit_observe_req_s": 497.0,
+    "p50_ms": 4.7,
+    "p95_ms": 15.46,
+    "p99_ms": 27.88,
+    "max_ms": 82.72,
+    "p95_invalides_ms": 14.02,
+    "echecs": 0,
+    "taux_echec": 0.0,
+    "cpu_serveur_pct": 78.0,
+    "cpu_generateur_pct": 23.4,
+    "conforme_latence": true,
+    "conforme_objectif": true
+   },
+   {
+    "palier": 10,
+    "cible_req_s": 600,
+    "duree_palier_s": 25,
+    "duree_mesuree_s": 18.0,
+    "n_requetes": 10571,
+    "n_valides": 10065,
+    "debit_observe_req_s": 587.3,
+    "p50_ms": 10.53,
+    "p95_ms": 57.93,
+    "p99_ms": 201.86,
+    "max_ms": 312.68,
+    "p95_invalides_ms": 61.3,
+    "echecs": 0,
+    "taux_echec": 0.0,
+    "cpu_serveur_pct": 89.2,
+    "cpu_generateur_pct": 27.4,
+    "conforme_latence": true,
+    "conforme_objectif": true
+   },
+   {
+    "palier": 11,
+    "cible_req_s": 700,
+    "duree_palier_s": 25,
+    "duree_mesuree_s": 18.0,
+    "n_requetes": 12349,
+    "n_valides": 11780,
+    "debit_observe_req_s": 686.1,
+    "p50_ms": 25.87,
+    "p95_ms": 81.54,
+    "p99_ms": 123.96,
+    "max_ms": 171.62,
+    "p95_invalides_ms": 80.3,
+    "echecs": 0,
+    "taux_echec": 0.0,
+    "cpu_serveur_pct": 96.5,
+    "cpu_generateur_pct": 30.5,
+    "conforme_latence": true,
+    "conforme_objectif": true
+   },
+   {
+    "palier": 12,
+    "cible_req_s": 10,
+    "duree_palier_s": 30,
+    "duree_mesuree_s": 23.0,
+    "n_requetes": 227,
+    "n_valides": 212,
+    "debit_observe_req_s": 9.9,
+    "p50_ms": 3.5,
+    "p95_ms": 4.95,
+    "p99_ms": 7.45,
+    "max_ms": 9.44,
+    "p95_invalides_ms": 5.01,
+    "echecs": 0,
+    "taux_echec": 0.0,
+    "cpu_serveur_pct": 3.4,
+    "cpu_generateur_pct": 1.2,
+    "conforme_latence": true,
+    "conforme_objectif": true
+   }
+  ],
+  "dernier_palier_conforme": {
+   "cible_req_s": 700,
+   "debit_observe_req_s": 686.1,
+   "p95_ms": 81.54
+  },
+  "dernier_palier_latence_conforme": {
+   "cible_req_s": 700,
+   "debit_observe_req_s": 686.1,
+   "p95_ms": 81.54
+  },
+  "premier_palier_non_conforme": null,
+  "debit_maximal_observe_req_s": 686.1,
+  "recuperation": {
+   "palier_reference_req_s": 10,
+   "p95_reference_ms": 4.91,
+   "p95_final_ms": 4.95,
+   "facteur": 1.01,
+   "echecs_palier_final": 0,
+   "conforme": true
+  },
+  "par_seconde": [
+   {
+    "t_s": 0,
+    "requetes": 5,
+    "echecs": 0,
+    "p95_ms": 6.65
+   },
+   {
+    "t_s": 1,
+    "requetes": 9,
+    "echecs": 0,
+    "p95_ms": 5.06
+   },
+   {
+    "t_s": 2,
+    "requetes": 10,
+    "echecs": 0,
+    "p95_ms": 3.92
+   },
+   {
+    "t_s": 3,
+    "requetes": 7,
+    "echecs": 0,
+    "p95_ms": 4.51
+   },
+   {
+    "t_s": 4,
+    "requetes": 9,
+    "echecs": 0,
+    "p95_ms": 3.85
+   },
+   {
+    "t_s": 5,
+    "requetes": 5,
+    "echecs": 0,
+    "p95_ms": 4.75
+   },
+   {
+    "t_s": 6,
+    "requetes": 5,
+    "echecs": 0,
+    "p95_ms": 4.57
+   },
+   {
+    "t_s": 7,
+    "requetes": 9,
+    "echecs": 0,
+    "p95_ms": 3.64
+   },
+   {
+    "t_s": 8,
+    "requetes": 8,
+    "echecs": 0,
+    "p95_ms": 3.98
+   },
+   {
+    "t_s": 9,
+    "requetes": 4,
+    "echecs": 0,
+    "p95_ms": 4.46
+   },
+   {
+    "t_s": 10,
+    "requetes": 5,
+    "echecs": 0,
+    "p95_ms": 4.82
+   },
+   {
+    "t_s": 11,
+    "requetes": 7,
+    "echecs": 0,
+    "p95_ms": 4.33
+   },
+   {
+    "t_s": 12,
+    "requetes": 5,
+    "echecs": 0,
+    "p95_ms": 4.41
+   },
+   {
+    "t_s": 13,
+    "requetes": 5,
+    "echecs": 0,
+    "p95_ms": 6.64
+   },
+   {
+    "t_s": 14,
+    "requetes": 6,
+    "echecs": 0,
+    "p95_ms": 5.25
+   },
+   {
+    "t_s": 15,
+    "requetes": 8,
+    "echecs": 0,
+    "p95_ms": 7.26
+   },
+   {
+    "t_s": 16,
+    "requetes": 7,
+    "echecs": 0,
+    "p95_ms": 3.74
+   },
+   {
+    "t_s": 17,
+    "requetes": 6,
+    "echecs": 0,
+    "p95_ms": 3.71
+   },
+   {
+    "t_s": 18,
+    "requetes": 9,
+    "echecs": 0,
+    "p95_ms": 4.28
+   },
+   {
+    "t_s": 19,
+    "requetes": 4,
+    "echecs": 0,
+    "p95_ms": 4.23
+   },
+   {
+    "t_s": 21,
+    "requetes": 5,
+    "echecs": 0,
+    "p95_ms": 4.46
+   },
+   {
+    "t_s": 22,
+    "requetes": 6,
+    "echecs": 0,
+    "p95_ms": 7.92
+   },
+   {
+    "t_s": 23,
+    "requetes": 5,
+    "echecs": 0,
+    "p95_ms": 4.39
+   },
+   {
+    "t_s": 24,
+    "requetes": 8,
+    "echecs": 0,
+    "p95_ms": 5.42
+   },
+   {
+    "t_s": 25,
+    "requetes": 3,
+    "echecs": 0,
+    "p95_ms": 4.49
+   },
+   {
+    "t_s": 26,
+    "requetes": 3,
+    "echecs": 0,
+    "p95_ms": 3.67
+   },
+   {
+    "t_s": 27,
+    "requetes": 4,
+    "echecs": 0,
+    "p95_ms": 3.49
+   },
+   {
+    "t_s": 28,
+    "requetes": 6,
+    "echecs": 0,
+    "p95_ms": 4.14
+   },
+   {
+    "t_s": 29,
+    "requetes": 7,
+    "echecs": 0,
+    "p95_ms": 3.63
+   },
+   {
+    "t_s": 30,
+    "requetes": 3,
+    "echecs": 0,
+    "p95_ms": 4.93
+   },
+   {
+    "t_s": 31,
+    "requetes": 14,
+    "echecs": 0,
+    "p95_ms": 5.33
+   },
+   {
+    "t_s": 32,
+    "requetes": 9,
+    "echecs": 0,
+    "p95_ms": 5.43
+   },
+   {
+    "t_s": 33,
+    "requetes": 11,
+    "echecs": 0,
+    "p95_ms": 5.8
+   },
+   {
+    "t_s": 34,
+    "requetes": 9,
+    "echecs": 0,
+    "p95_ms": 4.94
+   },
+   {
+    "t_s": 35,
+    "requetes": 6,
+    "echecs": 0,
+    "p95_ms": 4.8
+   },
+   {
+    "t_s": 36,
+    "requetes": 16,
+    "echecs": 0,
+    "p95_ms": 3.66
+   },
+   {
+    "t_s": 37,
+    "requetes": 13,
+    "echecs": 0,
+    "p95_ms": 4.07
+   },
+   {
+    "t_s": 38,
+    "requetes": 7,
+    "echecs": 0,
+    "p95_ms": 4.1
+   },
+   {
+    "t_s": 39,
+    "requetes": 9,
+    "echecs": 0,
+    "p95_ms": 4.19
+   },
+   {
+    "t_s": 40,
+    "requetes": 10,
+    "echecs": 0,
+    "p95_ms": 4.74
+   },
+   {
+    "t_s": 41,
+    "requetes": 8,
+    "echecs": 0,
+    "p95_ms": 4.68
+   },
+   {
+    "t_s": 42,
+    "requetes": 9,
+    "echecs": 0,
+    "p95_ms": 4.01
+   },
+   {
+    "t_s": 43,
+    "requetes": 8,
+    "echecs": 0,
+    "p95_ms": 4.41
+   },
+   {
+    "t_s": 44,
+    "requetes": 12,
+    "echecs": 0,
+    "p95_ms": 4.19
+   },
+   {
+    "t_s": 45,
+    "requetes": 10,
+    "echecs": 0,
+    "p95_ms": 4.19
+   },
+   {
+    "t_s": 46,
+    "requetes": 5,
+    "echecs": 0,
+    "p95_ms": 3.83
+   },
+   {
+    "t_s": 47,
+    "requetes": 7,
+    "echecs": 0,
+    "p95_ms": 4.43
+   },
+   {
+    "t_s": 48,
+    "requetes": 13,
+    "echecs": 0,
+    "p95_ms": 4.6
+   },
+   {
+    "t_s": 49,
+    "requetes": 10,
+    "echecs": 0,
+    "p95_ms": 4.46
+   },
+   {
+    "t_s": 50,
+    "requetes": 10,
+    "echecs": 0,
+    "p95_ms": 4.2
+   },
+   {
+    "t_s": 51,
+    "requetes": 14,
+    "echecs": 0,
+    "p95_ms": 5.6
+   },
+   {
+    "t_s": 52,
+    "requetes": 10,
+    "echecs": 0,
+    "p95_ms": 3.56
+   },
+   {
+    "t_s": 53,
+    "requetes": 21,
+    "echecs": 0,
+    "p95_ms": 7.46
+   },
+   {
+    "t_s": 54,
+    "requetes": 6,
+    "echecs": 0,
+    "p95_ms": 4.02
+   },
+   {
+    "t_s": 55,
+    "requetes": 10,
+    "echecs": 0,
+    "p95_ms": 4.16
+   },
+   {
+    "t_s": 56,
+    "requetes": 10,
+    "echecs": 0,
+    "p95_ms": 4.09
+   },
+   {
+    "t_s": 57,
+    "requetes": 10,
+    "echecs": 0,
+    "p95_ms": 5.23
+   },
+   {
+    "t_s": 58,
+    "requetes": 12,
+    "echecs": 0,
+    "p95_ms": 4.15
+   },
+   {
+    "t_s": 59,
+    "requetes": 16,
+    "echecs": 0,
+    "p95_ms": 8.42
+   },
+   {
+    "t_s": 60,
+    "requetes": 18,
+    "echecs": 0,
+    "p95_ms": 4.65
+   },
+   {
+    "t_s": 61,
+    "requetes": 22,
+    "echecs": 0,
+    "p95_ms": 4.71
+   },
+   {
+    "t_s": 62,
+    "requetes": 17,
+    "echecs": 0,
+    "p95_ms": 4.5
+   },
+   {
+    "t_s": 63,
+    "requetes": 22,
+    "echecs": 0,
+    "p95_ms": 4.74
+   },
+   {
+    "t_s": 64,
+    "requetes": 26,
+    "echecs": 0,
+    "p95_ms": 4.42
+   },
+   {
+    "t_s": 65,
+    "requetes": 21,
+    "echecs": 0,
+    "p95_ms": 5.36
+   },
+   {
+    "t_s": 66,
+    "requetes": 30,
+    "echecs": 0,
+    "p95_ms": 4.69
+   },
+   {
+    "t_s": 67,
+    "requetes": 16,
+    "echecs": 0,
+    "p95_ms": 4.01
+   },
+   {
+    "t_s": 68,
+    "requetes": 19,
+    "echecs": 0,
+    "p95_ms": 4.11
+   },
+   {
+    "t_s": 69,
+    "requetes": 16,
+    "echecs": 0,
+    "p95_ms": 4.68
+   },
+   {
+    "t_s": 70,
+    "requetes": 17,
+    "echecs": 0,
+    "p95_ms": 4.08
+   },
+   {
+    "t_s": 71,
+    "requetes": 19,
+    "echecs": 0,
+    "p95_ms": 4.45
+   },
+   {
+    "t_s": 72,
+    "requetes": 17,
+    "echecs": 0,
+    "p95_ms": 11.62
+   },
+   {
+    "t_s": 73,
+    "requetes": 26,
+    "echecs": 0,
+    "p95_ms": 6.6
+   },
+   {
+    "t_s": 74,
+    "requetes": 13,
+    "echecs": 0,
+    "p95_ms": 4.81
+   },
+   {
+    "t_s": 75,
+    "requetes": 22,
+    "echecs": 0,
+    "p95_ms": 4.74
+   },
+   {
+    "t_s": 76,
+    "requetes": 19,
+    "echecs": 0,
+    "p95_ms": 4.89
+   },
+   {
+    "t_s": 77,
+    "requetes": 14,
+    "echecs": 0,
+    "p95_ms": 6.23
+   },
+   {
+    "t_s": 78,
+    "requetes": 28,
+    "echecs": 0,
+    "p95_ms": 4.89
+   },
+   {
+    "t_s": 79,
+    "requetes": 15,
+    "echecs": 0,
+    "p95_ms": 5.53
+   },
+   {
+    "t_s": 80,
+    "requetes": 16,
+    "echecs": 0,
+    "p95_ms": 4.76
+   },
+   {
+    "t_s": 81,
+    "requetes": 16,
+    "echecs": 0,
+    "p95_ms": 4.01
+   },
+   {
+    "t_s": 82,
+    "requetes": 24,
+    "echecs": 0,
+    "p95_ms": 4.64
+   },
+   {
+    "t_s": 83,
+    "requetes": 13,
+    "echecs": 0,
+    "p95_ms": 4.68
+   },
+   {
+    "t_s": 84,
+    "requetes": 27,
+    "echecs": 0,
+    "p95_ms": 4.64
+   },
+   {
+    "t_s": 85,
+    "requetes": 24,
+    "echecs": 0,
+    "p95_ms": 5.1
+   },
+   {
+    "t_s": 86,
+    "requetes": 14,
+    "echecs": 0,
+    "p95_ms": 5.14
+   },
+   {
+    "t_s": 87,
+    "requetes": 19,
+    "echecs": 0,
+    "p95_ms": 6.15
+   },
+   {
+    "t_s": 88,
+    "requetes": 26,
+    "echecs": 0,
+    "p95_ms": 4.1
+   },
+   {
+    "t_s": 89,
+    "requetes": 23,
+    "echecs": 0,
+    "p95_ms": 4.16
+   },
+   {
+    "t_s": 90,
+    "requetes": 43,
+    "echecs": 0,
+    "p95_ms": 4.43
+   },
+   {
+    "t_s": 91,
+    "requetes": 49,
+    "echecs": 0,
+    "p95_ms": 5.87
+   },
+   {
+    "t_s": 92,
+    "requetes": 38,
+    "echecs": 0,
+    "p95_ms": 3.82
+   },
+   {
+    "t_s": 93,
+    "requetes": 53,
+    "echecs": 0,
+    "p95_ms": 3.75
+   },
+   {
+    "t_s": 94,
+    "requetes": 49,
+    "echecs": 0,
+    "p95_ms": 4.54
+   },
+   {
+    "t_s": 95,
+    "requetes": 47,
+    "echecs": 0,
+    "p95_ms": 5.94
+   },
+   {
+    "t_s": 96,
+    "requetes": 53,
+    "echecs": 0,
+    "p95_ms": 4.17
+   },
+   {
+    "t_s": 97,
+    "requetes": 41,
+    "echecs": 0,
+    "p95_ms": 3.79
+   },
+   {
+    "t_s": 98,
+    "requetes": 63,
+    "echecs": 0,
+    "p95_ms": 10.18
+   },
+   {
+    "t_s": 99,
+    "requetes": 43,
+    "echecs": 0,
+    "p95_ms": 4.44
+   },
+   {
+    "t_s": 100,
+    "requetes": 62,
+    "echecs": 0,
+    "p95_ms": 4.6
+   },
+   {
+    "t_s": 101,
+    "requetes": 45,
+    "echecs": 0,
+    "p95_ms": 4.7
+   },
+   {
+    "t_s": 102,
+    "requetes": 46,
+    "echecs": 0,
+    "p95_ms": 3.77
+   },
+   {
+    "t_s": 103,
+    "requetes": 59,
+    "echecs": 0,
+    "p95_ms": 4.42
+   },
+   {
+    "t_s": 104,
+    "requetes": 43,
+    "echecs": 0,
+    "p95_ms": 4.72
+   },
+   {
+    "t_s": 105,
+    "requetes": 62,
+    "echecs": 0,
+    "p95_ms": 3.69
+   },
+   {
+    "t_s": 106,
+    "requetes": 47,
+    "echecs": 0,
+    "p95_ms": 4.86
+   },
+   {
+    "t_s": 107,
+    "requetes": 49,
+    "echecs": 0,
+    "p95_ms": 4.09
+   },
+   {
+    "t_s": 108,
+    "requetes": 47,
+    "echecs": 0,
+    "p95_ms": 4.68
+   },
+   {
+    "t_s": 109,
+    "requetes": 46,
+    "echecs": 0,
+    "p95_ms": 5.21
+   },
+   {
+    "t_s": 110,
+    "requetes": 54,
+    "echecs": 0,
+    "p95_ms": 5.62
+   },
+   {
+    "t_s": 111,
+    "requetes": 49,
+    "echecs": 0,
+    "p95_ms": 4.59
+   },
+   {
+    "t_s": 112,
+    "requetes": 56,
+    "echecs": 0,
+    "p95_ms": 4.43
+   },
+   {
+    "t_s": 113,
+    "requetes": 45,
+    "echecs": 0,
+    "p95_ms": 5.05
+   },
+   {
+    "t_s": 114,
+    "requetes": 45,
+    "echecs": 0,
+    "p95_ms": 5.33
+   },
+   {
+    "t_s": 115,
+    "requetes": 110,
+    "echecs": 0,
+    "p95_ms": 6.23
+   },
+   {
+    "t_s": 116,
+    "requetes": 101,
+    "echecs": 0,
+    "p95_ms": 4.17
+   },
+   {
+    "t_s": 117,
+    "requetes": 92,
+    "echecs": 0,
+    "p95_ms": 4.44
+   },
+   {
+    "t_s": 118,
+    "requetes": 95,
+    "echecs": 0,
+    "p95_ms": 4.25
+   },
+   {
+    "t_s": 119,
+    "requetes": 98,
+    "echecs": 0,
+    "p95_ms": 5.53
+   },
+   {
+    "t_s": 120,
+    "requetes": 105,
+    "echecs": 0,
+    "p95_ms": 4.3
+   },
+   {
+    "t_s": 121,
+    "requetes": 77,
+    "echecs": 0,
+    "p95_ms": 4.66
+   },
+   {
+    "t_s": 122,
+    "requetes": 101,
+    "echecs": 0,
+    "p95_ms": 4.81
+   },
+   {
+    "t_s": 123,
+    "requetes": 81,
+    "echecs": 0,
+    "p95_ms": 6.21
+   },
+   {
+    "t_s": 124,
+    "requetes": 93,
+    "echecs": 0,
+    "p95_ms": 4.41
+   },
+   {
+    "t_s": 125,
+    "requetes": 92,
+    "echecs": 0,
+    "p95_ms": 5.47
+   },
+   {
+    "t_s": 126,
+    "requetes": 95,
+    "echecs": 0,
+    "p95_ms": 4.11
+   },
+   {
+    "t_s": 127,
+    "requetes": 88,
+    "echecs": 0,
+    "p95_ms": 7.23
+   },
+   {
+    "t_s": 128,
+    "requetes": 100,
+    "echecs": 0,
+    "p95_ms": 4.51
+   },
+   {
+    "t_s": 129,
+    "requetes": 99,
+    "echecs": 0,
+    "p95_ms": 4.95
+   },
+   {
+    "t_s": 130,
+    "requetes": 84,
+    "echecs": 0,
+    "p95_ms": 5.34
+   },
+   {
+    "t_s": 131,
+    "requetes": 115,
+    "echecs": 0,
+    "p95_ms": 7.87
+   },
+   {
+    "t_s": 132,
+    "requetes": 92,
+    "echecs": 0,
+    "p95_ms": 7.31
+   },
+   {
+    "t_s": 133,
+    "requetes": 95,
+    "echecs": 0,
+    "p95_ms": 5.35
+   },
+   {
+    "t_s": 134,
+    "requetes": 114,
+    "echecs": 0,
+    "p95_ms": 4.59
+   },
+   {
+    "t_s": 135,
+    "requetes": 106,
+    "echecs": 0,
+    "p95_ms": 4.83
+   },
+   {
+    "t_s": 136,
+    "requetes": 95,
+    "echecs": 0,
+    "p95_ms": 4.6
+   },
+   {
+    "t_s": 137,
+    "requetes": 106,
+    "echecs": 0,
+    "p95_ms": 7.24
+   },
+   {
+    "t_s": 138,
+    "requetes": 100,
+    "echecs": 0,
+    "p95_ms": 4.85
+   },
+   {
+    "t_s": 139,
+    "requetes": 115,
+    "echecs": 0,
+    "p95_ms": 6.55
+   },
+   {
+    "t_s": 140,
+    "requetes": 185,
+    "echecs": 0,
+    "p95_ms": 59.84
+   },
+   {
+    "t_s": 141,
+    "requetes": 198,
+    "echecs": 0,
+    "p95_ms": 4.43
+   },
+   {
+    "t_s": 142,
+    "requetes": 183,
+    "echecs": 0,
+    "p95_ms": 4.64
+   },
+   {
+    "t_s": 143,
+    "requetes": 197,
+    "echecs": 0,
+    "p95_ms": 5.57
+   },
+   {
+    "t_s": 144,
+    "requetes": 181,
+    "echecs": 0,
+    "p95_ms": 5.71
+   },
+   {
+    "t_s": 145,
+    "requetes": 210,
+    "echecs": 0,
+    "p95_ms": 20.05
+   },
+   {
+    "t_s": 146,
+    "requetes": 200,
+    "echecs": 0,
+    "p95_ms": 6.32
+   },
+   {
+    "t_s": 147,
+    "requetes": 182,
+    "echecs": 0,
+    "p95_ms": 5.35
+   },
+   {
+    "t_s": 148,
+    "requetes": 191,
+    "echecs": 0,
+    "p95_ms": 5.74
+   },
+   {
+    "t_s": 149,
+    "requetes": 218,
+    "echecs": 0,
+    "p95_ms": 5.8
+   },
+   {
+    "t_s": 150,
+    "requetes": 177,
+    "echecs": 0,
+    "p95_ms": 5.54
+   },
+   {
+    "t_s": 151,
+    "requetes": 174,
+    "echecs": 0,
+    "p95_ms": 7.13
+   },
+   {
+    "t_s": 152,
+    "requetes": 179,
+    "echecs": 0,
+    "p95_ms": 4.9
+   },
+   {
+    "t_s": 153,
+    "requetes": 199,
+    "echecs": 0,
+    "p95_ms": 6.42
+   },
+   {
+    "t_s": 154,
+    "requetes": 185,
+    "echecs": 0,
+    "p95_ms": 7.68
+   },
+   {
+    "t_s": 155,
+    "requetes": 184,
+    "echecs": 0,
+    "p95_ms": 6.31
+   },
+   {
+    "t_s": 156,
+    "requetes": 174,
+    "echecs": 0,
+    "p95_ms": 6.21
+   },
+   {
+    "t_s": 157,
+    "requetes": 200,
+    "echecs": 0,
+    "p95_ms": 30.94
+   },
+   {
+    "t_s": 158,
+    "requetes": 184,
+    "echecs": 0,
+    "p95_ms": 4.98
+   },
+   {
+    "t_s": 159,
+    "requetes": 185,
+    "echecs": 0,
+    "p95_ms": 5.47
+   },
+   {
+    "t_s": 160,
+    "requetes": 211,
+    "echecs": 0,
+    "p95_ms": 5.08
+   },
+   {
+    "t_s": 161,
+    "requetes": 191,
+    "echecs": 0,
+    "p95_ms": 7.32
+   },
+   {
+    "t_s": 162,
+    "requetes": 199,
+    "echecs": 0,
+    "p95_ms": 5.46
+   },
+   {
+    "t_s": 163,
+    "requetes": 196,
+    "echecs": 0,
+    "p95_ms": 58.2
+   },
+   {
+    "t_s": 164,
+    "requetes": 191,
+    "echecs": 0,
+    "p95_ms": 5.24
+   },
+   {
+    "t_s": 165,
+    "requetes": 275,
+    "echecs": 0,
+    "p95_ms": 20.52
+   },
+   {
+    "t_s": 166,
+    "requetes": 278,
+    "echecs": 0,
+    "p95_ms": 13.84
+   },
+   {
+    "t_s": 167,
+    "requetes": 283,
+    "echecs": 0,
+    "p95_ms": 7.37
+   },
+   {
+    "t_s": 168,
+    "requetes": 284,
+    "echecs": 0,
+    "p95_ms": 6.92
+   },
+   {
+    "t_s": 169,
+    "requetes": 265,
+    "echecs": 0,
+    "p95_ms": 6.18
+   },
+   {
+    "t_s": 170,
+    "requetes": 310,
+    "echecs": 0,
+    "p95_ms": 7.85
+   },
+   {
+    "t_s": 171,
+    "requetes": 293,
+    "echecs": 0,
+    "p95_ms": 6.79
+   },
+   {
+    "t_s": 172,
+    "requetes": 293,
+    "echecs": 0,
+    "p95_ms": 7.88
+   },
+   {
+    "t_s": 173,
+    "requetes": 296,
+    "echecs": 0,
+    "p95_ms": 8.5
+   },
+   {
+    "t_s": 174,
+    "requetes": 320,
+    "echecs": 0,
+    "p95_ms": 9.18
+   },
+   {
+    "t_s": 175,
+    "requetes": 283,
+    "echecs": 0,
+    "p95_ms": 7.92
+   },
+   {
+    "t_s": 176,
+    "requetes": 302,
+    "echecs": 0,
+    "p95_ms": 6.65
+   },
+   {
+    "t_s": 177,
+    "requetes": 300,
+    "echecs": 0,
+    "p95_ms": 6.71
+   },
+   {
+    "t_s": 178,
+    "requetes": 304,
+    "echecs": 0,
+    "p95_ms": 7.32
+   },
+   {
+    "t_s": 179,
+    "requetes": 313,
+    "echecs": 0,
+    "p95_ms": 10.72
+   },
+   {
+    "t_s": 180,
+    "requetes": 292,
+    "echecs": 0,
+    "p95_ms": 8.05
+   },
+   {
+    "t_s": 181,
+    "requetes": 296,
+    "echecs": 0,
+    "p95_ms": 10.36
+   },
+   {
+    "t_s": 182,
+    "requetes": 311,
+    "echecs": 0,
+    "p95_ms": 29.78
+   },
+   {
+    "t_s": 183,
+    "requetes": 317,
+    "echecs": 0,
+    "p95_ms": 17.19
+   },
+   {
+    "t_s": 184,
+    "requetes": 310,
+    "echecs": 0,
+    "p95_ms": 6.66
+   },
+   {
+    "t_s": 185,
+    "requetes": 284,
+    "echecs": 0,
+    "p95_ms": 12.74
+   },
+   {
+    "t_s": 186,
+    "requetes": 289,
+    "echecs": 0,
+    "p95_ms": 20.54
+   },
+   {
+    "t_s": 187,
+    "requetes": 319,
+    "echecs": 0,
+    "p95_ms": 26.56
+   },
+   {
+    "t_s": 188,
+    "requetes": 307,
+    "echecs": 0,
+    "p95_ms": 9.21
+   },
+   {
+    "t_s": 189,
+    "requetes": 288,
+    "echecs": 0,
+    "p95_ms": 10.14
+   },
+   {
+    "t_s": 190,
+    "requetes": 355,
+    "echecs": 0,
+    "p95_ms": 12.62
+   },
+   {
+    "t_s": 191,
+    "requetes": 393,
+    "echecs": 0,
+    "p95_ms": 22.38
+   },
+   {
+    "t_s": 192,
+    "requetes": 408,
+    "echecs": 0,
+    "p95_ms": 9.43
+   },
+   {
+    "t_s": 193,
+    "requetes": 408,
+    "echecs": 0,
+    "p95_ms": 7.85
+   },
+   {
+    "t_s": 194,
+    "requetes": 405,
+    "echecs": 0,
+    "p95_ms": 15.71
+   },
+   {
+    "t_s": 195,
+    "requetes": 375,
+    "echecs": 0,
+    "p95_ms": 48.69
+   },
+   {
+    "t_s": 196,
+    "requetes": 385,
+    "echecs": 0,
+    "p95_ms": 32.2
+   },
+   {
+    "t_s": 197,
+    "requetes": 454,
+    "echecs": 0,
+    "p95_ms": 10.73
+   },
+   {
+    "t_s": 198,
+    "requetes": 404,
+    "echecs": 0,
+    "p95_ms": 8.97
+   },
+   {
+    "t_s": 199,
+    "requetes": 371,
+    "echecs": 0,
+    "p95_ms": 7.05
+   },
+   {
+    "t_s": 200,
+    "requetes": 420,
+    "echecs": 0,
+    "p95_ms": 9.14
+   },
+   {
+    "t_s": 201,
+    "requetes": 372,
+    "echecs": 0,
+    "p95_ms": 10.32
+   },
+   {
+    "t_s": 202,
+    "requetes": 350,
+    "echecs": 0,
+    "p95_ms": 5.53
+   },
+   {
+    "t_s": 203,
+    "requetes": 396,
+    "echecs": 0,
+    "p95_ms": 8.05
+   },
+   {
+    "t_s": 204,
+    "requetes": 404,
+    "echecs": 0,
+    "p95_ms": 15.97
+   },
+   {
+    "t_s": 205,
+    "requetes": 436,
+    "echecs": 0,
+    "p95_ms": 8.81
+   },
+   {
+    "t_s": 206,
+    "requetes": 388,
+    "echecs": 0,
+    "p95_ms": 9.98
+   },
+   {
+    "t_s": 207,
+    "requetes": 383,
+    "echecs": 0,
+    "p95_ms": 10.05
+   },
+   {
+    "t_s": 208,
+    "requetes": 400,
+    "echecs": 0,
+    "p95_ms": 18.36
+   },
+   {
+    "t_s": 209,
+    "requetes": 392,
+    "echecs": 0,
+    "p95_ms": 14.51
+   },
+   {
+    "t_s": 210,
+    "requetes": 415,
+    "echecs": 0,
+    "p95_ms": 12.15
+   },
+   {
+    "t_s": 211,
+    "requetes": 347,
+    "echecs": 0,
+    "p95_ms": 8.44
+   },
+   {
+    "t_s": 212,
+    "requetes": 441,
+    "echecs": 0,
+    "p95_ms": 11.51
+   },
+   {
+    "t_s": 213,
+    "requetes": 368,
+    "echecs": 0,
+    "p95_ms": 13.34
+   },
+   {
+    "t_s": 214,
+    "requetes": 398,
+    "echecs": 0,
+    "p95_ms": 21.45
+   },
+   {
+    "t_s": 215,
+    "requetes": 462,
+    "echecs": 0,
+    "p95_ms": 17.15
+   },
+   {
+    "t_s": 216,
+    "requetes": 496,
+    "echecs": 0,
+    "p95_ms": 13.29
+   },
+   {
+    "t_s": 217,
+    "requetes": 450,
+    "echecs": 0,
+    "p95_ms": 23.83
+   },
+   {
+    "t_s": 218,
+    "requetes": 490,
+    "echecs": 0,
+    "p95_ms": 17.05
+   },
+   {
+    "t_s": 219,
+    "requetes": 492,
+    "echecs": 0,
+    "p95_ms": 51.84
+   },
+   {
+    "t_s": 220,
+    "requetes": 527,
+    "echecs": 0,
+    "p95_ms": 24.68
+   },
+   {
+    "t_s": 221,
+    "requetes": 512,
+    "echecs": 0,
+    "p95_ms": 14.65
+   },
+   {
+    "t_s": 222,
+    "requetes": 506,
+    "echecs": 0,
+    "p95_ms": 9.94
+   },
+   {
+    "t_s": 223,
+    "requetes": 503,
+    "echecs": 0,
+    "p95_ms": 9.11
+   },
+   {
+    "t_s": 224,
+    "requetes": 477,
+    "echecs": 0,
+    "p95_ms": 14.73
+   },
+   {
+    "t_s": 225,
+    "requetes": 495,
+    "echecs": 0,
+    "p95_ms": 13.4
+   },
+   {
+    "t_s": 226,
+    "requetes": 520,
+    "echecs": 0,
+    "p95_ms": 15.67
+   },
+   {
+    "t_s": 227,
+    "requetes": 484,
+    "echecs": 0,
+    "p95_ms": 15.42
+   },
+   {
+    "t_s": 228,
+    "requetes": 508,
+    "echecs": 0,
+    "p95_ms": 27.98
+   },
+   {
+    "t_s": 229,
+    "requetes": 507,
+    "echecs": 0,
+    "p95_ms": 13.53
+   },
+   {
+    "t_s": 230,
+    "requetes": 486,
+    "echecs": 0,
+    "p95_ms": 12.31
+   },
+   {
+    "t_s": 231,
+    "requetes": 501,
+    "echecs": 0,
+    "p95_ms": 11.8
+   },
+   {
+    "t_s": 232,
+    "requetes": 461,
+    "echecs": 0,
+    "p95_ms": 9.18
+   },
+   {
+    "t_s": 233,
+    "requetes": 489,
+    "echecs": 0,
+    "p95_ms": 24.59
+   },
+   {
+    "t_s": 234,
+    "requetes": 513,
+    "echecs": 0,
+    "p95_ms": 13.64
+   },
+   {
+    "t_s": 235,
+    "requetes": 477,
+    "echecs": 0,
+    "p95_ms": 14.65
+   },
+   {
+    "t_s": 236,
+    "requetes": 516,
+    "echecs": 0,
+    "p95_ms": 21.58
+   },
+   {
+    "t_s": 237,
+    "requetes": 491,
+    "echecs": 0,
+    "p95_ms": 11.27
+   },
+   {
+    "t_s": 238,
+    "requetes": 495,
+    "echecs": 0,
+    "p95_ms": 37.37
+   },
+   {
+    "t_s": 239,
+    "requetes": 517,
+    "echecs": 0,
+    "p95_ms": 18.24
+   },
+   {
+    "t_s": 240,
+    "requetes": 535,
+    "echecs": 0,
+    "p95_ms": 68.26
+   },
+   {
+    "t_s": 241,
+    "requetes": 580,
+    "echecs": 0,
+    "p95_ms": 96.18
+   },
+   {
+    "t_s": 242,
+    "requetes": 589,
+    "echecs": 0,
+    "p95_ms": 26.87
+   },
+   {
+    "t_s": 243,
+    "requetes": 615,
+    "echecs": 0,
+    "p95_ms": 35.81
+   },
+   {
+    "t_s": 244,
+    "requetes": 565,
+    "echecs": 0,
+    "p95_ms": 46.54
+   },
+   {
+    "t_s": 245,
+    "requetes": 595,
+    "echecs": 0,
+    "p95_ms": 56.45
+   },
+   {
+    "t_s": 246,
+    "requetes": 593,
+    "echecs": 0,
+    "p95_ms": 35.04
+   },
+   {
+    "t_s": 247,
+    "requetes": 548,
+    "echecs": 0,
+    "p95_ms": 254.45
+   },
+   {
+    "t_s": 248,
+    "requetes": 594,
+    "echecs": 0,
+    "p95_ms": 64.68
+   },
+   {
+    "t_s": 249,
+    "requetes": 572,
+    "echecs": 0,
+    "p95_ms": 31.59
+   },
+   {
+    "t_s": 250,
+    "requetes": 597,
+    "echecs": 0,
+    "p95_ms": 50.54
+   },
+   {
+    "t_s": 251,
+    "requetes": 596,
+    "echecs": 0,
+    "p95_ms": 32.25
+   },
+   {
+    "t_s": 252,
+    "requetes": 608,
+    "echecs": 0,
+    "p95_ms": 101.65
+   },
+   {
+    "t_s": 253,
+    "requetes": 581,
+    "echecs": 0,
+    "p95_ms": 28.16
+   },
+   {
+    "t_s": 254,
+    "requetes": 578,
+    "echecs": 0,
+    "p95_ms": 31.81
+   },
+   {
+    "t_s": 255,
+    "requetes": 568,
+    "echecs": 0,
+    "p95_ms": 49.82
+   },
+   {
+    "t_s": 256,
+    "requetes": 642,
+    "echecs": 0,
+    "p95_ms": 31.39
+   },
+   {
+    "t_s": 257,
+    "requetes": 580,
+    "echecs": 0,
+    "p95_ms": 17.29
+   },
+   {
+    "t_s": 258,
+    "requetes": 589,
+    "echecs": 0,
+    "p95_ms": 20.5
+   },
+   {
+    "t_s": 259,
+    "requetes": 601,
+    "echecs": 0,
+    "p95_ms": 29.61
+   },
+   {
+    "t_s": 260,
+    "requetes": 569,
+    "echecs": 0,
+    "p95_ms": 72.73
+   },
+   {
+    "t_s": 261,
+    "requetes": 584,
+    "echecs": 0,
+    "p95_ms": 27.83
+   },
+   {
+    "t_s": 262,
+    "requetes": 578,
+    "echecs": 0,
+    "p95_ms": 19.08
+   },
+   {
+    "t_s": 263,
+    "requetes": 588,
+    "echecs": 0,
+    "p95_ms": 36.6
+   },
+   {
+    "t_s": 264,
+    "requetes": 598,
+    "echecs": 0,
+    "p95_ms": 25.89
+   },
+   {
+    "t_s": 265,
+    "requetes": 671,
+    "echecs": 0,
+    "p95_ms": 27.49
+   },
+   {
+    "t_s": 266,
+    "requetes": 730,
+    "echecs": 0,
+    "p95_ms": 62.8
+   },
+   {
+    "t_s": 267,
+    "requetes": 669,
+    "echecs": 0,
+    "p95_ms": 84.13
+   },
+   {
+    "t_s": 268,
+    "requetes": 737,
+    "echecs": 0,
+    "p95_ms": 50.17
+   },
+   {
+    "t_s": 269,
+    "requetes": 649,
+    "echecs": 0,
+    "p95_ms": 67.51
+   },
+   {
+    "t_s": 270,
+    "requetes": 716,
+    "echecs": 0,
+    "p95_ms": 45.52
+   },
+   {
+    "t_s": 271,
+    "requetes": 732,
+    "echecs": 0,
+    "p95_ms": 71.73
+   },
+   {
+    "t_s": 272,
+    "requetes": 687,
+    "echecs": 0,
+    "p95_ms": 25.5
+   },
+   {
+    "t_s": 273,
+    "requetes": 695,
+    "echecs": 0,
+    "p95_ms": 93.37
+   },
+   {
+    "t_s": 274,
+    "requetes": 669,
+    "echecs": 0,
+    "p95_ms": 50.0
+   },
+   {
+    "t_s": 275,
+    "requetes": 680,
+    "echecs": 0,
+    "p95_ms": 47.07
+   },
+   {
+    "t_s": 276,
+    "requetes": 682,
+    "echecs": 0,
+    "p95_ms": 74.98
+   },
+   {
+    "t_s": 277,
+    "requetes": 739,
+    "echecs": 0,
+    "p95_ms": 75.47
+   },
+   {
+    "t_s": 278,
+    "requetes": 728,
+    "echecs": 0,
+    "p95_ms": 62.15
+   },
+   {
+    "t_s": 279,
+    "requetes": 697,
+    "echecs": 0,
+    "p95_ms": 59.58
+   },
+   {
+    "t_s": 280,
+    "requetes": 653,
+    "echecs": 0,
+    "p95_ms": 67.77
+   },
+   {
+    "t_s": 281,
+    "requetes": 680,
+    "echecs": 0,
+    "p95_ms": 40.6
+   },
+   {
+    "t_s": 282,
+    "requetes": 686,
+    "echecs": 0,
+    "p95_ms": 42.08
+   },
+   {
+    "t_s": 283,
+    "requetes": 652,
+    "echecs": 0,
+    "p95_ms": 49.58
+   },
+   {
+    "t_s": 284,
+    "requetes": 714,
+    "echecs": 0,
+    "p95_ms": 58.23
+   },
+   {
+    "t_s": 285,
+    "requetes": 700,
+    "echecs": 0,
+    "p95_ms": 116.56
+   },
+   {
+    "t_s": 286,
+    "requetes": 702,
+    "echecs": 0,
+    "p95_ms": 76.21
+   },
+   {
+    "t_s": 287,
+    "requetes": 662,
+    "echecs": 0,
+    "p95_ms": 53.9
+   },
+   {
+    "t_s": 288,
+    "requetes": 672,
+    "echecs": 0,
+    "p95_ms": 89.62
+   },
+   {
+    "t_s": 289,
+    "requetes": 651,
+    "echecs": 0,
+    "p95_ms": 154.12
+   },
+   {
+    "t_s": 290,
+    "requetes": 635,
+    "echecs": 0,
+    "p95_ms": 49.38
+   },
+   {
+    "t_s": 291,
+    "requetes": 498,
+    "echecs": 0,
+    "p95_ms": 36.5
+   },
+   {
+    "t_s": 292,
+    "requetes": 431,
+    "echecs": 0,
+    "p95_ms": 52.75
+   },
+   {
+    "t_s": 293,
+    "requetes": 314,
+    "echecs": 0,
+    "p95_ms": 10.35
+   },
+   {
+    "t_s": 294,
+    "requetes": 237,
+    "echecs": 0,
+    "p95_ms": 6.4
+   },
+   {
+    "t_s": 295,
+    "requetes": 142,
+    "echecs": 0,
+    "p95_ms": 5.86
+   },
+   {
+    "t_s": 296,
+    "requetes": 49,
+    "echecs": 0,
+    "p95_ms": 7.23
+   },
+   {
+    "t_s": 297,
+    "requetes": 10,
+    "echecs": 0,
+    "p95_ms": 3.75
+   },
+   {
+    "t_s": 298,
+    "requetes": 12,
+    "echecs": 0,
+    "p95_ms": 4.13
+   },
+   {
+    "t_s": 299,
+    "requetes": 7,
+    "echecs": 0,
+    "p95_ms": 3.62
+   },
+   {
+    "t_s": 300,
+    "requetes": 12,
+    "echecs": 0,
+    "p95_ms": 4.06
+   },
+   {
+    "t_s": 301,
+    "requetes": 12,
+    "echecs": 0,
+    "p95_ms": 4.32
+   },
+   {
+    "t_s": 302,
+    "requetes": 7,
+    "echecs": 0,
+    "p95_ms": 4.29
+   },
+   {
+    "t_s": 303,
+    "requetes": 14,
+    "echecs": 0,
+    "p95_ms": 7.27
+   },
+   {
+    "t_s": 304,
+    "requetes": 5,
+    "echecs": 0,
+    "p95_ms": 5.86
+   },
+   {
+    "t_s": 305,
+    "requetes": 4,
+    "echecs": 0,
+    "p95_ms": 4.3
+   },
+   {
+    "t_s": 306,
+    "requetes": 12,
+    "echecs": 0,
+    "p95_ms": 4.15
+   },
+   {
+    "t_s": 307,
+    "requetes": 14,
+    "echecs": 0,
+    "p95_ms": 4.74
+   },
+   {
+    "t_s": 308,
+    "requetes": 12,
+    "echecs": 0,
+    "p95_ms": 5.32
+   },
+   {
+    "t_s": 309,
+    "requetes": 8,
+    "echecs": 0,
+    "p95_ms": 3.69
+   },
+   {
+    "t_s": 310,
+    "requetes": 10,
+    "echecs": 0,
+    "p95_ms": 4.04
+   },
+   {
+    "t_s": 311,
+    "requetes": 13,
+    "echecs": 0,
+    "p95_ms": 4.22
+   },
+   {
+    "t_s": 312,
+    "requetes": 5,
+    "echecs": 0,
+    "p95_ms": 4.17
+   },
+   {
+    "t_s": 313,
+    "requetes": 9,
+    "echecs": 0,
+    "p95_ms": 4.7
+   },
+   {
+    "t_s": 314,
+    "requetes": 11,
+    "echecs": 0,
+    "p95_ms": 9.42
+   },
+   {
+    "t_s": 315,
+    "requetes": 8,
+    "echecs": 0,
+    "p95_ms": 3.94
+   },
+   {
+    "t_s": 316,
+    "requetes": 9,
+    "echecs": 0,
+    "p95_ms": 3.71
+   },
+   {
+    "t_s": 317,
+    "requetes": 15,
+    "echecs": 0,
+    "p95_ms": 5.47
+   },
+   {
+    "t_s": 318,
+    "requetes": 7,
+    "echecs": 0,
+    "p95_ms": 4.05
+   },
+   {
+    "t_s": 319,
+    "requetes": 11,
+    "echecs": 0,
+    "p95_ms": 3.67
+   },
+   {
+    "t_s": 320,
+    "requetes": 4,
+    "echecs": 0,
+    "p95_ms": 3.56
+   }
+  ],
+  "total_requetes": 73632,
+  "total_echecs": 0
+ },
+ "charge_essai_precedent": {
+  "profil": {
+   "etapes": [
+    [
+     5,
+     30
+    ],
+    [
+     10,
+     30
+    ],
+    [
+     20,
+     30
+    ],
+    [
+     50,
+     25
+    ],
+    [
+     100,
+     25
+    ],
+    [
+     200,
+     25
+    ],
+    [
+     300,
+     25
+    ],
+    [
+     400,
+     25
+    ],
+    [
+     500,
+     25
+    ],
+    [
+     600,
+     25
+    ],
+    [
+     700,
+     25
+    ],
+    [
+     10,
+     30
+    ]
+   ],
+   "debit_par_utilisateur_req_s": 1.0,
+   "arrivees": "aléatoires (temps de réflexion exponentiel, moyenne 1 s par utilisateur)",
+   "part_requetes_invalides": 0.05,
+   "chauffe_ignoree_par_palier_s": 7.0,
+   "generateur": "Locust FastHttpUser, 1 processus"
+  },
+  "isolement_cpu": {
+   "serveur": 0,
+   "generateur": 1
+  },
+  "duree_reelle_s": 322.2,
+  "code_retour_locust": 1,
+  "avertissement_cpu_generateur": false,
+  "demarrage_serveur_s": 1.44,
+  "memoire_serveur": {
+   "avant": {
+    "rss_mo": 165.6,
+    "pic_rss_mo": 165.6
+   },
+   "apres": {
+    "rss_mo": 184.4,
+    "pic_rss_mo": 184.4
+   }
+  },
+  "sante_apres_charge": 200,
+  "erreurs_journal_serveur": {
+   "traceback": 0,
+   "statuts_5xx": 0
+  },
+  "etapes": [
+   {
+    "palier": 1,
+    "cible_req_s": 5,
+    "duree_palier_s": 30,
+    "duree_mesuree_s": 23.0,
+    "n_requetes": 99,
+    "n_valides": 96,
+    "debit_observe_req_s": 4.3,
+    "p50_ms": 3.75,
+    "p95_ms": 5.43,
+    "p99_ms": 9.24,
+    "max_ms": 11.4,
+    "p95_invalides_ms": 2.99,
+    "echecs": 0,
+    "taux_echec": 0.0,
+    "cpu_serveur_pct": 1.7,
+    "cpu_generateur_pct": 0.6,
+    "conforme_objectif": true
+   },
+   {
+    "palier": 2,
+    "cible_req_s": 10,
+    "duree_palier_s": 30,
+    "duree_mesuree_s": 23.0,
+    "n_requetes": 256,
+    "n_valides": 243,
+    "debit_observe_req_s": 11.1,
+    "p50_ms": 3.67,
+    "p95_ms": 5.2,
+    "p99_ms": 6.87,
+    "max_ms": 8.09,
+    "p95_invalides_ms": 3.56,
+    "echecs": 0,
+    "taux_echec": 0.0,
+    "cpu_serveur_pct": 3.6,
+    "cpu_generateur_pct": 1.3,
+    "conforme_objectif": true
+   },
+   {
+    "palier": 3,
+    "cible_req_s": 20,
+    "duree_palier_s": 30,
+    "duree_mesuree_s": 23.0,
+    "n_requetes": 447,
+    "n_valides": 419,
+    "debit_observe_req_s": 19.4,
+    "p50_ms": 3.53,
+    "p95_ms": 5.21,
+    "p99_ms": 6.21,
+    "max_ms": 6.69,
+    "p95_invalides_ms": 4.87,
+    "echecs": 0,
+    "taux_echec": 0.0,
+    "cpu_serveur_pct": 5.7,
+    "cpu_generateur_pct": 2.0,
+    "conforme_objectif": true
+   },
+   {
+    "palier": 4,
+    "cible_req_s": 50,
+    "duree_palier_s": 25,
+    "duree_mesuree_s": 18.0,
+    "n_requetes": 898,
+    "n_valides": 841,
+    "debit_observe_req_s": 49.9,
+    "p50_ms": 2.85,
+    "p95_ms": 4.59,
+    "p99_ms": 6.69,
+    "max_ms": 15.0,
+    "p95_invalides_ms": 4.32,
+    "echecs": 0,
+    "taux_echec": 0.0,
+    "cpu_serveur_pct": 11.4,
+    "cpu_generateur_pct": 3.9,
+    "conforme_objectif": true
+   },
+   {
+    "palier": 5,
+    "cible_req_s": 100,
+    "duree_palier_s": 25,
+    "duree_mesuree_s": 18.0,
+    "n_requetes": 1736,
+    "n_valides": 1638,
+    "debit_observe_req_s": 96.4,
+    "p50_ms": 2.46,
+    "p95_ms": 4.54,
+    "p99_ms": 5.94,
+    "max_ms": 10.71,
+    "p95_invalides_ms": 4.58,
+    "echecs": 0,
+    "taux_echec": 0.0,
+    "cpu_serveur_pct": 18.7,
+    "cpu_generateur_pct": 6.2,
+    "conforme_objectif": true
+   },
+   {
+    "palier": 6,
+    "cible_req_s": 200,
+    "duree_palier_s": 25,
+    "duree_mesuree_s": 18.0,
+    "n_requetes": 3609,
+    "n_valides": 3432,
+    "debit_observe_req_s": 200.5,
+    "p50_ms": 2.68,
+    "p95_ms": 5.83,
+    "p99_ms": 9.23,
+    "max_ms": 37.78,
+    "p95_invalides_ms": 4.34,
+    "echecs": 0,
+    "taux_echec": 0.0,
+    "cpu_serveur_pct": 36.8,
+    "cpu_generateur_pct": 11.4,
+    "conforme_objectif": true
+   },
+   {
+    "palier": 7,
+    "cible_req_s": 300,
+    "duree_palier_s": 25,
+    "duree_mesuree_s": 18.0,
+    "n_requetes": 5379,
+    "n_valides": 5131,
+    "debit_observe_req_s": 298.8,
+    "p50_ms": 3.22,
+    "p95_ms": 9.36,
+    "p99_ms": 25.71,
+    "max_ms": 89.49,
+    "p95_invalides_ms": 7.62,
+    "echecs": 0,
+    "taux_echec": 0.0,
+    "cpu_serveur_pct": 52.5,
+    "cpu_generateur_pct": 16.0,
+    "conforme_objectif": true
+   },
+   {
+    "palier": 8,
+    "cible_req_s": 400,
+    "duree_palier_s": 25,
+    "duree_mesuree_s": 18.0,
+    "n_requetes": 7250,
+    "n_valides": 6890,
+    "debit_observe_req_s": 402.8,
+    "p50_ms": 3.82,
+    "p95_ms": 11.55,
+    "p99_ms": 20.6,
+    "max_ms": 73.18,
+    "p95_invalides_ms": 10.93,
+    "echecs": 0,
+    "taux_echec": 0.0,
+    "cpu_serveur_pct": 66.9,
+    "cpu_generateur_pct": 20.5,
+    "conforme_objectif": true
+   },
+   {
+    "palier": 9,
+    "cible_req_s": 500,
+    "duree_palier_s": 25,
+    "duree_mesuree_s": 18.0,
+    "n_requetes": 8988,
+    "n_valides": 8530,
+    "debit_observe_req_s": 499.3,
+    "p50_ms": 5.5,
+    "p95_ms": 31.32,
+    "p99_ms": 66.16,
+    "max_ms": 116.83,
+    "p95_invalides_ms": 28.66,
+    "echecs": 1,
+    "taux_echec": 0.00011,
+    "cpu_serveur_pct": 80.8,
+    "cpu_generateur_pct": 25.4,
+    "conforme_objectif": false
+   },
+   {
+    "palier": 10,
+    "cible_req_s": 600,
+    "duree_palier_s": 25,
+    "duree_mesuree_s": 18.0,
+    "n_requetes": 10713,
+    "n_valides": 10191,
+    "debit_observe_req_s": 595.2,
+    "p50_ms": 14.43,
+    "p95_ms": 57.02,
+    "p99_ms": 93.38,
+    "max_ms": 158.29,
+    "p95_invalides_ms": 56.75,
+    "echecs": 1,
+    "taux_echec": 9e-05,
+    "cpu_serveur_pct": 92.6,
+    "cpu_generateur_pct": 29.0,
+    "conforme_objectif": false
+   },
+   {
+    "palier": 11,
+    "cible_req_s": 700,
+    "duree_palier_s": 25,
+    "duree_mesuree_s": 18.0,
+    "n_requetes": 12127,
+    "n_valides": 11554,
+    "debit_observe_req_s": 673.7,
+    "p50_ms": 30.35,
+    "p95_ms": 90.59,
+    "p99_ms": 125.34,
+    "max_ms": 151.69,
+    "p95_invalides_ms": 97.4,
+    "echecs": 1,
+    "taux_echec": 8e-05,
+    "cpu_serveur_pct": 97.1,
+    "cpu_generateur_pct": 30.7,
+    "conforme_objectif": false
+   },
+   {
+    "palier": 12,
+    "cible_req_s": 10,
+    "duree_palier_s": 30,
+    "duree_mesuree_s": 23.0,
+    "n_requetes": 246,
+    "n_valides": 240,
+    "debit_observe_req_s": 10.7,
+    "p50_ms": 3.42,
+    "p95_ms": 4.9,
+    "p99_ms": 8.85,
+    "max_ms": 11.47,
+    "p95_invalides_ms": 2.61,
+    "echecs": 0,
+    "taux_echec": 0.0,
+    "cpu_serveur_pct": 3.7,
+    "cpu_generateur_pct": 1.3,
+    "conforme_objectif": true
+   }
+  ],
+  "dernier_palier_conforme": {
+   "cible_req_s": 400,
+   "debit_observe_req_s": 402.8,
+   "p95_ms": 11.55
+  },
+  "premier_palier_non_conforme": {
+   "cible_req_s": 500,
+   "debit_observe_req_s": 499.3,
+   "p95_ms": 31.32,
+   "echecs": 1
+  },
+  "debit_maximal_observe_req_s": 673.7,
+  "recuperation": {
+   "palier_reference_req_s": 10,
+   "p95_reference_ms": 5.2,
+   "p95_final_ms": 4.9,
+   "facteur": 0.94,
+   "echecs_palier_final": 0,
+   "conforme": true
+  },
+  "total_requetes": 73860,
+  "total_echecs": 4
+ },
+ "verdicts": [
+  {
+   "id": "O1",
+   "indicateur": "Latence d'inférence du modèle, P95",
+   "objectif": "≤ 20 ms",
+   "mesure": "0,37 ms",
+   "respecte": true,
+   "marge": "× 55",
+   "marge_num": 54.6000546000546
+  },
+  {
+   "id": "O2",
+   "indicateur": "Temps de réponse de l'API, P95 (requêtes valides, client unique)",
+   "objectif": "≤ 200 ms",
+   "mesure": "3,07 ms",
+   "respecte": true,
+   "marge": "× 65",
+   "marge_num": 65.05969226765558
+  },
+  {
+   "id": "O3",
+   "indicateur": "Débit soutenu avec P95 ≤ 200 ms et aucun échec",
+   "objectif": "≥ 50 req/s",
+   "mesure": "686 req/s (essai 2) ; 403 req/s (essai 1)",
+   "respecte": true,
+   "marge": "× 8,1",
+   "marge_num": 8.056000000000001
+  },
+  {
+   "id": "O4",
+   "indicateur": "Disponibilité après surcharge et retour au niveau initial",
+   "objectif": "aucune erreur serveur ; P95 final ≤ 1,5 × P95 initial",
+   "mesure": "facteur 1,01 ; santé 200",
+   "respecte": true,
+   "marge": "—",
+   "marge_num": null
+  }
+ ]
+}

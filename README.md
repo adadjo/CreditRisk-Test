@@ -87,11 +87,22 @@ cas dorés (`cas_dores.json`) sont figés dans le dépôt. Verdicts : `CONFORME`
 ## Performance
 
 ```bash
-python -m scripts.benchmark_performance          # latence d'inférence et d'API, P50/P95/P99, débit
-pip install -r requirements-perf.txt             # Locust et Matplotlib (hors CI)
-uvicorn app.main:app --port 8000 &               # puis, dans un autre terminal :
-locust -f scripts/locustfile.py --headless --host http://127.0.0.1:8000 --csv reports/locust
+pip install -r requirements-perf.txt                # Locust et Matplotlib (hors CI)
+python -m scripts.benchmark_performance             # latence (P50/P95/P99), rafales, débit saturé (~1,5 min)
+python -m scripts.benchmark_performance charge      # charge progressive Locust sur un serveur local (~5,5 min)
+python -m scripts.benchmark_performance rapport     # figures et reports/performance/rapport_performance.md
+python -m scripts.essai_keep_alive                  # délai d'inactivité keep-alive d'uvicorn (~10 s)
 ```
+
+Locust à la main (serveur déjà lancé avec `uvicorn app.main:app --port 8000`) :
+
+```bash
+locust -f scripts/locustfile.py --headless --host http://127.0.0.1:8000
+```
+
+Le profil de charge (paliers de 5 à 700 utilisateurs, arrivées aléatoires, retour à une charge faible)
+est défini dans `scripts/locustfile.py` ; il pilote seul la durée de l'essai. Objectifs, méthode,
+résultats et interprétation : `reports/performance/rapport_performance.md`.
 
 ## Rapports et audits
 
