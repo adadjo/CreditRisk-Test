@@ -126,6 +126,48 @@
   "groupe": "chargement"
  },
  {
+  "id": "M-modele_substitue",
+  "description": "Autre modèle valide (6 variables) sous le nom du modèle versionné",
+  "statut_attendu": 503,
+  "erreur_attendue": "modele_indisponible",
+  "statut_observe": 503,
+  "erreur_observee": "modele_indisponible",
+  "fuite_technique": false,
+  "probabilite_renvoyee": null,
+  "conforme": true,
+  "chargement": "ModeleIndisponible",
+  "statut_health": 503,
+  "groupe": "chargement"
+ },
+ {
+  "id": "M-octets_ajoutes",
+  "description": "Octets ajoutés en fin de fichier (le fichier reste chargeable)",
+  "statut_attendu": 503,
+  "erreur_attendue": "modele_indisponible",
+  "statut_observe": 503,
+  "erreur_observee": "modele_indisponible",
+  "fuite_technique": false,
+  "probabilite_renvoyee": null,
+  "conforme": true,
+  "chargement": "ModeleIndisponible",
+  "statut_health": 503,
+  "groupe": "chargement"
+ },
+ {
+  "id": "M-empreinte_metadonnees_erronee",
+  "description": "Empreinte SHA-256 des métadonnées erronée",
+  "statut_attendu": 503,
+  "erreur_attendue": "modele_indisponible",
+  "statut_observe": 503,
+  "erreur_observee": "modele_indisponible",
+  "fuite_technique": false,
+  "probabilite_renvoyee": null,
+  "conforme": true,
+  "chargement": "ModeleIndisponible",
+  "statut_health": 503,
+  "groupe": "chargement"
+ },
+ {
   "id": "P-variable_absente",
   "description": "Variable attendue absente après validation",
   "statut_attendu": 500,

@@ -27,4 +27,4 @@ TOTAL                    547      5    120      5    99%
 Coverage JSON written to file /home/user/CreditRisk-Test/reports/campagne2_v0.2/couverture.json
 =========================== short test summary info ============================
 SKIPPED [1] tests/test_demo_echec.py:14: actif seulement avec DEMO_ECHEC=1
-462 passed, 1 skipped in 13.20s
+462 passed, 1 skipped in 12.06s

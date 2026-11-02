@@ -3,6 +3,12 @@
 Usage (depuis la racine du dépôt) :
     python -m scripts.campagne executer reports/campagne2_v0.2 --etiquette v0.2
     python -m scripts.campagne documents
+
+Rejouer la campagne 1 (mêmes tests, code applicatif v0.1 du commit 1987160) :
+    git worktree add --detach /chemin/wt_v01 HEAD && cd /chemin/wt_v01
+    git checkout 1987160 -- app/
+    CAMPAGNE_COMMIT_APPLICATION=1987160 python -m scripts.campagne executer reports/campagne1_v0.1 --etiquette v0.1
+    (puis copier le dossier produit dans le dépôt et supprimer le worktree)
 """
 
 from __future__ import annotations
@@ -10,6 +16,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import os
 import platform
 import subprocess
 import sys
@@ -303,6 +310,7 @@ def executer(dossier: Path, etiquette: str) -> int:
         "etiquette": etiquette,
         "version_application": config.VERSION_APPLICATION,
         "commit_git": _version_git(),
+        "commit_application": os.environ.get("CAMPAGNE_COMMIT_APPLICATION", _version_git()),
         "debut": debut.isoformat(timespec="seconds"),
         "duree_s": round((datetime.now() - debut).total_seconds(), 1),
         "code_sortie_pytest": processus.returncode,
