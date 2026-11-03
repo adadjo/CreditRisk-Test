@@ -1,5 +1,5 @@
 {
- "date": "2026-11-01",
+ "date": "2026-11-03",
  "reference": {
   "version": "1.0.0",
   "metriques": {
@@ -780,11 +780,11 @@
   }
  ],
  "regression_logicielle": {
-  "reussis_v0_1": 185,
-  "echecs_v0_1": 269,
-  "reussis_v0_2": 454,
+  "reussis_v0_1": 186,
+  "echecs_v0_1": 276,
+  "reussis_v0_2": 462,
   "echecs_v0_2": 0,
   "regressions_introduites": [],
-  "tests_corriges": 269
+  "tests_corriges": 276
  }
 }

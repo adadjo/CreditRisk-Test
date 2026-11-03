@@ -1,4 +1,4 @@
-# Rapport de non-régression (2026-11-01)
+# Rapport de non-régression (2026-11-03)
 
 Référence : modèle v1.0.0 ; jeu d'évaluation figé (3000 demandes, 22.5% de défauts) ; seuil de décision 0.3.
 
@@ -41,6 +41,6 @@ Référence : modèle v1.0.0 ; jeu d'évaluation figé (3000 demandes, 22.5% de 
 
 ## Non-régression logicielle (code v0.1 -> v0.2)
 
-- Tests réussis : 185 (v0.1) -> 454 (v0.2) ; échecs : 269 -> 0.
+- Tests réussis : 186 (v0.1) -> 462 (v0.2) ; échecs : 276 -> 0.
 - Tests réussis en v0.1 qui échouent en v0.2 : **0**.
-- Tests en échec en v0.1 corrigés en v0.2 : 269.
+- Tests en échec en v0.1 corrigés en v0.2 : 276.
