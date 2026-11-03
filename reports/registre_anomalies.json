@@ -1,0 +1,1034 @@
+{
+ "synthese": {
+  "date": "2026-11-03",
+  "campagne_1": {
+   "version": "0.1.0",
+   "commit_application": "1987160",
+   "tests": {
+    "total": 463,
+    "passed": 186,
+    "failed": 276,
+    "skipped": 1
+   },
+   "couverture_pct": 99.29,
+   "scenarios_conformes": 4,
+   "scenarios_total": 27,
+   "pannes_conformes": 0,
+   "pannes_total": 23,
+   "fuzzing": {
+    "n": 800,
+    "statuts": {
+     "200": 138,
+     "422": 307,
+     "500": 355
+    },
+    "erreurs_serveur": 355,
+    "taux_erreurs_serveur": 0.4437
+   },
+   "fuites_techniques_scenarios": 13,
+   "fuites_techniques_pannes": 13
+  },
+  "campagne_2": {
+   "version": "0.2.0",
+   "commit_application": "c4b79e6",
+   "tests": {
+    "total": 463,
+    "passed": 462,
+    "failed": 0,
+    "skipped": 1
+   },
+   "couverture_pct": 98.5,
+   "scenarios_conformes": 27,
+   "scenarios_total": 27,
+   "pannes_conformes": 23,
+   "pannes_total": 23,
+   "fuzzing": {
+    "n": 800,
+    "statuts": {
+     "200": 62,
+     "400": 146,
+     "422": 592
+    },
+    "erreurs_serveur": 0,
+    "taux_erreurs_serveur": 0.0
+   }
+  },
+  "par_gravite": {
+   "Critique": {
+    "anomalies": 2,
+    "tests_en_echec": 30
+   },
+   "Majeure": {
+    "anomalies": 11,
+    "tests_en_echec": 213
+   },
+   "Moyenne": {
+    "anomalies": 7,
+    "tests_en_echec": 32
+   },
+   "Mineure": {
+    "anomalies": 0,
+    "tests_en_echec": 0
+   }
+  },
+  "constats_ouverts_par_gravite": {
+   "Critique": 2,
+   "Majeure": 5,
+   "Moyenne": 2,
+   "Mineure": 1
+  },
+  "echecs_v0_1": 276,
+  "echecs_rattaches": 276,
+  "transversal": {
+   "id": "T-00",
+   "titre": "Symptôme transversal : le fuzzing de 800 requêtes ne doit produire aucune erreur serveur",
+   "regles": [
+    "::test_fuzzing_aucune_erreur_serveur$"
+   ],
+   "explication": "Cumul des causes A-01, A-02, A-08 et A-10 : aucun défaut propre.",
+   "rattaches": 1,
+   "echecs_v0_1": 1,
+   "reussis_v0_2": 1,
+   "echecs_v0_2": 0
+  }
+ },
+ "echelle_gravite": {
+  "Critique": "résultat invalide ou erroné présenté comme valide, ou modèle non autorisé exécuté, sans aucun signal",
+  "Majeure": "erreur serveur sur une entrée du client, divulgation technique, indisponibilité mal signalée ou donnée invalide acceptée",
+  "Moyenne": "contrat d'API ou de traçabilité non respecté, sans effet direct sur une décision",
+  "Mineure": "écart de forme ou de documentation, sans effet sur le comportement"
+ },
+ "anomalies": [
+  {
+   "id": "A-01",
+   "titre": "Entrée incomplète, nulle ou qui n'est pas un objet : erreur 500 au lieu de 422",
+   "gravite": "Majeure",
+   "exigences": [
+    "EX06",
+    "EX10",
+    "EX11"
+   ],
+   "constat": "Un champ absent ou à `null`, un corps JSON qui est une liste, un texte ou un nombre provoquent une exception non rattrapée (KeyError, TypeError) transformée en erreur 500.",
+   "cause": "`valider_demande` lit `payload[champ]` sans vérifier la présence du champ ni la forme du corps, et ne rattrape que `ValueError`.",
+   "correction": "Validation stricte : le corps doit être un objet, chaque champ est vérifié (présence, type, domaine) et toutes les anomalies sont collectées puis renvoyées ensemble dans un 422 `donnees_invalides`.",
+   "tests": {
+    "rattaches": 35,
+    "echecs_v0_1": 35,
+    "reussis_v0_2": 35,
+    "echecs_v0_2": 0
+   },
+   "scenarios": [
+    {
+     "id": "S02",
+     "titre": "Champ obligatoire absent (revenu_mensuel)",
+     "attendu": "422 donnees_invalides",
+     "observe_v0_1": "500 erreur_interne",
+     "fuite_technique_v0_1": true,
+     "conforme_v0_2": true
+    },
+    {
+     "id": "S14",
+     "titre": "JSON valide mais qui n'est pas un objet (liste)",
+     "attendu": "422 donnees_invalides",
+     "observe_v0_1": "500 erreur_interne",
+     "fuite_technique_v0_1": true,
+     "conforme_v0_2": true
+    },
+    {
+     "id": "S19",
+     "titre": "Objet vide {}",
+     "attendu": "422 donnees_invalides",
+     "observe_v0_1": "500 erreur_interne",
+     "fuite_technique_v0_1": true,
+     "conforme_v0_2": true
+    },
+    {
+     "id": "S21",
+     "titre": "Valeur nulle pour l'âge",
+     "attendu": "422 donnees_invalides",
+     "observe_v0_1": "500 erreur_interne",
+     "fuite_technique_v0_1": true,
+     "conforme_v0_2": true
+    }
+   ],
+   "pannes": [],
+   "statut": "Corrigée en v0.2, vérifiée par la campagne 2"
+  },
+  {
+   "id": "A-02",
+   "titre": "Valeurs non finies ou démesurées (NaN, Infinity, 1e999, entier géant) : erreur 500",
+   "gravite": "Majeure",
+   "exigences": [
+    "EX02",
+    "EX08",
+    "EX10"
+   ],
+   "constat": "Les constantes non standard `NaN`/`Infinity` acceptées par le décodeur JSON de Python, les exposants débordants (`1e999`) et les entiers géants (`10^400`) atteignent le prétraitement ou la conversion en flottant et font échouer la requête (500).",
+   "cause": "Aucun contrôle de finitude ; `float()` appliqué à un entier géant lève `OverflowError` ; `json.loads` accepte `NaN` et `Infinity` hors norme RFC 8259.",
+   "correction": "Rejet des constantes non standard au décodage (400 `json_invalide`), contrôle `math.isfinite`, comparaison aux bornes avant toute conversion (sûre pour un entier géant).",
+   "tests": {
+    "rattaches": 47,
+    "echecs_v0_1": 40,
+    "reussis_v0_2": 47,
+    "echecs_v0_2": 0
+   },
+   "scenarios": [
+    {
+     "id": "S15",
+     "titre": "Constante non standard NaN dans le JSON",
+     "attendu": "400 json_invalide",
+     "observe_v0_1": "500 erreur_interne",
+     "fuite_technique_v0_1": true,
+     "conforme_v0_2": true
+    },
+    {
+     "id": "S16",
+     "titre": "Infini obtenu par débordement d'exposant (1e999)",
+     "attendu": "422 donnees_invalides",
+     "observe_v0_1": "500 erreur_interne",
+     "fuite_technique_v0_1": true,
+     "conforme_v0_2": true
+    },
+    {
+     "id": "S26",
+     "titre": "Entier gigantesque (10^400) pour le revenu",
+     "attendu": "422 donnees_invalides",
+     "observe_v0_1": "500 erreur_interne",
+     "fuite_technique_v0_1": true,
+     "conforme_v0_2": true
+    }
+   ],
+   "pannes": [],
+   "statut": "Corrigée en v0.2, vérifiée par la campagne 2"
+  },
+  {
+   "id": "A-03",
+   "titre": "Conversion implicite des types : « 250000 », `true`, « NaN », « Infinity » acceptés comme des nombres",
+   "gravite": "Majeure",
+   "exigences": [
+    "EX01",
+    "EX02",
+    "EX03",
+    "EX08",
+    "EX12"
+   ],
+   "constat": "Une chaîne numérique est convertie sans avertissement, un booléen devient 0 ou 1, des chiffres arabes, la chaîne « NaN » ou la chaîne « Infinity » sont acceptés : une prédiction (ou une erreur 500) est produite à partir d'une donnée qui ne respecte pas le contrat.",
+   "cause": "`float(payload[champ])` applique les règles de conversion de Python au lieu de contrôler le type JSON reçu.",
+   "correction": "Aucune conversion implicite : seul un nombre JSON est accepté, les booléens sont explicitement exclus, le message d'erreur ne reproduit jamais la valeur reçue.",
+   "tests": {
+    "rattaches": 95,
+    "echecs_v0_1": 71,
+    "reussis_v0_2": 95,
+    "echecs_v0_2": 0
+   },
+   "scenarios": [
+    {
+     "id": "S05",
+     "titre": "Revenu sous forme de chaîne numérique (\"250000\")",
+     "attendu": "422 donnees_invalides",
+     "observe_v0_1": "200",
+     "fuite_technique_v0_1": false,
+     "conforme_v0_2": true
+    },
+    {
+     "id": "S20",
+     "titre": "Booléen à la place de la durée",
+     "attendu": "422 donnees_invalides",
+     "observe_v0_1": "200",
+     "fuite_technique_v0_1": false,
+     "conforme_v0_2": true
+    }
+   ],
+   "pannes": [],
+   "statut": "Corrigée en v0.2, vérifiée par la campagne 2"
+  },
+  {
+   "id": "A-04",
+   "titre": "Troncature silencieuse d'une valeur entière (durée 12,5 mois devient 12)",
+   "gravite": "Moyenne",
+   "exigences": [
+    "EX01",
+    "EX03"
+   ],
+   "constat": "La durée et l'âge sont tronqués par `int()` : 12,5 mois est traité comme 12 mois, ce qui fausse le taux d'effort sans aucun signal.",
+   "cause": "`int(duree)` appliqué après `float()`, sans vérifier que la partie fractionnaire est nulle.",
+   "correction": "Une valeur entière attendue doit être un entier ou un flottant entier (35 ou 35.0) ; toute partie fractionnaire non nulle est refusée (`non_entier`).",
+   "tests": {
+    "rattaches": 4,
+    "echecs_v0_1": 4,
+    "reussis_v0_2": 4,
+    "echecs_v0_2": 0
+   },
+   "scenarios": [
+    {
+     "id": "S08",
+     "titre": "Durée de crédit non entière (12,5 mois)",
+     "attendu": "422 donnees_invalides",
+     "observe_v0_1": "200",
+     "fuite_technique_v0_1": false,
+     "conforme_v0_2": true
+    }
+   ],
+   "pannes": [],
+   "statut": "Corrigée en v0.2, vérifiée par la campagne 2"
+  },
+  {
+   "id": "A-05",
+   "titre": "Bornes métier absentes ou incomplètes (montant nul, aucun plafond)",
+   "gravite": "Majeure",
+   "exigences": [
+    "EX01",
+    "EX02",
+    "EX03",
+    "EX08",
+    "EX12"
+   ],
+   "constat": "Un montant égal à 0 est accepté puis provoque `log(0)` (500) ; aucun plafond n'existe pour le revenu, le montant et l'ancienneté ; les anomalies de plusieurs champs ne sont pas toutes rapportées.",
+   "cause": "Seuls l'âge, le revenu (> 0) et la durée sont bornés ; le montant n'est refusé que s'il est négatif ; ni plafond ni ancienneté maximale.",
+   "correction": "Domaine de validité déclaré pour chaque champ (`config.LIMITES`, bornes incluses) et appliqué à tous ; les anomalies sont cumulées.",
+   "tests": {
+    "rattaches": 27,
+    "echecs_v0_1": 20,
+    "reussis_v0_2": 27,
+    "echecs_v0_2": 0
+   },
+   "scenarios": [
+    {
+     "id": "S06",
+     "titre": "Montant du crédit nul",
+     "attendu": "422 donnees_invalides",
+     "observe_v0_1": "500 erreur_interne",
+     "fuite_technique_v0_1": true,
+     "conforme_v0_2": true
+    },
+    {
+     "id": "S10",
+     "titre": "Valeurs extrêmement élevées sur tous les champs",
+     "attendu": "422 donnees_invalides",
+     "observe_v0_1": "422 donnees_invalides",
+     "fuite_technique_v0_1": false,
+     "conforme_v0_2": true
+    }
+   ],
+   "pannes": [],
+   "statut": "Corrigée en v0.2, vérifiée par la campagne 2"
+  },
+  {
+   "id": "A-06",
+   "titre": "Schéma non strict : champs supplémentaires, clés dupliquées, casse et alias ignorés ou mal gérés",
+   "gravite": "Moyenne",
+   "exigences": [
+    "EX09"
+   ],
+   "constat": "Un champ non prévu (par exemple `genre`) est ignoré sans signal ; une clé dupliquée est résolue silencieusement (la dernière gagne) ; `Age` ou un alias anglais sont traités comme des champs manquants (500).",
+   "cause": "La validation lit les cinq champs attendus et ne regarde jamais les autres clés du corps.",
+   "correction": "Schéma strict : tout champ non autorisé est refusé (422 `champ_non_autorise`, noms triés et tronqués) ; une clé dupliquée rend la requête ambiguë (400 `json_invalide`).",
+   "tests": {
+    "rattaches": 14,
+    "echecs_v0_1": 14,
+    "reussis_v0_2": 14,
+    "echecs_v0_2": 0
+   },
+   "scenarios": [
+    {
+     "id": "S09",
+     "titre": "Champ supplémentaire non autorisé (genre)",
+     "attendu": "422 donnees_invalides",
+     "observe_v0_1": "200",
+     "fuite_technique_v0_1": false,
+     "conforme_v0_2": true
+    },
+    {
+     "id": "S27",
+     "titre": "Clé dupliquée dans le JSON (age deux fois, 35 puis -1)",
+     "attendu": "400 json_invalide",
+     "observe_v0_1": "422 donnees_invalides",
+     "fuite_technique_v0_1": false,
+     "conforme_v0_2": true
+    }
+   ],
+   "pannes": [],
+   "statut": "Corrigée en v0.2, vérifiée par la campagne 2"
+  },
+  {
+   "id": "A-07",
+   "titre": "Incohérence entre l'âge et l'ancienneté d'activité non contrôlée",
+   "gravite": "Moyenne",
+   "exigences": [
+    "EX12"
+   ],
+   "constat": "Un demandeur de 20 ans avec 15 ans d'ancienneté est accepté et scoré.",
+   "cause": "Aucun contrôle inter-champs.",
+   "correction": "L'ancienneté ne peut pas dépasser l'âge moins 16 ans (422 `incoherence`).",
+   "tests": {
+    "rattaches": 5,
+    "echecs_v0_1": 5,
+    "reussis_v0_2": 5,
+    "echecs_v0_2": 0
+   },
+   "scenarios": [
+    {
+     "id": "S22",
+     "titre": "Ancienneté incohérente avec l'âge (20 ans, 15 ans d'activité)",
+     "attendu": "422 donnees_invalides",
+     "observe_v0_1": "200",
+     "fuite_technique_v0_1": false,
+     "conforme_v0_2": true
+    }
+   ],
+   "pannes": [],
+   "statut": "Corrigée en v0.2, vérifiée par la campagne 2"
+  },
+  {
+   "id": "A-08",
+   "titre": "JSON mal formé, corps vide ou octets non décodables : erreur 500",
+   "gravite": "Majeure",
+   "exigences": [
+    "EX10",
+    "EX11"
+   ],
+   "constat": "Un JSON tronqué, un corps vide ou des octets invalides ne sont pas rattrapés par le gestionnaire de la route et produisent une erreur 500.",
+   "cause": "Le décodage (`request.json()`) est exécuté dans le bloc générique `except Exception` de la route : une erreur de syntaxe devient une erreur 500.",
+   "correction": "Toute erreur de décodage devient un 400 `json_invalide` au format d'erreur uniforme.",
+   "tests": {
+    "rattaches": 6,
+    "echecs_v0_1": 6,
+    "reussis_v0_2": 6,
+    "echecs_v0_2": 0
+   },
+   "scenarios": [
+    {
+     "id": "S12",
+     "titre": "Requête mal formée (JSON tronqué)",
+     "attendu": "400 json_invalide",
+     "observe_v0_1": "500 erreur_interne",
+     "fuite_technique_v0_1": true,
+     "conforme_v0_2": true
+    },
+    {
+     "id": "S13",
+     "titre": "Corps de requête vide",
+     "attendu": "400 json_invalide",
+     "observe_v0_1": "500 erreur_interne",
+     "fuite_technique_v0_1": true,
+     "conforme_v0_2": true
+    }
+   ],
+   "pannes": [],
+   "statut": "Corrigée en v0.2, vérifiée par la campagne 2"
+  },
+  {
+   "id": "A-09",
+   "titre": "Type de contenu non vérifié : un corps `text/plain` est traité",
+   "gravite": "Moyenne",
+   "exigences": [
+    "EX10"
+   ],
+   "constat": "Une requête envoyée avec `Content-Type: text/plain` est acceptée et scorée.",
+   "cause": "L'en-tête `Content-Type` n'est pas contrôlé.",
+   "correction": "Rejet 415 `type_contenu_non_supporte` si le type n'est pas `application/json`.",
+   "tests": {
+    "rattaches": 1,
+    "echecs_v0_1": 1,
+    "reussis_v0_2": 1,
+    "echecs_v0_2": 0
+   },
+   "scenarios": [
+    {
+     "id": "S17",
+     "titre": "Content-Type non JSON (text/plain)",
+     "attendu": "415 type_contenu_non_supporte",
+     "observe_v0_1": "200",
+     "fuite_technique_v0_1": false,
+     "conforme_v0_2": true
+    }
+   ],
+   "pannes": [],
+   "statut": "Corrigée en v0.2, vérifiée par la campagne 2"
+  },
+  {
+   "id": "A-10",
+   "titre": "Aucune limite de taille ni de profondeur : corps volumineux ou très imbriqué provoque une erreur 500",
+   "gravite": "Majeure",
+   "exigences": [
+    "EX10"
+   ],
+   "constat": "Un corps de 1 Mo ou un JSON imbriqué sur 4 900 niveaux (9,8 Ko) fait échouer la requête (500) : risque de déni de service.",
+   "cause": "Le corps est lu et décodé sans limite ; la récursion du décodeur n'est pas maîtrisée.",
+   "correction": "Rejet 413 au-delà de 10 000 octets (annoncés ou réellement lus) ; `RecursionError` traité comme un JSON invalide.",
+   "tests": {
+    "rattaches": 2,
+    "echecs_v0_1": 2,
+    "reussis_v0_2": 2,
+    "echecs_v0_2": 0
+   },
+   "scenarios": [
+    {
+     "id": "S18",
+     "titre": "Corps de requête volumineux (1 Mo)",
+     "attendu": "413 corps_trop_volumineux",
+     "observe_v0_1": "500 erreur_interne",
+     "fuite_technique_v0_1": true,
+     "conforme_v0_2": true
+    },
+    {
+     "id": "S25",
+     "titre": "JSON profondément imbriqué (4 900 niveaux, 9,8 Ko)",
+     "attendu": "422 donnees_invalides",
+     "observe_v0_1": "500 erreur_interne",
+     "fuite_technique_v0_1": true,
+     "conforme_v0_2": true
+    }
+   ],
+   "pannes": [],
+   "statut": "Corrigée en v0.2, vérifiée par la campagne 2"
+  },
+  {
+   "id": "A-11",
+   "titre": "Erreurs 500 qui exposent la trace, le message de l'exception et des chemins ; pas de code d'erreur distinct",
+   "gravite": "Majeure",
+   "exigences": [
+    "EX11"
+   ],
+   "constat": "Les réponses 500 contiennent `message = str(exc)` et la trace complète (chemins de fichiers du serveur, extraits de code, valeurs). Toutes les pannes internes portent le même code `erreur_interne`.",
+   "cause": "Le bloc `except Exception` de la route renvoie `str(exc)` et `traceback.format_exc()` au client.",
+   "correction": "Message générique côté client ; le détail est journalisé côté serveur et relié par un identifiant de requête (`id_requete`, `X-Request-ID`) ; codes distincts `erreur_pretraitement`, `erreur_prediction`, `incoherence_dimensions`.",
+   "tests": {
+    "rattaches": 2,
+    "echecs_v0_1": 2,
+    "reussis_v0_2": 2,
+    "echecs_v0_2": 0
+   },
+   "scenarios": [],
+   "pannes": [
+    {
+     "id": "P-prediction_exception",
+     "description": "Erreur interne pendant l'inférence",
+     "attendu": "500 erreur_prediction",
+     "observe_v0_1": "500 erreur_interne",
+     "fuite_technique_v0_1": true,
+     "conforme_v0_2": true
+    }
+   ],
+   "statut": "Corrigée en v0.2, vérifiée par la campagne 2"
+  },
+  {
+   "id": "A-12",
+   "titre": "Modèle indisponible mal géré : erreur 500 avec chemin du fichier, `/health` toujours 200, pas de reprise",
+   "gravite": "Majeure",
+   "exigences": [
+    "EX05",
+    "EX11"
+   ],
+   "constat": "Si le fichier du modèle ou des métadonnées est absent, illisible ou altéré, `/predict` renvoie une erreur 500 (avec la trace) et `/health` répond 200 « ok ».",
+   "cause": "`charger()` laisse remonter les exceptions brutes ; `/health` ne consulte pas l'état du modèle.",
+   "correction": "`ModeleIndisponible` unique ; 503 `modele_indisponible` avec `Retry-After` sur les trois endpoints ; `/health` répond 503 ; rechargement automatique à la requête suivante ; une demande invalide reste refusée en 422 même sans modèle.",
+   "tests": {
+    "rattaches": 10,
+    "echecs_v0_1": 10,
+    "reussis_v0_2": 10,
+    "echecs_v0_2": 0
+   },
+   "scenarios": [
+    {
+     "id": "S11",
+     "titre": "Modèle indisponible (non chargé)",
+     "attendu": "503 modele_indisponible",
+     "observe_v0_1": "500 erreur_interne",
+     "fuite_technique_v0_1": true,
+     "conforme_v0_2": true
+    }
+   ],
+   "pannes": [
+    {
+     "id": "M-fichier_absent",
+     "description": "Fichier modèle absent",
+     "attendu": "503 modele_indisponible",
+     "observe_v0_1": "500 erreur_interne",
+     "fuite_technique_v0_1": true,
+     "conforme_v0_2": true
+    },
+    {
+     "id": "M-octets_aleatoires",
+     "description": "Fichier modèle illisible (octets aléatoires)",
+     "attendu": "503 modele_indisponible",
+     "observe_v0_1": "500 erreur_interne",
+     "fuite_technique_v0_1": true,
+     "conforme_v0_2": true
+    },
+    {
+     "id": "M-fichier_altere",
+     "description": "Fichier modèle altéré (un octet modifié)",
+     "attendu": "503 modele_indisponible",
+     "observe_v0_1": "500 erreur_interne",
+     "fuite_technique_v0_1": true,
+     "conforme_v0_2": true
+    },
+    {
+     "id": "M-metadonnees_illisibles",
+     "description": "Métadonnées illisibles (JSON invalide)",
+     "attendu": "503 modele_indisponible",
+     "observe_v0_1": "500 erreur_interne",
+     "fuite_technique_v0_1": true,
+     "conforme_v0_2": true
+    },
+    {
+     "id": "M-metadonnees_absentes",
+     "description": "Fichier de métadonnées absent",
+     "attendu": "503 modele_indisponible",
+     "observe_v0_1": "500 erreur_interne",
+     "fuite_technique_v0_1": true,
+     "conforme_v0_2": true
+    }
+   ],
+   "statut": "Corrigée en v0.2, vérifiée par la campagne 2"
+  },
+  {
+   "id": "A-13",
+   "titre": "Aucun contrôle d'intégrité ni de conformité du modèle chargé",
+   "gravite": "Critique",
+   "exigences": [
+    "EX14"
+   ],
+   "constat": "Un modèle substitué, un fichier complété d'octets, une empreinte erronée, un modèle à 5 variables, un objet qui n'est pas un modèle, des métadonnées incomplètes ou aux variables permutées sont chargés et servent des prédictions (200).",
+   "cause": "`charger()` désérialise directement le fichier avec `joblib.load` (format pickle, qui exécute du code à la lecture) sans comparer l'empreinte SHA-256 ni vérifier le contrat des métadonnées.",
+   "correction": "Contrôles avant désérialisation : métadonnées complètes et variables conformes au prétraitement, empreinte SHA-256 identique ; contrôle du contrat de l'objet chargé (méthodes, nombre de variables, classes). Tout échec produit `ModeleIndisponible`.",
+   "tests": {
+    "rattaches": 11,
+    "echecs_v0_1": 11,
+    "reussis_v0_2": 11,
+    "echecs_v0_2": 0
+   },
+   "scenarios": [],
+   "pannes": [
+    {
+     "id": "M-objet_non_conforme",
+     "description": "Fichier contenant un objet qui n'est pas un modèle",
+     "attendu": "503 modele_indisponible",
+     "observe_v0_1": "500 erreur_interne",
+     "fuite_technique_v0_1": true,
+     "conforme_v0_2": true
+    },
+    {
+     "id": "M-modele_a_5_variables",
+     "description": "Modèle entraîné sur 5 variables au lieu de 6",
+     "attendu": "503 modele_indisponible",
+     "observe_v0_1": "500 erreur_interne",
+     "fuite_technique_v0_1": true,
+     "conforme_v0_2": true
+    },
+    {
+     "id": "M-metadonnees_incompletes",
+     "description": "Métadonnées incomplètes (clé version absente)",
+     "attendu": "503 modele_indisponible",
+     "observe_v0_1": "200",
+     "fuite_technique_v0_1": false,
+     "conforme_v0_2": true
+    },
+    {
+     "id": "M-variables_divergentes",
+     "description": "Variables des métadonnées dans un autre ordre",
+     "attendu": "503 modele_indisponible",
+     "observe_v0_1": "200",
+     "fuite_technique_v0_1": false,
+     "conforme_v0_2": true
+    },
+    {
+     "id": "M-modele_substitue",
+     "description": "Autre modèle valide (6 variables) sous le nom du modèle versionné",
+     "attendu": "503 modele_indisponible",
+     "observe_v0_1": "200",
+     "fuite_technique_v0_1": false,
+     "conforme_v0_2": true
+    },
+    {
+     "id": "M-octets_ajoutes",
+     "description": "Octets ajoutés en fin de fichier (le fichier reste chargeable)",
+     "attendu": "503 modele_indisponible",
+     "observe_v0_1": "200",
+     "fuite_technique_v0_1": false,
+     "conforme_v0_2": true
+    },
+    {
+     "id": "M-empreinte_metadonnees_erronee",
+     "description": "Empreinte SHA-256 des métadonnées erronée",
+     "attendu": "503 modele_indisponible",
+     "observe_v0_1": "200",
+     "fuite_technique_v0_1": false,
+     "conforme_v0_2": true
+    }
+   ],
+   "statut": "Corrigée en v0.2, vérifiée par la campagne 2"
+  },
+  {
+   "id": "A-14",
+   "titre": "Prétraitement sans garde : `log(0)`, division par zéro, variable absente, exceptions brutes",
+   "gravite": "Majeure",
+   "exigences": [
+    "EX02",
+    "EX06",
+    "EX08",
+    "EX11"
+   ],
+   "constat": "Le prétraitement produit silencieusement des infinis ou des NaN (avertissements NumPy) et laisse remonter des exceptions non typées lorsqu'une variable manque.",
+   "cause": "`ErreurPretraitement` est déclarée mais jamais levée ; aucun contrôle des erreurs flottantes ni de la finitude de la matrice produite.",
+   "correction": "Erreurs flottantes transformées en exception (`np.errstate(all='raise')`), vérification de la finitude du résultat, variable absente convertie en `ErreurPretraitement` (500 `erreur_pretraitement`, message générique).",
+   "tests": {
+    "rattaches": 12,
+    "echecs_v0_1": 12,
+    "reussis_v0_2": 12,
+    "echecs_v0_2": 0
+   },
+   "scenarios": [],
+   "pannes": [
+    {
+     "id": "P-variable_absente",
+     "description": "Variable attendue absente après validation",
+     "attendu": "500 erreur_pretraitement",
+     "observe_v0_1": "500 erreur_interne",
+     "fuite_technique_v0_1": true,
+     "conforme_v0_2": true
+    },
+    {
+     "id": "P-pretraitement_controle",
+     "description": "Le prétraitement signale une erreur",
+     "attendu": "500 erreur_pretraitement",
+     "observe_v0_1": "500 erreur_interne",
+     "fuite_technique_v0_1": true,
+     "conforme_v0_2": true
+    },
+    {
+     "id": "P-pretraitement_imprevu",
+     "description": "Exception imprévue dans le prétraitement",
+     "attendu": "500 erreur_interne",
+     "observe_v0_1": "500 erreur_interne",
+     "fuite_technique_v0_1": true,
+     "conforme_v0_2": true
+    }
+   ],
+   "statut": "Corrigée en v0.2, vérifiée par la campagne 2"
+  },
+  {
+   "id": "A-15",
+   "titre": "Aucune garde sur le modèle : dimensions incohérentes et probabilités invalides transmises",
+   "gravite": "Critique",
+   "exigences": [
+    "EX04",
+    "EX11",
+    "EX16"
+   ],
+   "constat": "Une probabilité de 1,5 ou de -0,1 renvoyée par le modèle est transmise à l'agent de crédit (200) ; NaN et infini produisent une erreur 500 sans corps JSON ; une matrice (2, 6) est acceptée ; (1, 5) et (1, 7) donnent une erreur 500 brute.",
+   "cause": "`predire` renvoie `float(predict_proba(x)[0, 1])` sans contrôler la forme de l'entrée ni la valeur de la sortie ; `interpreter_probabilite` n'a pas de garde.",
+   "correction": "Contrôle de forme et de finitude avant l'inférence (`ErreurDimensions`), contrôle de la probabilité après (finie, dans [0 ; 1]) et garde dans l'interprétation : toute violation devient une erreur 500 générique et journalisée, jamais une probabilité.",
+   "tests": {
+    "rattaches": 19,
+    "echecs_v0_1": 19,
+    "reussis_v0_2": 19,
+    "echecs_v0_2": 0
+   },
+   "scenarios": [],
+   "pannes": [
+    {
+     "id": "D-1x5",
+     "description": "Dimensions (1, 5) au lieu de (1, 6)",
+     "attendu": "500 incoherence_dimensions",
+     "observe_v0_1": "500 erreur_interne",
+     "fuite_technique_v0_1": true,
+     "conforme_v0_2": true
+    },
+    {
+     "id": "D-1x7",
+     "description": "Dimensions (1, 7) au lieu de (1, 6)",
+     "attendu": "500 incoherence_dimensions",
+     "observe_v0_1": "500 erreur_interne",
+     "fuite_technique_v0_1": true,
+     "conforme_v0_2": true
+    },
+    {
+     "id": "D-2x6",
+     "description": "Dimensions (2, 6) au lieu de (1, 6)",
+     "attendu": "500 incoherence_dimensions",
+     "observe_v0_1": "200",
+     "fuite_technique_v0_1": false,
+     "conforme_v0_2": true
+    },
+    {
+     "id": "P-proba_nan",
+     "description": "Le modèle renvoie la probabilité nan",
+     "attendu": "500 erreur_prediction",
+     "observe_v0_1": "500",
+     "fuite_technique_v0_1": false,
+     "conforme_v0_2": true
+    },
+    {
+     "id": "P-proba_1.5",
+     "description": "Le modèle renvoie la probabilité 1.5",
+     "attendu": "500 erreur_prediction",
+     "observe_v0_1": "200",
+     "fuite_technique_v0_1": false,
+     "conforme_v0_2": true
+    },
+    {
+     "id": "P-proba_-0.1",
+     "description": "Le modèle renvoie la probabilité -0.1",
+     "attendu": "500 erreur_prediction",
+     "observe_v0_1": "200",
+     "fuite_technique_v0_1": false,
+     "conforme_v0_2": true
+    },
+    {
+     "id": "P-proba_inf",
+     "description": "Le modèle renvoie la probabilité inf",
+     "attendu": "500 erreur_prediction",
+     "observe_v0_1": "500",
+     "fuite_technique_v0_1": false,
+     "conforme_v0_2": true
+    }
+   ],
+   "statut": "Corrigée en v0.2, vérifiée par la campagne 2"
+  },
+  {
+   "id": "A-16",
+   "titre": "Version du modèle codée en dur et incohérente avec les métadonnées (« 1.0 » au lieu de « 1.0.0 »)",
+   "gravite": "Moyenne",
+   "exigences": [
+    "EX13",
+    "EX14"
+   ],
+   "constat": "`/predict` annonce la version « 1.0 » alors que le modèle et ses métadonnées sont en 1.0.0 : la réponse n'est pas auditable.",
+   "cause": "Constante de version dans le code de l'API.",
+   "correction": "La version annoncée est lue dans les métadonnées du modèle réellement chargé.",
+   "tests": {
+    "rattaches": 2,
+    "echecs_v0_1": 2,
+    "reussis_v0_2": 2,
+    "echecs_v0_2": 0
+   },
+   "scenarios": [],
+   "pannes": [],
+   "statut": "Corrigée en v0.2, vérifiée par la campagne 2"
+  },
+  {
+   "id": "A-17",
+   "titre": "`/model-info` expose le chemin du fichier du modèle ; les métadonnées internes sont modifiables depuis l'extérieur",
+   "gravite": "Moyenne",
+   "exigences": [
+    "EX07",
+    "EX11",
+    "EX14"
+   ],
+   "constat": "La réponse contient `chemin_modele` (chemin absolu du fichier sur le serveur) ; la propriété `metadonnees` du service renvoie l'objet interne et non une copie : un appelant peut falsifier les métadonnées du service.",
+   "cause": "La réponse reprend `str(service.chemin_modele)` et la propriété `metadonnees` expose l'objet interne.",
+   "correction": "Liste blanche de champs exposés (version, variables, empreinte, métriques de référence, seuils), sans chemin ; copie profonde des métadonnées.",
+   "tests": {
+    "rattaches": 3,
+    "echecs_v0_1": 3,
+    "reussis_v0_2": 3,
+    "echecs_v0_2": 0
+   },
+   "scenarios": [],
+   "pannes": [],
+   "statut": "Corrigée en v0.2, vérifiée par la campagne 2"
+  },
+  {
+   "id": "A-18",
+   "titre": "Contrat d'API incomplet : 404 et 405 hors format uniforme, schéma de requête absent de l'OpenAPI",
+   "gravite": "Moyenne",
+   "exigences": [
+    "EX09",
+    "EX10"
+   ],
+   "constat": "Les erreurs 404 et 405 reprennent le format par défaut du framework ; la documentation OpenAPI ne décrit ni le corps de requête ni les erreurs.",
+   "cause": "Gestionnaires d'erreurs HTTP par défaut ; route sans modèle de requête déclaré.",
+   "correction": "Gestionnaire d'exceptions HTTP au format uniforme (`ressource_introuvable`, `methode_non_autorisee`) ; schéma de requête et codes d'erreur documentés dans l'OpenAPI.",
+   "tests": {
+    "rattaches": 3,
+    "echecs_v0_1": 3,
+    "reussis_v0_2": 3,
+    "echecs_v0_2": 0
+   },
+   "scenarios": [
+    {
+     "id": "S23",
+     "titre": "Méthode non autorisée (GET /predict)",
+     "attendu": "405 methode_non_autorisee",
+     "observe_v0_1": "405",
+     "fuite_technique_v0_1": false,
+     "conforme_v0_2": true
+    },
+    {
+     "id": "S24",
+     "titre": "Ressource inconnue (GET /inconnu)",
+     "attendu": "404 ressource_introuvable",
+     "observe_v0_1": "404",
+     "fuite_technique_v0_1": false,
+     "conforme_v0_2": true
+    }
+   ],
+   "pannes": [],
+   "statut": "Corrigée en v0.2, vérifiée par la campagne 2"
+  },
+  {
+   "id": "A-19",
+   "titre": "Seuil de risque élevé mal appliqué : p = 0,60 est classé « modéré »",
+   "gravite": "Majeure",
+   "exigences": [
+    "EX16"
+   ],
+   "constat": "La règle attendue est p ≥ 0,60 → « élevé » ; le code compare avec `<=`.",
+   "cause": "Opérateur de comparaison `<=` au lieu de `<` à la borne.",
+   "correction": "`p < 0,30` faible ; `0,30 ≤ p < 0,60` modéré ; `p ≥ 0,60` élevé, avec tests aux bornes (0, 0,2999, 0,30, 0,5999, 0,60, 1).",
+   "tests": {
+    "rattaches": 8,
+    "echecs_v0_1": 1,
+    "reussis_v0_2": 8,
+    "echecs_v0_2": 0
+   },
+   "scenarios": [],
+   "pannes": [],
+   "statut": "Corrigée en v0.2, vérifiée par la campagne 2"
+  },
+  {
+   "id": "A-20",
+   "titre": "Alertes « hors domaine d'entraînement » non implémentées (fonction vide)",
+   "gravite": "Majeure",
+   "exigences": [
+    "EX04",
+    "EX15"
+   ],
+   "constat": "Une demande valide mais très éloignée des données d'entraînement (revenu de 20 millions, montant de 200 millions, durée de 120 mois…) est scorée sans aucun avertissement : fausse confiance dans une extrapolation.",
+   "cause": "`evaluer_alertes` renvoie une liste vide (marquée TODO).",
+   "correction": "Comparaison de chaque champ et du taux d'effort au domaine observé à l'entraînement (métadonnées du modèle) ; alerte `hors_domaine_entrainement` portée par la réponse 200.",
+   "tests": {
+    "rattaches": 14,
+    "echecs_v0_1": 14,
+    "reussis_v0_2": 14,
+    "echecs_v0_2": 0
+   },
+   "scenarios": [],
+   "pannes": [],
+   "statut": "Corrigée en v0.2, vérifiée par la campagne 2"
+  }
+ ],
+ "constats_ouverts": [
+  {
+   "id": "O-01",
+   "titre": "Taux de faux négatifs très élevé sur des profils précis, invisible dans les indicateurs globaux",
+   "gravite": "Critique",
+   "exigences": [
+    "EX07",
+    "EX16"
+   ],
+   "constat": "Au seuil de décision 0,30, le rappel global est de 0,622 (faux négatifs : 37,8 %), avec une AUC de 0,836 et une erreur de calibration de 0,018. Pour les prêts de 24 mois ou plus (n = 1 072, 135 défauts), le rappel tombe à 0,207 (faux négatifs : 79,3 %) ; pour les demandeurs de moins de 2 ans d'ancienneté avec un prêt de 24 mois ou plus (n = 116, 48 défauts), il est de 0,167 (40 défauts sur 48 non signalés). Tous les tests fonctionnels et de non-régression passent.",
+   "preuve": "reports/audit_segments.md (données synthétiques ; l'interaction durée × ancienneté a été introduite volontairement dans le générateur pour que l'audit ait quelque chose à trouver)",
+   "action": "Ouvert : décision métier. Pistes : seuil adapté ou revue manuelle obligatoire pour les prêts de 24 mois ou plus (au seuil 0,20 le rappel global passe à 0,727 et à 0,356 pour les prêts longs, avec 32,7 % de dossiers signalés ; au seuil 0,10 : 0,917 et 0,815, mais 64,2 % de dossiers signalés), critères d'acceptation par segment dans la non-régression, réentraînement avec interaction ou modèle non linéaire."
+  },
+  {
+   "id": "O-02",
+   "titre": "Extrapolation hors du domaine d'entraînement : probabilités extrêmes ou trompeuses malgré l'alerte",
+   "gravite": "Majeure",
+   "exigences": [
+    "EX15"
+   ],
+   "constat": "Le cas doré G16 (montant de 60 millions, hors du domaine d'entraînement) obtient une probabilité de défaut de 0,99998 ; le cas G15 (revenu de 8 millions) obtient 0,0081. L'alerte `hors_domaine_entrainement` est émise, mais la probabilité reste renvoyée comme les autres.",
+   "preuve": "tests/reference/cas_dores.json (G15, G16), tests de robustesse EX15",
+   "action": "Ouvert : décider si une demande hors domaine doit être orientée vers une revue manuelle sans score affiché."
+  },
+  {
+   "id": "O-03",
+   "titre": "Aucune authentification, aucun chiffrement de transport, aucune limitation de débit",
+   "gravite": "Majeure",
+   "exigences": [
+    "EX10",
+    "EX11"
+   ],
+   "constat": "L'API est ouverte : tout client qui l'atteint peut interroger `/predict` et `/model-info`, sans trace d'audit des décisions ni limite de débit.",
+   "preuve": "Conception du prototype (hors périmètre de la consigne)",
+   "action": "Ouvert : à traiter avant tout déploiement (authentification, TLS, quota, journal d'audit sans donnée personnelle superflue)."
+  },
+  {
+   "id": "O-04",
+   "titre": "Chargement du modèle par pickle : l'empreinte protège contre l'erreur, pas contre un attaquant qui écrit les deux fichiers",
+   "gravite": "Majeure",
+   "exigences": [
+    "EX14"
+   ],
+   "constat": "Le contrôle SHA-256 détecte une corruption ou une substitution accidentelle et empêche de désérialiser un fichier inattendu, mais l'empreinte attendue est stockée à côté du modèle.",
+   "preuve": "tests TC14 et TC15 ; app/prediction.py",
+   "action": "Ouvert : signer le modèle ou publier l'empreinte par un canal distinct, restreindre les droits d'écriture, envisager un format sans exécution de code."
+  },
+  {
+   "id": "O-05",
+   "titre": "Aucune analyse d'équité ni de conformité réglementaire ; l'âge est une variable explicative",
+   "gravite": "Majeure",
+   "exigences": [],
+   "constat": "Les écarts de performance entre groupes (âge, genre, zone) ne sont ni mesurés ni encadrés ; l'usage de l'âge dans un modèle de crédit peut être restreint selon le cadre juridique applicable.",
+   "preuve": "Hors périmètre des tests ; audit limité aux segments d'âge, d'ancienneté, de revenu et de durée",
+   "action": "Ouvert : analyse d'impact et d'équité par la conformité avant tout usage décisionnel."
+  },
+  {
+   "id": "O-06",
+   "titre": "Données exclusivement synthétiques : aucune conclusion sur la performance réelle",
+   "gravite": "Critique",
+   "exigences": [],
+   "constat": "Le jeu d'entraînement et le jeu d'évaluation sont générés par un modèle probabiliste écrit pour l'exercice ; les métriques mesurent la cohérence du système, pas la qualité d'un score de crédit.",
+   "preuve": "data/DONNEES.md",
+   "action": "Ouvert : le modèle doit être requalifié (mêmes tests, baseline, audit par segment) sur des données réelles, anonymisées et représentatives."
+  },
+  {
+   "id": "O-07",
+   "titre": "Exploitation : instance unique, aucune supervision de la dérive ni de la performance en production",
+   "gravite": "Moyenne",
+   "exigences": [
+    "EX05",
+    "EX17"
+   ],
+   "constat": "Un seul processus sert l'API ; rien ne surveille la distribution des entrées, la calibration ou le rappel par segment une fois en service.",
+   "preuve": "Architecture du prototype",
+   "action": "Ouvert : redondance, métriques d'exploitation, suivi de dérive et de calibration, procédure de retour arrière documentée."
+  },
+  {
+   "id": "O-08",
+   "titre": "Rares échecs de connexion persistante (statut 0) sous charge soutenue",
+   "gravite": "Mineure",
+   "exigences": [
+    "EX17"
+   ],
+   "constat": "Lors d'un des deux essais de charge progressive, 4 requêtes sur 73 860 ont échoué sans réponse ; l'essai final n'en compte aucun sur 73 632. Cause reproduite de façon déterministe : fermeture de la connexion inactive par uvicorn au bout de 5 s (`--timeout-keep-alive`) au moment où le client la réutilise.",
+   "preuve": "reports/performance/essai_keep_alive.txt",
+   "action": "Atténuation documentée : aligner les délais (client plus court que le serveur) ou placer un reverse proxy ; nouvelle tentative côté client pour les requêtes idempotentes."
+  },
+  {
+   "id": "O-09",
+   "titre": "Message de recommandation « Profil standard : poursuivre l'instruction habituelle » au niveau faible",
+   "gravite": "Majeure",
+   "exigences": [
+    "EX16"
+   ],
+   "constat": "Un niveau « faible » est présenté comme un profil standard à instruire normalement, alors que le modèle laisse passer une part importante de défauts dans certains segments (O-01) : le texte rassure plus que ce que les preuves permettent.",
+   "preuve": "app/prediction.py (`interpreter_probabilite`)",
+   "action": "Ouvert : reformuler (« aucun signal de risque élevé détecté par le modèle ; ne dispense pas de l'analyse habituelle ») après validation par le métier."
+  },
+  {
+   "id": "O-10",
+   "titre": "Seuils de risque 0,30 et 0,60 non validés par le métier",
+   "gravite": "Moyenne",
+   "exigences": [
+    "EX16"
+   ],
+   "constat": "Les seuils sont ceux de l'énoncé ; aucune analyse de coût (crédit accordé à tort, dossier refusé à tort, charge de revue) ne les justifie.",
+   "preuve": "reports/audit_segments.md (balayage de seuils)",
+   "action": "Ouvert : décision métier fondée sur le balayage de seuils et la capacité de revue."
+  }
+ ],
+ "lacune_de_tests": {
+  "id": "T-01",
+  "titre": "Lacune de la suite de tests : la désactivation du contrôle SHA-256 n'était détectée par aucun test",
+  "gravite": "Majeure",
+  "exigences": [
+   "EX14"
+  ],
+  "constat": "L'injection de défauts dans le code (`scripts/preuve_ci.py`, mutant M4 : contrôle d'empreinte remplacé par `if False`) laissait la suite entièrement verte : le défaut « fichier altéré » échouait par un autre chemin (le fichier modifié n'était plus chargeable) et masquait l'absence de contrôle.",
+  "action": "Corrigée : trois défauts silencieux (modèle substitué, octets ajoutés, empreinte des métadonnées erronée), un test exigeant que le fichier suspect ne soit jamais désérialisé et un témoin positif (cas de test TC15). Les 15 défauts injectés sont désormais tous détectés (reports/preuve_ci_locale.md)."
+ }
+}

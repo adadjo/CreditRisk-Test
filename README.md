@@ -109,6 +109,7 @@ résultats et interprétation : `reports/performance/rapport_performance.md`.
 ```bash
 python -m scripts.campagne            # plan de test, matrice de traçabilité, résultats des scénarios
 python -m scripts.audit_segments      # rappel et faux négatifs par profil de demandeur
+python -m scripts.registre_anomalies  # registre des anomalies (causes racines, gravité, preuves)
 ```
 
 ## GitHub Actions
