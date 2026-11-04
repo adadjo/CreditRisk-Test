@@ -386,7 +386,7 @@ Ces constats ne sont pas des défauts de code corrigeables par une retouche : il
 ### O-10 — Seuils de risque 0,30 et 0,60 non validés par le métier
 
 - **Gravité** : Moyenne — **Exigences** : EX16
-- **Constat** : Les seuils sont ceux de l'énoncé ; aucune analyse de coût (crédit accordé à tort, dossier refusé à tort, charge de revue) ne les justifie.
+- **Constat** : Les seuils sont des hypothèses de conception du prototype (l'énoncé n'en fixe aucun) ; aucune analyse de coût (crédit accordé à tort, dossier refusé à tort, charge de revue) ne les justifie.
 - **Preuve** : reports/audit_segments.md (balayage de seuils)
 - **Suite** : Ouvert : décision métier fondée sur le balayage de seuils et la capacité de revue.
 

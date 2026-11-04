@@ -1,9 +1,12 @@
 """Figures du rapport de qualification issues de l'audit par segment (données synthétiques).
 
-Trois figures, toutes lues dans reports/audit_segments.json :
+Quatre figures :
   - faux_negatifs_par_segment.png : taux de faux négatifs par profil, face à l'ensemble ;
   - effet_du_seuil.png            : rappel par profil et part de dossiers signalés selon le seuil ;
-  - calibration.png               : probabilité prédite et fréquence observée (diagramme de fiabilité).
+  - calibration.png               : probabilité prédite et fréquence observée (diagramme de fiabilité) ;
+  - echecs_par_anomalie.png       : tests en échec en v0.1 par cause racine, critiques en évidence.
+Les trois premières sont lues dans reports/audit_segments.json, la dernière dans
+reports/registre_anomalies.json.
 
 Usage : python -m scripts.figures_qualification
 """
@@ -214,6 +217,69 @@ def figure_calibration(audit: dict, chemin: Path) -> None:
     enregistrer(fig, chemin)
 
 
+COURTS = {
+    "A-01": "Entrée incomplète ou nulle (erreur 500)",
+    "A-02": "Valeurs non finies ou démesurées (500)",
+    "A-03": "Conversion implicite des types",
+    "A-04": "Troncature silencieuse d'un entier",
+    "A-05": "Bornes métier absentes ou incomplètes",
+    "A-06": "Schéma non strict",
+    "A-07": "Âge et ancienneté incohérents",
+    "A-08": "JSON mal formé ou corps vide (500)",
+    "A-09": "Type de contenu non vérifié",
+    "A-10": "Aucune limite de taille ni de profondeur",
+    "A-11": "Erreurs 500 qui exposent la trace",
+    "A-12": "Modèle indisponible mal géré",
+    "A-13": "Aucun contrôle d'intégrité du modèle",
+    "A-14": "Prétraitement sans garde",
+    "A-15": "Aucune garde sur la sortie du modèle",
+    "A-16": "Version du modèle incohérente",
+    "A-17": "/model-info expose le chemin du modèle",
+    "A-18": "Contrat d'API incomplet (404, 405, OpenAPI)",
+    "A-19": "Seuil de risque élevé mal appliqué",
+    "A-20": "Alertes hors domaine non implémentées",
+}
+
+
+def figure_echecs_par_anomalie(registre: dict, chemin: Path) -> None:
+    lignes = sorted(
+        (
+            (a["id"], a["gravite"], a["tests"]["echecs_v0_1"])
+            for a in registre["anomalies"]
+            if a["tests"]["echecs_v0_1"] > 0
+        ),
+        key=lambda ligne: ligne[2],
+    )
+    fig, ax = plt.subplots(figsize=(LARGEUR, 5.6))
+    for y, (_identifiant, gravite, echecs) in enumerate(lignes):
+        ax.barh(
+            y,
+            echecs,
+            height=0.66,
+            color=ORANGE if gravite == "Critique" else BLEU,
+            edgecolor=SURFACE,
+            linewidth=1.2,
+            zorder=3,
+        )
+        ax.text(echecs + 1.0, y, str(echecs), va="center", fontsize=8.4, color=ENCRE)
+    ax.set_yticks(
+        range(len(lignes)),
+        [f"{identifiant}  {COURTS[identifiant]}" for identifiant, _, _ in lignes],
+        fontsize=8.0,
+    )
+    ax.set_xlim(0, max(e for _, _, e in lignes) * 1.12)
+    ax.set_xlabel("Tests de la suite en échec sur la v0.1 (un test rattaché à une seule cause)")
+    ax.grid(axis="y", visible=False)
+    ax.tick_params(axis="y", length=0)
+    ax.set_title("Le nombre de tests en échec n'est pas la gravité", pad=10)
+    legende = [
+        Line2D([], [], color=ORANGE, linewidth=8, label="Gravité critique"),
+        Line2D([], [], color=BLEU, linewidth=8, label="Gravité majeure ou moyenne"),
+    ]
+    ax.legend(handles=legende, loc="lower right", frameon=False, fontsize=8.2)
+    enregistrer(fig, chemin)
+
+
 def main() -> None:
     appliquer_style()
     audit = json.loads((RACINE / "reports" / "audit_segments.json").read_text(encoding="utf-8"))
@@ -221,6 +287,10 @@ def main() -> None:
     figure_faux_negatifs(audit, DOSSIER / "faux_negatifs_par_segment.png")
     figure_seuil(audit, DOSSIER / "effet_du_seuil.png")
     figure_calibration(audit, DOSSIER / "calibration.png")
+    registre = json.loads(
+        (RACINE / "reports" / "registre_anomalies.json").read_text(encoding="utf-8")
+    )
+    figure_echecs_par_anomalie(registre, DOSSIER / "echecs_par_anomalie.png")
     print("figures écrites dans", DOSSIER)
 
 

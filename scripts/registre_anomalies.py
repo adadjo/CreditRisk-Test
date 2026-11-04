@@ -543,7 +543,7 @@ def constats_ouverts(audit: dict, perf: dict, non_regression: dict) -> list[dict
             "titre": "Seuils de risque 0,30 et 0,60 non validés par le métier",
             "gravite": "Moyenne",
             "exigences": ["EX16"],
-            "constat": "Les seuils sont ceux de l'énoncé ; aucune analyse de coût (crédit accordé à tort, dossier refusé à tort, charge de revue) ne les justifie.",
+            "constat": "Les seuils sont des hypothèses de conception du prototype (l'énoncé n'en fixe aucun) ; aucune analyse de coût (crédit accordé à tort, dossier refusé à tort, charge de revue) ne les justifie.",
             "preuve": "reports/audit_segments.md (balayage de seuils)",
             "action": "Ouvert : décision métier fondée sur le balayage de seuils et la capacité de revue.",
         },
