@@ -21,7 +21,7 @@ CreditRisk-Test/
 ├── scripts/              # Entraînement, comparaison de versions, audit par segments, performance, campagne
 ├── tests/                # test_validation / test_api / test_integration / test_robustness / test_regression ...
 │   └── reference/        # Base de non-régression : baseline, tolérances, cas dorés, contrat d'API
-├── reports/              # Rapports produits (traçabilité, anomalies, non-régression, performance)
+├── reports/              # Rapports produits (traçabilité, anomalies, non-régression, performance, rapport Word)
 ├── .github/workflows/tests.yml
 ├── requirements.txt      # Dépendances figées (Python 3.13)
 └── README.md
@@ -111,6 +111,11 @@ python -m scripts.campagne            # plan de test, matrice de traçabilité, 
 python -m scripts.audit_segments      # rappel et faux négatifs par profil de demandeur
 python -m scripts.registre_anomalies  # registre des anomalies (causes racines, gravité, preuves)
 ```
+
+Le rapport final de qualification (Word, une quarantaine de pages) est `reports/Rapport_qualification_CreditRisk.docx` :
+il reprend ces résultats et conclut sur l'aptitude à une phase pilote. Les trois champs à compléter avant
+le rendu (auteur, URL du dépôt, URL des deux exécutions GitHub Actions) sont surlignés en jaune sur la
+couverture ; la marche à suivre est dans l'annexe D du rapport.
 
 ## GitHub Actions
 
